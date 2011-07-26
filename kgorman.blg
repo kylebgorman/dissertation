@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: kgorman.aux
+A level-1 auxiliary file: ack.aux
+A level-1 auxiliary file: abs.aux
+A level-1 auxiliary file: pre.aux
+The style file: pwpl.bst
+Database file #1: /home/kgorman/Documents/Other/kgorman.bib.bib
+You've used 3 entries,
+            2720 wiz_defined-function locations,
+            616 strings with 5132 characters,
+and the built_in function-call counts, 1333 in all, are:
+= -- 127
+> -- 53
+< -- 3
++ -- 18
+- -- 15
+* -- 106
+:= -- 245
+add.period$ -- 12
+call.type$ -- 3
+change.case$ -- 22
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 57
+empty$ -- 97
+format.name$ -- 26
+if$ -- 262
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 4
+newline$ -- 25
+num.names$ -- 12
+pop$ -- 20
+preamble$ -- 1
+purify$ -- 17
+quote$ -- 0
+skip$ -- 34
+stack$ -- 0
+substring$ -- 75
+swap$ -- 9
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 0
+while$ -- 11
+width$ -- 0
+write$ -- 47

@@ -1,0 +1,27 @@
+\begin{thebibliography}{3}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Albright and Hayes(2003)}]{Albright2003b}
+\vspace*{-7pt}
+Albright, Adam, and Bruce Hayes. 2003.
+\newblock Rules vs. analogy in {English} past tenses: A
+  computational/experimental study.
+\newblock {\em Cognition\/} 90:119--161.
+
+\bibitem[{Greenberg and Jenkins(1964)}]{Greenberg1964}
+\vspace*{-7pt}
+Greenberg, Joseph~H., and James~J. Jenkins. 1964.
+\newblock Studies in the psychological correlates of the sound system of
+  {American English}, {I and II}.
+\newblock {\em Word\/} 20:157--177.
+
+\bibitem[{Scholes(1966)}]{Scholes1966}
+\vspace*{-7pt}
+Scholes, Robert~J. 1966.
+\newblock {\em Phonotactic grammaticality\/}.
+\newblock Berlin: Mouton.
+
+\end{thebibliography}

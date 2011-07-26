@@ -1,0 +1,239 @@
+\documentclass{upenndiss}
+
+% bib stuff
+\usepackage[round]{natbib}
+\bibpunct[:]{(}{)}{,}{a}{}{,}
+
+% fonts and symbols
+\usepackage{pifont} % some symbols
+\usepackage{amsmath} % \mathbb letters, among other things
+\usepackage{pxfonts} % Palatino
+\usepackage{courier}
+
+% tables and figures
+\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage{graphicx}
+%\usepackage{colortbl}
+%\usepackage{arydshln} % colortbl >> arydshln is a crit. ordering
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% ling shiz
+\usepackage{tipa}
+%\usepackage{covington}
+\usepackage{tipx} % OT commands
+\usepackage{wasysym}  
+\usepackage{marvosym}
+\newcommand{\frwn}{\frownie}
+\newcommand{\hand}{\ding{43}} 
+\newcommand{\np}{\textObullseye}
+
+% programming language syntax highlighting
+\usepackage{listings}
+
+% my shortcuts
+\newcommand{\zr}{$\emptyset$}
+\newcommand{\lm}{\textlengthmark}
+\newcommand{\gap}{\rule{.21cm}{0.4pt}}
+\newcommand{\shade}{\cellcolor[gray]{0.7}}
+
+% lorem ipsum
+\usepackage{lipsum}
+
+\title{Words \& Gaps}
+
+\author{Kyle Gorman}
+\supervisor{Charles Yang \\ Associate Professor, Linguistics \& Computer and Information Science}
+\gradchair{Eugene Buckley \\ Associate Professor, Linguistics}
+\committee{
+%Eugene Buckley \\ Associate Professor, Linguistics \and 
+Stephen R. Anderson, Dorothy R. Diebold professor of Linguistics, Psychology \& Cognitive Science (Yale University) \and
+Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science \and
+Rolf Noyer \\ Associate Professor, Linguistics}
+
+\copyrighttrue
+%\copyrightyear{2011}  % Defaults to the current year
+
+\department{Linguistics}
+
+\abstractfile{abs} % 350 word limit: 1. statement of problem 2. procedure and methods used 3. result 4. conclusions
+\acknowledgementsfile{ack}
+%\dedicationfile{ded} % will probably not use this -- KG
+\prefacefile{pre}
+
+\dedication{\center To my parents}
+
+\begin{document}
+
+% more kyle stuff
+\frenchspacing
+
+\FrontMatter
+
+%\chapter{Introduction}
+%\include{chap1} 
+
+\chapter{What phonotactics might not be}
+\lipsum
+
+\section{The null hypothesis}
+\section{A corpus study of English syllable contact}
+\section{What are phonotactics good for, anyways?}
+
+\begin{table}
+\caption{Does this work?}
+\end{table}
+
+\begin{figure}
+\caption{Does this work?}
+\end{figure}
+
+%\chapter{Anourobic processes in Latin}
+%\lipsum
+
+\chapter{Towards simpler models of phonotactic acceptability}
+\lipsum
+
+\section{Methodological concerns}
+
+\section{The one-neighbor distance model}
+
+\section{The PLD-20 model}
+
+\section{The \emph{SPE} distance model}
+
+\section{Conclusion}
+
+\chapter{The reality of inflectional gaps}
+\lipsum
+
+\chapter{[$\pm$ \textsc{Lexical Insertion}] forever}
+
+\chapter{Case studies in inflectional gaps}
+\lipsum
+
+\section{Methodological concerns}
+
+\section{Tolerance theory}
+
+\subsection{The model}
+
+\subsubsection{Elsewhere rules}
+
+\subsubsection{The rank list hypothesis}
+
+\subsubsection{The definition of Tolerance}
+
+\subsection{German noun plurals}
+
+\subsubsection{Processing evidence}
+
+\subsubsection{Child speech evidence}
+
+\subsubsection{Diachronic evidence}
+
+\subsection{Spanish verbal vowel alternations}
+
+\subsubsection{Processing evidence}
+
+\subsubsection{Child speech evidence}
+
+\subsubsection{Diachronic evidence}
+
+\subsection{Latin rhotacism}
+
+\subsubsection{The decadence of rhotacism}
+
+\subsubsection{An analysis of masculine imparisyllabics}
+
+\subsubsection{The ``analogy''}
+
+\section{Case studies}
+
+\subsection{English past tense verbs}
+
+\subsubsection{The data}
+
+\subsubsection{Results}
+
+\subsection{Spanish \emph{-ir} verbs}
+
+\subsubsection{The data}
+
+\subsubsection{Results}
+
+\subsection{Greek genitive plural nouns}
+
+\subsubsection{The data}
+
+\subsubsection{Results}
+
+\subsection{Russian 1sg. \emph{-it'} verbs}
+
+\subsubsection{The data}
+
+\subsubsection{Results}
+
+\subsection{Russian genitive plural nouns}
+
+\subsubsection{The data}
+
+\subsubsection{Results}
+
+\subsection{Swedish neuter adjectives}
+
+\subsubsection{The data}
+
+\subsubsection{Results}
+
+\subsection{Hungarian denominal verbs}
+
+\subsubsection{The data}
+
+\subsubsection{Results}
+
+\subsection{French \emph{-iss-} verbs}
+
+\subsubsection{The data}
+
+\subsubsection{Results}
+
+\section{Summary}
+
+\chapter{Conclusion}
+\lipsum
+
+\section{Chapter summary}
+
+\section{On \textsc{Rules Apply}}
+
+\appendix
+
+\chapter{Data from Chapter 1}
+\input{appendix1.tex}
+
+\chapter{Data from Chapter 2}
+\input{appendix2.tex}
+
+\chapter{Data from Chapter 3}
+\lipsum
+%\input{appendix3.tex}
+
+\chapter{Data from Chapter 4}
+\lipsum
+%\input{appendix4.tex}
+
+\chapter{Data from Chapter 5}
+\lipsum
+%\input{appendix5.tex}
+
+\chapter{Zipfian simulation code}
+
+\lstset{language=Python, basicstyle=\scriptsize\ttfamily, showstringspaces=false, upquote=false}
+\lstinputlisting{zipf_sim.py}
+
+\bibliographystyle{pwpl}
+\bibliography{/home/kgorman/Documents/Other/kgorman.bib}
+
+\end{document}
