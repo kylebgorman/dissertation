@@ -1,3 +1,5 @@
+%!TEX TS-program = xetex
+%!TEX encoding = UTF-8 Unicode
 \documentclass{upenndiss}
 
 \usepackage{longtable}
@@ -9,9 +11,16 @@
 \usepackage{multirow}
 \usepackage{colortbl}
 \usepackage{arydshln} % colortbl >> arydshln is a crit. ordering
-\usepackage{pxfonts} % Palatino
 \usepackage{courier}
 \usepackage{expex}
+
+%\usepackage{libertine}
+\usepackage{xunicode}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\setromanfont[Mapping=tex-text]{LinLibertineO}
+%\setsansfont{LinBiolinumO}
+%\setmonofont{CourierNewPSM}
 
 %\usepackage{tipx} % OT commands
 %\usepackage{wasysym}  
@@ -20,6 +29,9 @@
 %\newcommand{\frwn}{\frownie}
 %\newcommand{\hand}{\ding{43}} 
 %\newcommand{\np}{\textObullseye}
+
+%\usepackage[T1]{fontenc} % allows for dh, th, etc.
+%\usepackage[utf8x]{inputenc}
 
 % programming language syntax highlighting
 \usepackage{listings}
@@ -30,6 +42,12 @@
 \newcommand{\buf}{\hspace{0pt}}
 \newcommand{\gap}{\rule{.21cm}{0.4pt}}
 \newcommand{\shade}{\cellcolor[gray]{0.7}}
+
+%\newcommand{\amac}{\unichar{257}} % macron a
+%\newcommand{\emac}{\unichar{275}} % macron e
+%\newcommand{\imac}{\unichar{299}} % macron i
+%\newcommand{\omac}{\unichar{333}} % macron o
+%\newcommand{\umac}{\unichar{363}} % macron u
 
 % lorem ipsum FIXME
 \usepackage{lipsum}
@@ -67,7 +85,6 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 
 \FrontMatter
 
-\chapter{Structural and accidental phonotactic gaps in the lexicon}
 \include{clusters}
 
 \chapter{Wordlikeness without phonotactics}
@@ -83,14 +100,14 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 \appendix
 
 \chapter{Data from Chapter 1}
-\input{Aclusters.tex}
+\input{Aclusters}
 
 \chapter{Data from Chapter 2}
-\input{Awordlikeness.tex}
+\input{Awordlikeness}
 
 \chapter{Data from Chapter 4}
 \lipsum
-\input{Ainflections.tex}
+\input{Ainflections}
 
 \chapter{Zipfian simulation code}
 

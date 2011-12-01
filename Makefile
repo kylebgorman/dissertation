@@ -1,12 +1,12 @@
 TARGET?=kgorman.pdf
 
 pdf: 
-	pdflatex kgorman
+	xelatex kgorman
 
-bib: kgorman.pdf
+bib: pdf
 	bibtex kgorman
-	pdflatex kgorman
-	pdflatex kgorman
+	xelatex kgorman
+	xelatex kgorman
 
 clean:
 	rm -f *.aux *.toc *.log *.lot *.pdf
