@@ -1,0 +1,89 @@
+Imagine a word $W$ from some donor language borrowed into a recipient language as $W'$. For the sake of simplicity, I further assume speakers of both languages are monolingual and that the contact is not in any way mediated by writing. There are many possible explanations for a nonvacuous function mapping $W$ to $W'$. 
+
+In many cases, $W$ is the target of one or more synchronic processes in the source language and $W'$ is the expected outcome. These synchronic processes can give rise to the adaptation under the assumption that $W$ is perceived faithfully by speakers of the recipient language, and thus set up as the UR for the loanword. Naturally, the application of the synchronic processes will produce outputs of $W'$. Unless new alternations are introduced, speakers who are not in contact with the donor language will treat $W'$ as the UR. Any instance of this account can be falsified by showing that the synchronic processes used to characterize the adaptation are incorrect characterizations of the recipient language.
+
+In such a case, the relation of $W$ to $W'$ might instead represent lossy perception of $W$ as $W'$ by speakers of the recipient language \citep[e.g.,][]{Halle1998b,Dupoux1999,Peperkamp2008}, in which case the speakers of the recipient language have no access to $W'$. However, it is not at all clear what kind of evidence would suffice to falsify this account. The presence of alternations mapping 
+
+
+
+The phonological account predicts that speakers would produce $W'$, even if, contrary to the perceptual account, they could reliably perceive $W$. This is schematized below:
+
+\ex Perceptual (non)-effects on loanword adaptation: 
+\begin{tabular}{l l l}
+a. & Perfect perception: & /W/ $\rightarrow$ [W']
+b. & Lossy perception:   & /W'/ $\rightarrow$ [W']
+\end{tabular} \xe
+
+The same falsification issue is characteristic of accounts which suggest adaptation is the result of speakers' difficulty with certain non-native articulatory gestures \citep[e.g.,][]{Ussishkin2003}. 
+
+
+
+
+These alternative accounts are more persasive when the adaptation does not correspond to an alternation in the recipient language. 
+
+
+
+Phonology might be said to be active in perceptions of non-native phones or phonemes. 
+
+phonological 
+
+This in fact is a problem for any attempt to a problem for any attempt to a problem for any attempt to a problem for any attempt to 
+
+Any attempt to show that perceptual constraints are independent of 
+
+it is not clear that there are strong constraints on phonological perception of
+
+what would constrain perception
+
+Similar concerns apply to accounts that 
+
+only telepathy could allow speakers of the recipient language access to $W$ at all. 
+
+do not have access to the faithful $W$
+
+\citep[e.g.,][41]{Hjelmslev1970}
+
+\citet{Werker1984,Polka1994}
+
+in some fashion that does not directly result 
+
+
+It could even reflect speakers' knowledge of static generalizations about the native lexicon, divorced from their knowledge of alternation phonology. 
+
+
+It may also reflect an semi-automonous module of grammar dedicated solely to loanword
+
+interpretation of orthographic conventions, perceptual biases, and/or motor
+programs imposed by knowledge of L, or even a special grammatical
+device for loanword adaptation. I am entirely sympathetic to these
+models. But it is possible that W is perceived faithfully and is set
+up as a UR, and the relation of W to W' in the speech of speakers of L
+in contact with the source language corresponds to a synchronic
+process in L.
+
+
+
+\citep[][34f.]{Hjelmslev1970}
+
+Hooper concurs.
+
+However, Hooepr does grant a type of phonotactic constraint on underlying forms. She claims that these constraints are all delimited in terms of surface syllablification. For instance, in a language which only has CV syllables, there is a condition requires syllable boundaries on either side of any CV sequence (ibid., p. 100). 
+
+this is a very surfacey
+
+In evaluating this claim, we should ask whether this has any role to play in the grammar at all. 
+Hooper's discussion of Japanese loanwords makes it clear that she 
+
+Many 
+
+[bi:.rɯ]
+
+``This type of process seems to show that syllable-formatino is productive, and that there is very possibly a rule that inserts V's into syllables in the correct position.'' \citep[][101-102]{Hooper1973}.
+
+\citep{Hooper1973} insertion of syllable boundaries and vowels.
+
+We might problematize this a bit. 
+
+ODAWA
+
+

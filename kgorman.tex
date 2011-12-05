@@ -14,12 +14,13 @@
 \usepackage{courier}
 \usepackage{expex}
 
-%\usepackage{libertine}
 \usepackage{xunicode}
 \usepackage{fontspec}
-\usepackage{xltxtra}
-\setromanfont[Mapping=tex-text]{LinLibertineO}
-%\setsansfont{LinBiolinumO}
+\defaultfontfeatures{Mapping=tex-text}
+%\usepackage{xltxtra}
+%\setmainfont[Mapping=text-tex]{LinLibertineO}
+\usepackage{libertine}
+%\setsansfont[tex]{LinBiolinumO}
 %\setmonofont{CourierNewPSM}
 
 %\usepackage{tipx} % OT commands
@@ -41,6 +42,7 @@
 \newcommand{\lm}{\textlengthmark}
 \newcommand{\buf}{\hspace{0pt}}
 \newcommand{\gap}{\rule{.21cm}{0.4pt}}
+\newcommand{\pal}{\textceltpal}
 \newcommand{\shade}{\cellcolor[gray]{0.7}}
 
 %\newcommand{\amac}{\unichar{257}} % macron a
@@ -71,7 +73,7 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 
 \department{Linguistics}
 
-\abstractfile{abs} % 350 word limit: 1. statement of problem 2. procedure and methods used 3. result 4. conclusions
+\abstractfile{abs} 
 \acknowledgementsfile{ack}
 %\dedicationfile{ded} % will probably not use this -- KG
 \prefacefile{pre}
@@ -79,42 +81,23 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 \dedication{\center To my parents}
 
 \begin{document}
-
-% more kyle stuff
 \frenchspacing
 
 \FrontMatter
-
 \include{clusters}
-
-\chapter{Wordlikeness without phonotactics}
 \include{wordlikeness}
-
-\chapter{Morphology's dirtiest little secret}
-%[$\pm$ \textsc{Lexical Insertion}] forever}
 \include{lexinsertion}
-
-\chapter{Case studies in inflectional gaps}
 \include{inflectional}
 
 \appendix
 
-\chapter{Data from Chapter 1}
 \input{Aclusters}
-
-\chapter{Data from Chapter 2}
 \input{Awordlikeness}
-
-\chapter{Data from Chapter 4}
-\lipsum
 \input{Ainflections}
-
-\chapter{Zipfian simulation code}
 
 \lstset{language=Python, basicstyle=\scriptsize\ttfamily, showstringspaces=false, upquote=false}
 \lstinputlisting{zipf_sim.py}
 
 \bibliographystyle{pwpl}
 \bibliography{kgorman.bib}
-
 \end{document}
