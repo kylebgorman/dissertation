@@ -1,0 +1,417 @@
+\chapter{Life without morpheme structure constraints}
+
+\section{Introduction}
+
+\subsection{The claim}
+
+\ex \textsc{Empirical principle}: // any constraint on the phonological contents of a morph operates on a domain either smaller or larger than the morph \xe
+
+\subsection{On the desirability of a theory free of MSCs}
+
+\subsubsection{Duplication and conspiracy} 
+
+noted first by stanly
+
+\citet[][401]{Stanley1967}
+
+Another major trade-off-, discussed by \citet[][?]{Harms1968}, is between rule and lexical economy; one can imagine models with both aspects.
+
+\citet[][?]{Kisseberth1970}
+and 
+\citet[][?]{Kenstowicz1977}
+
+conspiracy
+
+\citet[][]{Shibatani1973} 
+
+\citet[][310f.]{Clayton1976} also claims that ther is no evidnece that MSCs can diachronically change without changes in the narrow phonology.
+
+A key point, made by \citet[][301]{Clayton1976} with respect to MSCs, is that duplication amounts to claim that ``the two statements represent independent phenomena''. 
+
+
+% kisseberth & kenstowicz, stanley vs. hooper
+\subsubsection{Computational inertness} 
+
+\begin{quotation}
+Even if we, as linguists, find some generalizations in our description of the lexicon, there is no reason to posit these generalizations as part of the speaker's knowledge of their language, since they are computational inert and thus irrelevant to the input-output mappings that grammar is responsible for. \citep[][18-19]{PE}
+\end{quotation}
+
+\subsubsection{Falsifiability}          % wordlikeness 
+
+Also in Chapter 3, I will provide explicit quantitative evidence that highly statistically reliable generalizations identified by linguists may play no role in wordlikeness tasks. This does not eliminate the possibility that some constraints, either stated on the 
+
+but any study that uses statistics about the structure of underlying forms may be modeling a generalization that has no synchronic status at all.
+
+outside the extension of a speaker's phonology \citep[][3]{Goldsmith1995}.
+
+Generative phonologies are not constrained to be \emph{bijective},\footnote{Formally, a function $f(X) \rightarrow Y$ is bijective if only if $\forall y \in Y . \exists! x \in X . y = f(x)$. 
+% SEE PMW
+}
+
+leaving the underlying form of a morph often underdetermined even when the URs of roots are known. For instance, the surface form \emph{frōns} in Latin could mean either `forehead', from /front-s/ (cf. gen.sg. \emph{frontis}) or `leaf', from /frond-s/ (cf. gen.sg. \emph{frondis}). From the surface form alone, there is no way to decide if an [ns] is from /nts/, /nds/, or perhaps /ns/ (though see \citealt{Gorman2011b}). Countless other examples of this type could easily be adduced.
+
+%One might admit some indeterminacy in underlying form; for instance, giving \emph{frōns} a tentative UR /fronT-s/, where /T/ is an archiphoneme representing /t, d/. Even determining such degenerate URs from surface forms is itself not guaranteed to be efficiently computable \citep{Barton1987}, casting doubt on the plausibility of ``inverted phonology'' as the appropriate cognitive model \citep[see][530 for discussion]{Anderson1988}.
+
+\subsection{Outline}
+
+\section{A brief history of the MSC}
+
+A brief note on the organization of this section: the subsections below correspond to chronologically ordered theoretical periods, but within each period, no attempt has been made to respect chronology.
+
+\subsection{The structuralist MSC}
+
+\subsubsection{Constraints on phoneme sequences}
+% Vogt, Fischer-Jorgensen
+
+\begin{quotation}
+\ldots the fact that some [clusters--KG] are not found must be due to accidental gaps in the inventory of signs, and cannot be explained by structural laws of the language. \citep[][]{Fischer-Jorgensen1952}
+\end{quotation}
+
+\noindent
+Hans \citeauthor{Vogt1954} makes a similar observation in his study of Georgian clusters
+
+\begin{quotation}
+Although my material is drawn from a fairly extensive corpus---all accessible dictionaries and vocabularies, printed texts of tens of thousands of pages as well as ordinary speech---there is every reason to believe, as experience has shown, that additional material would yield new clusters. The material will never be complete. It will always contain accidental gaps \ldots partly because some clusters by pure chance do not occur in the vocabulary. \citep[][30]{Vogt1954}
+\end{quotation}
+
+\subsubsection{The morph in phonology}
+% German, Russian
+% Bloomfield, Jakobson
+
+A major result of the American structuralists was the finding that generalizations which hold of the sound sequences found in underlying forms may not hold across morpheme boundaries. If this is correct, then there must be some sense in which phonology is sensitive to the presence of morpheme boundaries. In his history of phonology, \citet[][267]{Anderson1985} credits this innovation to \citet{Bloomfield1930}, who proposes that a problem in the phonemic analysis of German can be resolved by allowing for allophony to make reference to morpheme boundaries. \citeauthor{Bloomfield1930} notes that [ç] and [x] can be cast as allophones, despite the existence of apparent minimal pairs like \emph{Kuchen} [ku\lm xən] `cake' $\sim$ \emph{Kuhchen} [ku\lm çən] `cow-let'. \citeauthor{Bloomfield1930}'s claim is that these words differ not just in their medial consonsant but also that the latter is a compound, marked with the diminutive \emph{-chen} (cf. \emph{Kuh} `cow'). Under the assumption that [x] occurs in this position (before a back vowel) only when this preceding vowel belongs to the same word or morpheme, [ç] and [x] can be cast as allophones of the same phoneme (likely /ç/, the basic variant).
+
+While \citeauthor{Bloomfield1930} is known for introducing morphemic structure into phonology, a member of the Prague circle developed an arguably more sophisticated approach only two years later. \citet{Jakobson1932} attributes a number of phonological properites of the Russian imperative to morpheme juncture. For instance, most Russian infinitives end with a final /t\pal/. The reflexive variant of these verbs is marked with a final /-sa/, which feeds a general process of regressive voicing assimilation, and this /\ldots t\pal-s\ldots/ juncture triggers the loss of palatalization. However, palatalization of a stem-final labial or coronal---including /t\pal/, as in (\nextx c)---is preserved in reflexive imperatives, which are formed by attaching the reflexive /-sa/ to the bare stem.\footnote{I have taken a number of liberties with \citeauthor{Jakobson1932}'s presentation of the data, which uses a highly abstract phonemic transcription. The broad phonetic transcriptions below are the result of consultations with N linguistically na\"ive native Russian speakers. Palatalization is marked even where not constrastive.}
+
+\ex Russian reflexives \citep[after][]{Jakobson1932}: \\
+\begin{tabular}{l l l l} %\toprule
+   &  infinitive & imperative \\ %\midrule
+a. & [slav\pal itsə] & [slaf\pal sə] & `be glorious'    \\
+   & [upram\pal itsə]              & [upram\pal sə]          & `be stubborn'    \\
+b. & [kras\pal itsə]         & [kras\pal sə]           & `put on makeup'  \\
+   & [ʒar\pal itsə]       & [ʒar\pal sə]         & `roast'          \\
+c. & [zəbytsə] & [zəbut\pal sə] & `forget' \\ %\bottomrule
+%   & ab\'utsa      & ab\'ujsa     & `put on shoes'   \\
+\end{tabular} \xe
+
+\noindent
+Both (\lastx c) forms contain a /t\pal-s/ juncture, though palatalization is only preserved in the imperative. \citeauthor{Jakobson1932} proposes that the phonology treats them differently: the imperative does not undergo loss of palatalization. A few years later, \citet{Trnka1936}, another member of the Prague Circle, makes the connection between \citeauthor{Jakobson1932}'s hypothesis and phonotactic generalizations.
+ 
+\subsubsection{The morpheme structure constraint}
+% Mixteco
+% Pike 
+
+A natural consequence of this view is that generalizations about sound sequences found within morphemes are necessarily different within and across morpheme boundaries, and \citet{Pike1947b} argues that the distributional analysis of sound sequences must take morphology into account. \citeauthor{Pike1947b} discusses limitations on possible vowel sequences in Mixteco monomorphs, but none of these generalizations hold across morpheme boundaries, at least according to the phonological analysis of a short Mixteco text in one of \citeauthor{Pike1944}'s earlier papers.
+
+\ex Mixteco MSCs \citep{Pike1947b} and complex words \citep{Pike1944}: \\
+\begin{tabular}{r l l l} %\toprule
+   & MSC & complex exception \\ %\midrule
+%a. & *{C}a{C}e & [k\'a-\textsuperscript{n}dee] & `kept \ldots inside' \\
+%b. & *{C}\textipa{@}{C}e & [n\`i-k\`ə bə-de] & `who entered'        \\
+%c. & *{C}e{C}i & [te-n\'i-ke\textsuperscript{n}da] & `was walking         \\
+%d. & *{C}i{C}e & [te-n\`i-kee-t\`ə] & `and went away'      \\ %\toprule
+%e. & *{C}e{C}o & b\'e\textglotstopvari e-\v{z}\'o & `our house'          \\
+%f. & *{C}eo & ke-o-d\'e & `we eat him'         \\
+a. & *{C}a{C}e & [ká\textsuperscript{n}dee] & `kept \ldots inside' \\
+b. & *{C}ə{C}e & [nìk\`əbəde] & `who entered'        \\
+c. & *{C}e{C}i & [teníke\textsuperscript{n}da] & `was walking         \\
+d. & *{C}i{C}e & [tenìkeet\`ə] & `and went away'      \\ 
+\end{tabular} \xe
+
+\noindent
+\citet[][166]{Pike1947b} affirms that the morpheme is ``marked'' by the violation of morpheme-internal sequence restrictions, an idea further developed by \citet{Harris1955} as a morpheme discovery routine.
+
+\subsection{The early generativist MSC}
+
+\subsubsection{Neutralization in phonology} 
+% English (Can. raising, nasal allophones)
+% Joos, Harris, Halle
+
+\citet{SPR}
+\citet[][143]{Joos1942} 
+\citet[][69f., originally printed in 1951]{Harris1960}
+
+Nasal allophone
+\citet{Borowsky1986}
+
+A minimal extension of \citeauthor{Harris1960}'s proposal gives rise to the rule ordering analysis given by \citet[][238]{Chomsky1957}. 
+
+\footnote{The discussion here is loosely adapted from \citealt{Idsardi2006}.}
+
+\subsubsection{Lexical redundancy} 
+
+\citet[][101]{Chomsky1965}
+[blɪk] vs. [bnɪk]
+
+\citet[][101]{Chomsky1965}
+\citet{Stanley1967}
+\citet{SPE}
+
+\begin{quotation}
+If, on the other hand, we interpret the set of sequence structure rules as a statement of constraints on systematic phoneme sequences, then this set provides a characterization of the set of `possible' morphemes of Russian. This fact is clear if, as is quite natural, we regard a `possible'  morpheme as a form which may or may not occur in the lexicon, but whose phonological structure violates no sequence structure rule (and of course, no segment structure rule) of the language. \citep[][401]{Stanley1967}
+\end{quotation}
+
+\subsubsection{Surface constraints}
+
+\citeauthor{Hale1965}
+
+\begin{quotation}
+To specify more exactly...which clusters can actually occur, and where, would require paraphrase of a subset of the morphophonemic rules, since the `possible clusters' in Papago, and their distributions, are automatically specified by a number of very general, independently motivated rules which impose a phonetic interpretation upon the morphophonemic representation. \citep[][297]{Hale1965}
+\end{quotation}
+
+\begin{quotation}
+...we are forced to incorporate into every complete generative grammar a characterization of the distinction between admissible and inadmissible segment sequences. The fact ectively cuts the ground out from under the recent suggestion that generative grammars be supplemented with special phonological grammars, since the sole purpose of phonological grammars is to characterize the distinction between admissible and inadmissible segment sequences. \citep[][61-62]{Halle1962}
+\end{quotation}
+
+Cast in somewhat disparate theoretical terms,
+
+\citet[][]{Postal1968} concludes, after a lengthy discussion of morpheme structure in Mohawk, that ``the restrictions on phoneme combination are completely a function of the grammar and morphophonemic rules'' (p.~212) and that ``an independent phonotactics \ldots~is in all cases useless and redundant in its entirety. It describes or accounts for not one fact which is not accounted for without it'' (p.~214).
+
+German
+\citet[][94f.]{Shibatani1973} 
+\citet[][82f.]{Hooper1973}
+\citet{Clayton1976}
+
+\subsubsection{Stampean occultation}
+
+English
+\citet[][28f.]{Stampe1979}
+\citet[][205f.]{Dell1973} \emph{restrictions induites}
+
+Turkish
+\citet{Zimmer1969}
+
+Russian
+\citet[][]{Anderson1974}
+
+Odawa
+\citet{Kaye1974}
+
+Critiqued by 
+\citet[][310]{Clayton1976}
+\citet[][73f.]{Kiparsky1982b}
+
+Desano
+\citet{Kaye1971} and discussed at length by \citet{Leben1973}
+
+
+Sanskrit
+(which appears to be due to \citealt{MacEachern1999})
+\citet{Gallagher2010a}
+
+which \citet{Sag1974} traces back to the ancient Sanskrit grammarian Pāṇini. It is also, as \citeauthor{Sag1974} notes, the account given by \citet[][\S141f.]{Whitney1889} in his Sanskrit grammar. \citet[][59f.]{Hoenigswald1965} makes a similar claim.  This account is put forth by \citet{Sag1974,Sag1976} and \citet{Schindler1976}. \citet{Stemberger1980}, \citet{Borowsky1983}, and \citet{Kaye1985} present an autosegmental version of the aspirate spreading account; \citet{Janda1989} critique a number of the specifics of these accounts.
+
+\citet[][109f.]{Zwicky1965} and \citet[][\S3.2]{Kiparsky1965} independently propose a solution with underlying diaspirates and Grassmannian dissimilation, one that is further developed by \citet{Anderson1970}, \citet{Phelps1973}, \citet{Phelps1975} and \citet{Hoard1975}.
+
+Ofo
+\citet{DeReuse1981}
+\citet[][38-42]{MacEachern1999}, 
+
+\subsection{MSCs beyond the segment}
+
+\subsubsection{Suprasegmental MSCs}
+
+Mende
+\citet{Leben1973}
+
+\subsubsection{Autosegmental MSCs}
+% Greenberg, Goldsmith, McCarthy
+
+Etung
+\citet{Edmondson1966}
+\citet[][132]{Goldsmith1976}
+
+\citet{McCarthy1979}
+\citet{McCarthy1981b}
+\citet{McCarthy1986}
+
+\citet{Greenberg1950},
+\citet[][178]{Greenberg1950}, who observes that 
+
+``There are no Proto-Semitic roots with identical consonants in the first and second positions''
+
+Tigrinya
+\citet{Berhane1991}
+\citet{Buckley1990a}
+\citet{Buckley1997}
+\citet{Buckley2000c}
+
+\subsubsection{Prosodic licensing}
+
+\citet{Ito1989}
+
+English
+\citet{McCarthy1979}
+\citet[][63, 73]{Kiparsky1982b}
+\citet[][19f.]{Wolf2009}
+
+Yawelmani
+%\citet{Newman1944}
+\citet{Kuroda1967}
+\citet{Kisseberth1969}
+\citet{Kisseberth1970}
+
+\subsection{The MSC in Optimality Theory}
+
+\subsubsection{Richness of the base}
+
+\subsubsection{Lexicon Optimization}
+
+\subsubsection{Recent developments}
+% lexical redunancy studies as evidence, gradience
+
+\section{The MSC in acquisition}
+
+\subsection{Phonotactic knowledge}
+
+\subsubsection{Head turn preference studies}
+\citet{Jusczyk1993b} % dutch
+
+\citet{Jusczyk2002}
+
+\subsubsection{Infant lexicons}
+
+%an idea which is already endorsed by \citet{Shibatani1973}.
+
+\citet{Werker1984}
+
+\citet{Swingley2000,Swingley2002}
+relatively detailed lexical entries, at least including contrastive features
+by demonstrating that children recognize minor mispronunciations of familiar words
+
+\citet{Jusczyk1995}, who find that 7.5-month-old infants can find words in sentential context (that is, running speech).
+
+However, \citet[][563]{Johnson2001} caution that ``[e]ight-month-olds know very few words and are not likely to use lexical knowledge in segmenting speech.''
+
+\citet{Bergelson2010}
+
+\footnote{This should come as no surprise: \citet[][294]{Darwin1877} who writes that his seven-month-old child knew the name of his nurse.}
+
+% My quick study
+\citet{Jusczyk1994}
+
+exs 1-2:
+high prob [R IH S, G EH N, K AE Z], low prob [Y AW JH, SH AO CH, G UW SH]
+
+ex 3:
+high prob [CH AH N, T AA L S, K IY K, V EY T, M ER N], low prob [Y AW SH, SH AY B, G IY TH, TH EY JH, CH ER G]
+
+\citet{CDI,Dale1996}
+\citet{Stadthagen-Gonzalez2006}
+\citet{Cortese2008}
+\citet{Bird2001b}
+
+\subsection{Phonological acquisition}
+
+\subsubsection{Learning of alternations}
+
+\citet{White2008}
+
+\subsubsection{Learning of structural descriptions}
+
+\citet{Hayes2008}
+
+\begin{quotation}
+The data presently available to us suggests that is is indeed the case that all the types of rule interaction sketched above---feeding, counterfeeding, bleeding, and counterbleeding---are required both for the application of separate rules and also \emph{for the multiple applications of a single rule}. \citep[][327, emphasis mine]{Kenstowicz1979} 
+\end{quotation}
+
+Lardil iteration
+\citet{McCarthy2003a}
+
+\citet{Anderson1969}
+\citet{Howard1972}
+\citet{Kenstowicz1973} 
+For instance, reviewing work by \citet{Johnson1972} and \citet{Kaplan1994}
+
+and is endorsed by \citet[][101]{Kiparsky1973c}
+
+\citet{Gorman2011b}
+
+For instance
+\emph{targeted constraints}
+\citet{Wilson2001}
+
+\subsection{Word and morph segmentation}
+
+%\citet{Anderson1988}
+
+\subsubsection{In adults}
+\citet{Hay2004a}
+
+\footnote{Another concern, is that even the those forms that \citeauthor{Hay2004a} consider to be monomorphs may be morphologically complex. Some evidence for this is given in \S?.}
+
+\subsubsection{In children}
+
+\citet{Mattys2001a,Mattys2001b}
+
+\citet{Onishi2002,Chambers2003}
+% see gambell and yang
+
+% Adriaans
+\citet{Adriaans2010}
+
+% word seg
+\citet{Yang2004,Gambell2005,Lignos2010,Lignos2011}
+
+\citet{Jusczyk1999c}
+\citet{Johnson2001}
+
+\citet{Gambell2005}:
+if the infant extracts allophonic cues from the linguistic data, it seems...that she must have extracted a set of words to begin with. Hence, the assumptions and mechanisms required for the successful application of articulatory cues remain somewhat unclear.
+
+%\section{Loanword adaptation}
+% shibatani's rant on this
+%satisfying
+%\citep[e.g.,][]{Hyman1970,Danesi1985}
+%those which do not \citep[e.g.,][]{Yip1993,Ito1994,Ito1995}
+%with, perhaps, a relatively gradual cline of nativization \citep[e.g.,][]{Davidson1997}.
+
+\section{Formal aspects}
+
+\subsection{The generative architecture}
+
+\ex \textsc{Representational Hypothesis}: UG does not allow the imposition of language-specific constraints on underlying representations \xe
+
+\subsubsection{Underlying forms}
+% rich base assumption?
+
+\subsubsection{Complex word formation}
+
+\subsubsection{Phonological rule application}
+
+\subsection{Acquisition of underlying representations}
+
+\ex \textsc{Acquisitional Hypothesis}: The LAD does not search for language-specific constraints on underlying representations \xe
+
+\subsubsection{Stampean occultation}
+
+insights of \citeauthor{Stampe1979}, \citeauthor{Dell1973}, and others
+
+\subsubsection{The Alternation Condition and Lexicon Optimization}
+
+\subsubsection{Richness of the Base}
+
+%\citet{Prince2004}
+
+\subsection{Falsifiability of the hypothesis}
+
+\ex \textsc{Empirical Hypothesis}: // any constraint on the phonological contents of a morph operates on a domain either smaller or larger than the morph \xe
+
+\subsubsection{Inventory gaps}
+
+\subsubsection{Phonologically induced constraints}
+
+\subsubsection{Accidental gaps}
+
+practically a correlate of arbitrariness
+
+\citet[][]{Fischer-Jorgensen1952} and \citet{Vogt1954}
+
+\citet[94]{Hooper1973} claims that ``in languages that allow relatively complex consonant clusters, the occurring clusters represent only a small percentage of all theoretically possible consonant clusters.'' 
+
+\begin{quotation}
+In describing and explaining the phonotatic patterns in any language, phonologists recognize a distinction between accidental and systematic gaps in the lexcion. In practice, this distinction has often been applied in an intuitive and \emph{post-hoc} fashion. A gap is taken to be systematic if it belongs to a natural class of examples according to the current theory of the investigator. Otherwise, it is viewed as accidental. \citep[][180]{Frisch2004}
+\end{quotation}
+
+(and unfortunately, the approach taken by \citeauthor{Frisch2004}).
+
+Surely it is the case that if there were no more phonological constraints, there would be no
