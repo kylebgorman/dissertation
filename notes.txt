@@ -1342,4 +1342,8 @@ Surely it is the case that if there were no more phonological constraints, there
 
 \footnote{The one exception is \emph{says} [s\textepsilon z] instead of the expected *[sa\textsci z].}
 
+It must be stressed that under current assumptions, this is independent of whether predictable prosodic representations (particularly coda and onset identity) are part of the memorized underlying representation \citep[e.g.,][]{Vaux2003}.
 
+The derivative nature of 
+W
+\citet{Ito1989,Noske1993}
