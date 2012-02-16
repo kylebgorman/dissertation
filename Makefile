@@ -1,17 +1,18 @@
-TARGET?=kgorman.pdf
+TARGET=gorman_diss.pdf
+COMMAND=xelatex
 
 pdf: 
-	xelatex kgorman
+	$(COMMAND) gorman_diss
 
-bib: kgorman.pdf
-	bibtex kgorman
-	xelatex kgorman
-	xelatex kgorman
+bib: $(TARGET)
+	bibtex gorman_diss
+	$(COMMAND) gorman_diss
+	$(COMMAND) gorman_diss
 
 clean:
-	rm -f *.aux *.toc *.log *.lot *.pdf *.bbl *.blg
+	rm -f *.aux *.toc *.log *.lot *.bbl *.blg
 
-show: kgorman.pdf
-	pdf kgorman.pdf
+show: $(TARGET)
+	pdf $(TARGET) & open $(TARGET) &
 
 .PHONY: clean show

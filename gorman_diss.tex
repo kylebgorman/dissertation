@@ -1,0 +1,233 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{upenndiss}
+
+\usepackage{longtable}
+\usepackage{tipa}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{colortbl}
+\usepackage{arydshln} % colortbl >> arydshln is a crit. ordering
+\usepackage{courier}
+\usepackage{expex}
+\usepackage[all]{xy}
+
+%\usepackage{libertine}
+\usepackage{mathspec}
+\setmainfont[Mapping=tex-text]{Linux Libertine O}
+\setmathfont(Digits,Greek,Latin){Linux Libertine O}
+
+%\usepackage[math]{mathspec}
+%\setmathfont{Linux Libertine O}
+
+%\usepackage{tipx} % OT commands
+%\usepackage{wasysym}  
+%\usepackage{marvosym}
+\usepackage{graphicx}
+%\newcommand{\frwn}{\frownie}
+%\newcommand{\hand}{\ding{43}} 
+%\newcommand{\np}{\textObullseye}
+
+%\usepackage[T1]{fontenc} % allows for dh, th, etc.
+%\usepackage[utf8x]{inputenc}
+
+% programming language syntax highlighting
+\usepackage{listings}
+
+% my shortcuts
+\newcommand{\zr}{$\emptyset$}
+\newcommand{\lm}{ː}
+\newcommand{\buf}{\hspace{0pt}}
+\newcommand{\gap}{\rule{.21cm}{0.4pt}}
+\newcommand{\pal}{\textsuperscript{j}}
+\newcommand{\shade}{\cellcolor[gray]{0.7}}
+\newcommand{\arrow}{$\longrightarrow$}
+
+% lorem ipsum FIXME
+\usepackage{lipsum}
+
+\usepackage[round]{natbib}
+\bibpunct[:]{(}{)}{,}{a}{}{,}
+
+%\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\e}[1]{\textsc{e}{$#1$}}
+
+\title{Words \& Gaps}
+
+\author{Kyle Gorman}
+\supervisor{Charles Yang \\ Associate Professor, Linguistics, Computer and Information Science, \& Psychology}
+\gradchair{Eugene Buckley \\ Associate Professor, Linguistics}
+\committee{Stephen R. Anderson \\ Dorothy R. Diebold professor of Linguistics, Psychology, \& Cognitive Science, Yale University \and
+Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science \and
+Rolf Noyer \\ Associate Professor, Linguistics}
+
+\copyrighttrue
+%\copyrightyear{2011}  % Defaults to the current year
+
+\department{Linguistics}
+
+\abstractfile{abs} 
+\acknowledgementsfile{ack}
+%\dedicationfile{ded} % will probably not use this -- KG
+%\prefacefile{pre}
+
+\dedication{\center To my parents}
+
+\begin{document}
+\frenchspacing
+
+%\FrontMatter
+%
+%\chapter{Morpheme structure constraints in generative grammar} \input{1}
+%    \section{A brief history of MSCs} %\input{1.1}
+%        \subsection{Structuralism} %\input{1.1.1}
+%            \subsubsection{Morpheme boundaries in phonology} %\input{1.1.1.1}
+%            \subsubsection{The morph as a constraint domain} %\input{1.1.1.2}
+%            \subsubsection{Biuniqueness and neutralization} %\input{1.1.1.3}
+%        \subsection{Early generativism} %\input{1.1.2}
+%            \subsubsection{\citet{Stanley1967}} %\input{1.1.2.1}
+%            \subsubsection{Surface constraints and occultation} %\input{1.1.2.2}
+%            \subsubsection{The duplication problem} %\input{1.1.2.3}
+%        \subsection{Autosegmentalism} %\input{1.1.3}
+%            \subsubsection{Syllable structure} %\input{1.1.3.1}
+%            \subsubsection{Morph features} %\input{1.1.3.2}
+%            \subsubsection{The Obligatory Contour Principle} %\input{1.1.3.3}
+%        \subsection{Classical Optimality Theory} %\input{1.1.4}
+%            \subsubsection{Richness of the Base} %\input{1.1.4.1}
+%            \subsubsection{Freedom of Analysis} %\input{1.1.4.2}
+%            \subsubsection{Undominated constraints} %\input{1.1.4.3}
+%        \subsection{Recent developments} %\input{1.1.5}
+%            \subsubsection{Language acquisition} %\input{1.1.5.1}
+%            \subsubsection{Psycholinguistic tasks in adults} %\input{1.1.5.2}
+%            \subsubsection{Loanword adaptation} %\input{1.1.5.3}
+%    \section{The null hypothesis} %\input{1.2}
+%        \subsection{The empirical proposal} %\input{1.2.1}
+%        \subsection{The acquisition principle} %\input{1.2.2}
+%        \subsection{Falsifiability} %\input{1.2.3}
+%        \subsection{Universal constraints?} %\input{1.2.4}
+%    \section{Outline of Part I} %\input{1.3}
+\chapter[2]{Accidental and structural gaps in English syllable contact} %\input{2}
+\label{clusters}
+    \section{Domain} %\input{2.1}
+        \subsection{Data source} %\input{2.1.1}
+        \subsection{Syllabification} \input{2.1.2}
+        \subsection{Inventory considerations} \input{2.1.3}
+        \subsection{Corpus statistics} \input{2.1.4}
+    \section{Evaluation} %\input{2.2}
+        \subsection{Static and derived constraints} \input{2.2.1}
+        \subsection{Computational models} \input{2.2.2}
+        \subsection{Statistical properties of syllable contact} \input{2.2.3}
+    \section{Conclusion} %\input{2.3}
+%\chapter{Static and derived constraints on Turkish vowel harmony} %\input{3}
+%\label{vowels}
+%    \section{Wordlikeness predictions} %\input{3.1}
+%        \subsection{Alternation vs. phonotactic} %\input{3.1.1}
+%        \subsection{Lexical statistics} %\input{3.1.2}
+%    \section{Lexical statistics} %\input{3.2}
+%        \subsection{Labial harmony} %\input{3.2.1}
+%        \subsection{Labial attraction} %\input{3.2.1}
+%    \subsection{Wordlikeness results} %\input{3.3}
+%        \subsection{Labial harmony} %\input{3.3.1}
+%        \subsection{Labial attraction} %\input{3.3.2}
+%    \section{Conclusion} %\input{3.4}
+%        \subsection{Naturalness} %\input{3.1.3}
+%\chapter{Gradient and categorical aspects of wordlikeness judgements} %\input{4}
+%\label{wordlikeness}
+%    \section{Aspects in the theory of wordlikeness} %\input{4.1}
+%        \subsection{Gradience in judgements} %\input{4.1.1}
+%            \subsubsection{Task model} %\input{4.1.1.1}
+%            \subsubsection{Falsifiability} %\input{4.1.1.2}
+%        \subsection{The ontology of wordlikeness} %\input{4.1.2}
+%            \subsubsection{Gross phonotactic violation} %\input{4.1.2.1}
+%            \subsubsection{Phonological statistics} %\input{4.1.2.2}
+%            \subsubsection{Lexical similarity} %\input{4.1.2.3}
+%    \section{Evaluation} %\input{4.2}
+%        \subsection{Assessing gradience} %\input{4.2.1}
+%            \subsubsection{Response multimodality} %\input{4.2.1.1}
+%            \subsubsection{Prediction multimodality} %input{4.2.1.2}
+%        \subsection{Assessing models} %\input{4.2.2}
+%            \subsubsection{Unimodal fit} %\input{4.2.2.1}
+%            \subsubsection{Bimodal fit} %\input{4.2.2.2}
+%            \subsubsection{Intramodal fit} %\input{4.2.2.3}
+%    \section{Conclusion} %\input{4.3}
+%\chapter{Inflectional gaps in generative grammar} %\input{5}
+%    \section{A brief history of inflectional gaps} %\input{5.1}
+%    \section{The null hypothesis} %\input{5.2}
+%    \section{Outline of Part II} %\input{5.3}
+%\chapter{A new theory of inflectional gaps} %\input{6}
+%\label{theory}
+%    \section{Proposal} %\input{6.1}
+%        \subsection{Unproductivity and inflectional gaps} %\input{6.1.1}
+%        \subsection{The Tolerance Principle} %\input{6.1.2}
+%    \section{Case studies in Tolerance} %\input{6.2}
+%        \subsection{English past tense} %\input{6.2.1}
+%            %\subsubsection{Acquisition evidence} %\input{6.2.1.1}
+%            %\subsubsection{Processing evidence} %\input{6.2.1.2}
+%        \subsection{German noun plurals} %\input{6.2.2}
+%            %\subsubsection{Acquisition evidence} %\input{6.2.2.1}
+%            %\subsubsection{Processing evidence} %\input{6.2.2.2}
+%    \section{Evaluation} %\input{6.3}
+%       \subsection{English pasts} %\input{6.3.1}
+%            %?
+%       \subsection{Spanish diphthongization and velar insertion} %\input{6.3.2}
+%            %?
+%       \subsection{Greek stress shift} %\input{6.3.3}
+%            %?
+%       \subsection{Russian 1sg. imperfectives} %\input{6.3.4}
+%            %?
+%    \section{Conclusion} %\input{6.4}
+%\chapter{Other theories of inflectional gaps} %\input{7}
+%\label{insufficient}
+%    \section{Inviolable constraints} %\input{7.1}
+%        \subsection{Proposal} %\input{7.1.1}
+%            \subsubsection{Inviolable constraints in a rule-based phonology} %\input{7.1.1.1}
+%            \subsubsection{MParse} %\input{7.1.1.2}
+%            \subsubsection{Control} %\input{7.1.1.3}
+%       \subsection{Evaluation} %\input{7.1.3}
+%            \subsubsection{Turkish and Turkish$'$} %\input{7.1.3.1}
+%            \subsubsection{Kinande reduplication} %\input{7.1.3.2}
+%            \subsubsection{Swedish indefinite adjectives} %\input{7.1.3.3}
+%            \subsubsection{Tagalog infixation} %\input{7.1.3.4}
+%    \section{Morphophonological confidence} %\input{7.2}
+%        \subsection{Proposal} %\input{7.2.1}
+%            \subsubsection{Confidence} %\input{7.2.1.1}
+%            \subsubsection{Familiarity} %\input{7.2.1.2}
+%        \subsection{Evaluation} %\input{7.2.2}
+%            \subsubsection{English past tense verbs} %\input{7.2.2.1}
+%            \subsubsection{Spanish diphthongization} %\input{7.2.2.2}
+%    \section{Neutralization} %\input{7.3}
+%        \subsection{Proposal} %\input{7.3.1}
+%            \subsubsection{Syntactic semantic neutralization} %\input{7.3.1.1}
+%            \subsubsection{Morphological neutralization} %\input{7.3.1.2}
+%        \subsection{Evaluation} %\input{7.3.2}
+%            \subsubsection{Surmiran modals} %\input{7.3.2.1}
+%            \subsubsection{English *\emph{amn't}} %\input{7.3.2.2}
+%    \section{Storage} %\input{7.4}
+%        \subsection{Proposal} %\input{7.4.1}
+%            \subsubsection{Stem storage} %\input{7.4.1.1}
+%            \subsubsection{Whole word storage} %\input{7.4.1.2}
+%        \subsection{Evaluation} %\input{7.4.2}
+%            \subsubsection{English past tense verbs} %\input{7.4.2.1}
+%            \subsubsection{Spanish diphthongization} %\input{7.4.2.2}
+%    \section{Conclusion} %\input{7.5}
+\appendix
+\renewcommand{\arraystretch}{0.25}
+\chapter{Data from Chapter \ref{clusters}} \input{A} \label{A}
+%\chapter{Data from Chapter \ref{vowels}} %\input{B}
+%\chapter{Data from Chapter \ref{wordlikeness}} 
+%    \section{\citet{Greenberg1964} experiment B} \input{C.1}
+%    \section{\citet{Scholes1966} experiment 5} \input{C.2}
+%    \section{\citet{Albright2003b} norming study} \input{C.3}
+%\chapter{Data from Chapter \ref{theory}} %\input{D}
+%\chapter{Data from Chapter \ref{insufficient}} %\input{E}
+
+%\lstset{language=Python, basicstyle=\scriptsize\ttfamily, showstringspaces=false, upquote=false}
+%\lstinputlisting{zipf_sim.py}
+
+\bibliographystyle{pwpl}
+\bibliography{kgorman.bib}
+\end{document}

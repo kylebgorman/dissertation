@@ -1,6 +1,0 @@
-    Annote = {394:
-
-[gownp] > [g^np] > [gump]
-[D^Nd] > [D\'\textopeno Nd@] > [t\'\textopeno Ng@]
-[dZ umg] > [dZ\'u Ng@]},
-
