@@ -4,132 +4,54 @@ Having described the database of English syllable contact clsuters, I now consid
 
 \subsubsection{Statistical technique}
 
-Before the dawn of generative phonology, many linguists concerned themselves with documenting co-occurrence in various languages. \citet[][28]{Vogt1954} declares that a ``phonemic description of a language \ldots should also comprise a description of the phoneme combinations that occur or may be expected to occur in the language''. Studies in this tradition include the discussions of consononantal co-occurrence in Arabic and Javanese by \citet{Greenberg1950} and \citet{Uhlenbeck1950}, respectively. In the case of \citet{Greenberg1950}'s study, the primary generalization has no exceptions, but \citeauthor{Uhlenbeck1950}'s description of co-occurrence restrictions contains many exceptions. Many years later, \citet{Mester1988} revisits \citeauthor{Uhlenbeck1950}'s study and suggests a statistical method to distinguish between accidental and structural lexical dispreferences in the Javanese lexicon. 
+Before the dawn of generative phonology, many linguists concerned themselves with documenting co-occurrence in various languages. \citet[][28]{Vogt1954} declares that a ``phonemic description of a language \ldots should also comprise a description of the phoneme combinations that occur or may be expected to occur in the language''. Studies in this tradition include the discussions of consononantal co-occurrence in Arabic and Javanese by \citet{Greenberg1950} and \citet{Uhlenbeck1950}, respectively. \citeauthor{Uhlenbeck1950}, for instance, puts forth co-occurrence dispreferences, rather than exceptionless generalizations of the sort given by \citet{Greenberg1950}. Years later, \citet{Mester1988} revisits \citeauthor{Uhlenbeck1950}'s study and proposes a statistical technique, based on the chi-square test, to distinguish between accidental and structural lexical dispreferences in the Javanese lexicon. 
 
-\citeauthor{Mester1988}'s technique, which has been adopted by many subsequent studies (e.g., \citealt{Padgett1992,Padgett1995} on Russian; \citealt{Pierrehumbert1993}, \citealt{Frisch1996}, and \citealt{Frisch2004} on Arabic; \citealt{Berkley1994b,Berkley1994a,Berkley2000}, \citealt{Dmitrieva2008a}, \citealt{Dmitrieva2008b} on English), is based on the chi-square test. 
+\citeauthor{Mester1988}'s technique has been adopted by many subsequent studies (e.g., \citealt{Padgett1992,Padgett1995} on Russian; \citealt{Pierrehumbert1993}, \citealt{Frisch1996}, and \citealt{Frisch2004} on Arabic; \citealt{Berkley1994b,Berkley1994a,Berkley2000}, \citealt{Dmitrieva2008a}, \citealt{Dmitrieva2008b} on English). The null hypothesis $H_0$ is that some sequence occurs at no different a rate than the researcher expects, and the alternative hypothesis $H_1$ is that it is underrepresented. Given an observed frequency $O$ and also a frequency $E$ expected under the null hypothesis, the test is as follows.
 
-In this study, I use the Fisher exact test, which is isomorphic to this chi-square test. The chi-square test has been favored historically simply because it can be easily computed by hand, but it is equally easy to perform either test on a modern computer. Compared to the Fisher test, which is appropriate for small samples or rare events, the chi-square test has a serious defect, since it depends on an approximation which is only exact in the limit (i.e., with a hypothetically infinite sample), and therefore is not appropriate for small samples \citep[e.g.,][142]{Mester1988}.
+\ex $\displaystyle \textrm{Reject } H_0 \textrm{ iff } \frac{(O E) ^ 2}{E} >
+\chi^2$ \xe
 
-The opposite problem, difficulties scaling to large samples, is an unfortunate defect of the Monte Carlo procedure developed by \citet{Kessler2001} and applied to co-occurrence statistics by \citet{Martin2007,Martin2011} and \citet{Brown2010}. This technique, which is the Monte Carlo isomorph of the one-tailed chi-square test, depends on the ability to generate random (i.e., unbiased) permutations of large lists. This is much more difficult than prior researchers have realized, as I explain below; less mathematically inclined readers may wish to skip ahead. 
+%\footnote{This is the one-tailed version of the test.}
+  
+In this study, I use the \citet{Fisher1934} exact test, which is isomorphic to this chi-square test. Compared to the chi-square test, the Fisher exact test $p$-value is somewhat more difficult to compute, but both are automated by modern statistical packages and can be computed rapidly. The major advantage of the Fisher test over the chi-square test is that it is appropriate for small samples or rare events, whereas the chi-square test depends on an approximation which is only exact in the limit (i.e., with a hypothetically infinite sample), and therefore is not appropriate for small samples \citep[see][]{Gorman2012a}.
+%\citep[e.g.,][142]{Mester1988}.
 
-Any permutation of a list $L$ can be thought of as a list $S$ such that 
+On the other end of the spectrum, the Monte Carlo statistical procedure developed by \citet{Kessler2001} and applied to co-occurrence statistics by \citet{Martin2007,Martin2011} and \citet{Brown2010} does not scale to large samples. The Monte Carlo procedure is isomorphic to the one-tailed Fisher Exact test, and involves comparing observed co-occurrence counts to those produced by randomly generated samples.  This requires the researcher to generate random permutations, something which is particularly difficult for large samples, as I will explain; disinterested readers may wish to skip the following paragraph.
 
-$S_i$ 
+Any permutation of a sequence $L$ can be represented as a sequence $S$ of the same length, where the value of $S_i$ corresponds to the permuted position of $L_i$. Generating random permutations requires an unbiased method to generate all $N!$ of these lists with equal probability. Unfortunately, this is near impossible for $N$s of moderate size with current computational resources. Any pseudo-random number generator can be characterized by its ``period'', the number of pseduo-random numbers it can emit before repeating itself; this is also the upper limit for the number of random permutations that can be generated. The pseudo-random number generator used by both \citeauthor{Martin2011} and \citeauthor{Brown2010} has a period of approximately $2^{48}$, a number which turns out to be smaller than $17!$. For the large samples, sometimes in the thousands, used by these researchers, virtually all the possible permutations can never be generated by this method. As a consequence, the shuffling procedure is far from random and introducing the possibility that the statistical test is biased in unpredictable ways.
 
-the $i$th element in the permuted list is 
-
-
-the permuted position of the $i$th elemnt of $L$. Since 
-
-
-A permutation of a list of length $N$ can be thought of a vector $S$ such that $S_i$ is a counting number denoting the length of k
-
-as a list of $N$ unique counting numbers which are less than or equal to $N$; 
+As an example of the Fisher exact test as it is applied here, consider some of the Javanese co-occurrence facts considered by \citet{Mester1988}. \citeauthor{Mester1988} is at pains to show that there is a gradient dispreference for first and second root consonants which share the same major place. However, perfectly identical first and second consonants are exempt. Since 
 
 
-
-$N - 1$ 
-
-The problem is that even for moderately-sized lists, the number of possible permutations quickly exceeds modern computational capabilities. 
-
-
-
-
-To explain why this is so requires a short discussion of
-
-
-The pseudo-random number generator used by both \citeauthor{Martin2011} and \citeauthor{Brown2010} has a ``period'' of approximately $2 ^ 48$; this means that it repeats the same 281-trillion number pattern indefinitiely. 
-
-
-
-. What this means has a period of approximately $2 ^ 48$. What this means has a period of approximately $2 ^ 48$. What this means has a period of approximately $2 ^ 48$. What this means 
-
-use the Perl scripting language, which generally provides a pseudo-random number generator 
-
-
-
-
-Both 
-
-A list of $N$ elements has $N!$ different permutations. T
-
-When $N$ is large, t
-When $N$ is large, current computational 
-
-this greatly exceeds the abilities of the pseudorandom number generators 
-
-This often a collosal quantity 
-
-When $N$ is large, this is a collosal quantita
-
-
-with a ``period'' of approximately $2 ^ 48$, i.e., it will repeat itself after 
-
-
-
-
-I had a chance to write out my thoughts about the periodicity issue for Kessler's Monte Carlo method, and do a bit of research into Perl resources. 
-
-%If you're lucky, you have a version of Perl that uses the drand48 library function. The period is 2 ^ 48, around 281 trillion; after 281 trillion draws, it just regenerates the same 281 trillion numbers in the same order. 
-
-%A permutation of a list of N items can be thought of as a list of N - 1 random numbers; this is N - 1 because there's only one way to "permute" a one-element list (and in your method, only one outcome for the last element left). 
-
-%Given a period P, there are only P unique sequences of random numbers. Unfortunately, even for N = 18, N!, the number of possible permutations is far larger than the period of the Perl random number generator. That means there are many random permutations that can never be generated. When N gets significantly larger, virtually all random permutations can never be reached. In your CELEX compound study, for instance, N = 4758, and thus requires a period of approximately 2 ^ 51260 according to the Stirling approximation. But Perl can only reach 2 ^ 48 of them, a tiny fraction thereof.
-
-%I only have browsed Kessler's book, but I saw that he spoke about how hard it was to calculate the Fisher exact test. With all due respect, I think he's just wrong. It's difficult to compute a p-value via Monte Carlo test that is provably unbiased (for instance, I'm unaware of any publically-available pseudo-random number generator with a period big enough for the CELEX compounds study), but the Fisher exact test, the one-tailed variant of which is isomorphic to the shuffle test, can be computed in the blink of an eye in any good stats environment.
-
- which in turn requires
-
-Since totally-identical consonants occur quite frequently, 
+% APPLY THIS TO JAVANESE
 
 \ex Javanese root co-occurrence (\citealp[][264]{Uhlenbeck1950}, \citealp[][139]{Mester1988}): \vspace{6pt} \\
 \begin{tabular}{l r r r r}
 \toprule
-                      & attested & unattested & saturation & $p$-value \\
+           & attested & unattested & saturation & $p$-value \\
 \midrule
-Same major place      & 21       & 15         & 0.583      & \multirow{2}{*}{6.10\e{-06}} \\
-Different major place & 134      & 12         & 0.918 \\
+conforming & 134      & 12         & 0.918      & \multirow{2}{*}{6.095\e{-06}} \\
+violating  & 21       & 15         & 0.583 \\
 \bottomrule
 \end{tabular}
 \xe
 
 \noindent
-It is evident that roots with identical labial stops are far more common than those in which the roots disagree in voicing. This data is input to a chi-square test, which reports that this highly skewed distribution is unlikely to be due to chance ($\chi^2 = 64.525$, two-tailed $p = 9.5$\e{-16}).  
+It is evident that roots with identical labial stops are far more common than those in which the roots disagree in voicing. 
 
+This data is input to a chi-square test, which reports that this highly skewed distribution is unlikely to be due to chance 
 
-\citep[see also][]{Gorman2012}
-contains the counts 
+That this is highly unlikely to be due to chance is apparent both from the chi-square ($\chi^2 = 25.572$, two-tailed $p = 4.3$\e{-07}) and Fisher exaact tests ($p =  6.095$\e{-06}). 
 
-
-
-
-%\ex $ \lim_{n \rightarrow \infty} n! = 2 ^ {(n \ln{n} - n) \cdot \log_2{e}} $ \xe
+I use two-tailed statistical tests throughout. 
+Under a one-tailed test, the alternative hypothesis is underrepresentation, whereas a two-tailed test also allows the possibility that a class of clusters would be overrepresented, i.e., more frequent than predicted by the null hypothesis. As 
 
 \citet{Pierrehumbert1994}
 
-Applying the syllabification algorithm to the CELEX data produces 40 medial onset types and 22 medial coda types from 161 medial consonant clusters.
-
 It must be stressed that under current assumptions, this is independent of whether predictable prosodic representations (particularly coda and onset identity) are part of the memorized underlying representation \citep[e.g.,][]{Vaux2003}.
-
 It is an undeniable fact that URs need to be 
-
 The derivative nature of 
-W
-
-\citet{Ito1989a,Noske1993}
-
-The nature of 
-The prosodic characteristic of
-
-The Fisher exact test is isomorphic to the chi-square test 
-
-and has been used by several researchers \citep{Zuraw2010}.
-
-Unlike the chi-square test, which uses an approximation which is exact in the limit (i.e., only with a hypothetical infinite sample), the Fisher exact test is robust to small sample sizes.
-
-The opposite problem, inability to scale to large samples, is a defect of the a statistical procedure developed by \citet{Kessler2001} and applied to co-occurrence restrictions by \citet{Martin2007,Martin2011}. This procedure is a Monte Carlo approach to t
-
-Under a one-tailed test, the alternative hypothesis is underrepresentation, whereas a two-tailed test also allows the possibility that a class of clusters would be overrepresented, i.e., more frequent than predicted by the null hypothesis. As 
+\citet{Ito1989a,Noske1992}
 
 least some researchers (i.e., \citealt{Mester1988}) 
 
@@ -148,7 +70,7 @@ I will first consider three well-known English phonological alternations, showin
 
 \subsubsection{Obstruent Voice Assimilation}
 
-English has a process of voice assimilation which is found in two inflectional suffixes. The suffix /-d/ forms regular pasts and denominal adjectives, and /-z/ forms regular noun plurals and genitives, and the 3sg. present active indicative verbs.\footnote{The URs /-d, -z/ are argued for by \citet[][282]{Hockett1958}, \citet[][210]{SPE}, \citet{Basboll1972}, \citet{Shibatani1972}, \citet[][]{Anderson1973a}, \citet[][102]{Pinker1988}, and \citet[][284f.]{Bakovic2005b}, and alternative views are presented by \citet[][211f.]{LANGUAGE}, \citet[][426]{Nida1948}, \citet{Luelsdorff1969}, \citet{Lightner1970}, \citet{Hoard1971}, \citet[]{Miner1975}, \citet{Zwicky1975}, \citet{Kiparsky1985}, and \citet[][135]{Borowsky1986}.}
+English has a process of voice assimilation which is found in two inflectional suffixes. The suffix /-d/ forms regular pasts and denominal adjectives, and /-z/ forms regular noun plurals and genitives, and the 3sg. present active indicative verbs.\footnote{The URs /-d, -z/ are argued for by \citet[][282]{Hockett1958}, \citet[][210]{SPE}, \citet{Basboll1972}, \citet{Shibatani1972}, S. \citet[][]{Anderson1973a}, \citet[][102]{Pinker1988}, and \citet[][284f.]{Bakovic2005b}, and alternative views are presented by \citet[][211f.]{LANGUAGE}, \citet[][426]{Nida1948}, \citet{Luelsdorff1969}, \citet{Lightner1970}, \citet{Hoard1971}, \citet[]{Miner1975}, \citet{Zwicky1975}, \citet{Kiparsky1985}, and \citet[][135]{Borowsky1986}.}
 
 \ex Voice assimilation in the past tense and noun plural: \vspace{6pt} \\
 \begin{tabular}{l l l l l l}
@@ -229,7 +151,7 @@ The shape of the prefix before other obstruents is somewhat more complex.
 \label{CNPA}
 \xymatrix@C=6pt{
                           & \txt{\textsc{Place}}\ar@{-}[d]\ar@{..}[dl] \\
-\txt{C}\ar@{-}[d]      & \txt{C}\ar@{-}[d] \\
+\txt{C}\ar@{-}[d]         & \txt{C}\ar@{-}[d] \\
 \txt{[$+$\textsc{Nasal}]} & \txt{[$+$\textsc{Obstruent}]} }
 \xe
 
@@ -253,16 +175,26 @@ Clusters which conform to this generalization are far more likely to be attested
 
 There is some evidence that even young infants show a preference for nonce words that conform to this generalization. \citet{Jusczyk2003}, \citet{Mattys1999}, and \citet{Jusczyk2002} play nonce words containing nasal-obstruent clusters to 4.5, 9, and 10-month-old infants (respectively) acquiring English, All three studies find that infants prefer to listen to stimuli which conform to the above generalization (e.g., \emph{u}[m.b]\emph{o}) over those which do not (e.g., \emph{u}[n.b]\emph{o}). \citet{Wright1975} taught several nonce words to a group of adolescents, and asked them to repeat the words to each other in a game of ``Telephone''. In these nonse words, nasals do not agree in \textsc{Place} with the following obstruent in these nonsense words, and \citeauthor{Wright1975} observes that after a few rounds of the game, the nonce words had been adapted to conform to \textsc{Coda Nasal Place Assimilation}.
 
-\ex Artificial language adaptations \citep[][394]{Wright1975}: \\
+\ex Artificial language adaptations \citep[][394, his transcriptions]{Wright1975}: \\
 \begin{tabular}{l l l l l l}
-a. & [gownp]    & > & [gump] \\
-b. & [\v{j}umg] & > & [\v{j}úŋgə] \\
-c. & [ðʌŋd]     & > & [tɔŋg] \\
+a. & [gownp] & > & [gump] \\
+b. & [ǰumg]  & > & [ǰúŋgə] \\
+c. & [ðʌŋd]  & > & [tɔŋg] \\
 \end{tabular} 
 \xe
 
 \noindent
-If this game is akin to the process of loanword adaptation, it is possible that various extragrammatical pressures are at play \citep[e.g.,][]{Halle1998b,Dupoux1999,Ussishkin2003,Peperkamp2008}. Yet, the independent evidence for a phonological process of nasal place assimilation provides the most parsiminious account of the adaptations seen in \citeauthor{Wright1975}'s study.
+If this game is akin to the process of loanword adaptation, it is possible that various extragrammatical pressures are at play \citep[e.g.,][]{Halle1998b,Dupoux1999,Ussishkin2003,Peperkamp2008}. Yet, the independent evidence for a phonological process of nasal place assimilation provides the most parsiminious account of the adaptations seen in \citeauthor{Wright1975}'s study. J. \citet{Myers1993} also shows that \textsc{Coda Nasal Place Assimilation} is fed by speech errors:
+
+\ex Speech errors and \textsc{Coda Nasal Place Assimilation} \citep[][228]{Myers1993}: \\
+\begin{tabular}{l l l}
+   & \emph{error}  & \emph{target} \\
+a. & primps        & prints        \\
+b. & rand orker    & rank order    \\
+%  & [sprɪg]time for [hɪ̃ntlɘr] & springtime for Hitler \\
+c. & po[ŋ]cutation & computation   \\
+\end{tabular}
+\xe
 
 %\citet{Hay2004a} demonstrates that [n.p, mθ] clusters, which are not found in English, are in fact rated better than many attested clusters.
 %report that 10-month-old infants prefer to listen to nonsense words which conform to \textsc{Coda Nasal Place Assimilation} (e.g., \emph{u}[m.b]\emph{o}) compared to those which do not (e.g., \emph{u}[n.b]\emph{o}). 
@@ -271,7 +203,7 @@ If this game is akin to the process of loanword adaptation, it is possible that 
 
 A final well-known alternation in English is the simplification of geminates derived by certain suffixes. For instance, the suffix \emph{-ly} rarely forms a geminate when attaching to root-final /l/, whether forming denominal adjectives (e.g., \emph{sme}[l]\emph{y}) or deadjectival adverbs (e.g., \emph{norma}[l]\emph{y}). A small class of English verbs take a /-t/ suffix in the past; as this suffix does not trigger the \textsc{Epenthesis} found in the regular past (e.g., \citealt{Bakovic2005b}, \citealt{Fruehwald2011}), \textsc{Degemination} applies.
 
-\ex Degemination in the /-t/ past (\citealp[][105]{Halle1985a}, \citealp[][492]{Myers1987}): \vspace{6pt} \\
+\ex Degemination in the /-t/ past (\citealp[][105]{Halle1985a}, S. \citealp[][492]{Myers1987}): \vspace{6pt} \\
 \begin{tabular}{l l l l l}
 a. & /bɛnd-t/ & \arrow & [bɛnt] & (cf. \emph{burn}[t]) \\
 b. & /bɪld-t/ & \arrow & [bɪlt] & (cf. \emph{spil}[t]) \\
