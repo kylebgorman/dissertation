@@ -1,8 +1,133 @@
-% 3.1.2: Lexical statistics
+% 3.1.2: Labial attraction
 
-This is essentially the hypothesis pursued in the previous chapter.
+I am using the dotted association line in a deliberately ambiguous fashion in this chapter. The autosegmental structures represent formalizations of the constraints, but I intend to remain ambiguous as to their ontology and do not intend them to be interpreted as derivational rules. These questions are taken up more carefully below.
 
-\citet{TELL}
+\citet{Clements1982}
+
+\citet{Zimmer1969}, \citet{Zuraw2000}, and \citet{Inkelas2001} all suggest
+
+\subsubsection{Phonological description}
+
+\citet[][36]{Lees1966a} describes \textsc{Labial Attraction} as a process by which ``a high, short harmonic vowel is rounded in the second syllable of a disyllabic word whose first vowel is /a/, and whose medial consonant cluster contains a labial /p, b, m, v/, and then it is de-harmonified''. This description is transalted into an autosegmental rule below.
+
+\ex \textsc{Labial Attraction} (after \citealt[][286]{Lees1966b}, \citealt[][171]{Inkelas2001}): \\
+\xymatrix@R=12pt{
+\txt{[$-$\textsc{Round}]}\ar@{-}[d] &                            & \txt{[$+$\textsc{Round}]}\ar@{..}[d] \\
+\txt{V}\ar@{-}[d]                    & \txt{C}\ar@{-}[d]          & \txt{V}\ar@{-}[d] \\
+\txt{[$-$\textsc{High}, $+$\textsc{Back}]}             & \txt{[$+$\textsc{Labial}]} & \txt{[$+$\textsc{High}, $+$\textsc{Back}]}}
+\xe
+
+\noindent
+A few examples of words conforming to this generalization are \emph{çapul} `raid', \emph{sabur} `patient', \emph{şaful} `wooden honey tub', \emph{avuç} `palm of hand', and \emph{samur} `sable' \citep[][285]{Lees1966b}; \citeauthor{Lees1966b} also notes the existence of exceptions like \emph{tavır} `mode', but writes they are ``surprisingly rare'' (ibid., 286); \citet[][225]{Clements1982} lists a number of additional exceptions.
+
+\citeauthor{Clements1982} propose that there is an additional type of exception to \textsc{Labial Attraction}.
+
+\begin{quotation}
+Even more decisive evidence against a rule of Labial Attraction is the existence of a further, much larger set of roots containing /\ldots~aCu~\ldots/ sequences in which the intervening consonant or consonant cluster does not contain a labial\ldots We conclude that there is no systematic restriction on the set of consonants that may occur medially in rotos of the form /\ldots~aCu~\ldots/. \citep[][225]{Clements1982}
+\end{quotation}
+
+\noindent
+\citeauthor{Clements1982} are suggesting that \textsc{Labial Attraction} implies that \emph{aTu}, where \emph{T} represents a non-labial consonant, should be infrequent, but this fact is not inconsistent with the formulation of the constraint by \citet{Lees1966a,Lees1996b} and \citet{Zimmer1969}; \emph{aTu} clusters do not meet \textsc{Labial Attraction}'s structural description.
+
+There is reason to believe that \textsc{Labial Attraction} is at best a static constraint: it never applies across morpheme boundaries. If, contrary to fact, there was a \textsc{Labial Attraction} alternation, then one would expect, for example, that the gen.sg. of \emph{sap} `stalk' would be *\emph{sapun} instead of the observed \emph{sapın}. Additional potential evidence for the static nature of \textsc{Labial Attraction} is provided by \citeauthor{Clements1982}, who note a class of bisyllabic words in which the second vowel, always [$+$\textsc{High}], alternates with zero. 
+
+\ex High-vowel/zero alternations \citep[][243]{Clements1982}: \\
+\begin{tabular}{l l l l}
+   & nom.sg. & 3.poss. \\
+a. & fikir   & fikri & `idea' \\ 
+   & hüküm   & hükmü & `judgement' \\ 
+%   & filim   & filmi & `film' & \citep[][178]{Inkelas2001} \\
+%   & kojun   & kojun & `bosom' \\
+b. & vakit  & vakti  & `time' \\
+   & rahim  & rahmi  & `womb' \\
+\end{tabular}
+\xe
+
+\noindent 
+The vowel is present in the nom.sg. form and absent in the 3.poss. form. The examples in (\lastx b) shows that it need not harmonize with the preceding vowel
+\citeauthor{Inkelas2001} (ibid, 178) note that \textsc{Labial Attraction} does not affect this vowel (e.g., \emph{sabır}/\emph{sabrı} `patience'), citing this as evidence against \textsc{Labial Attraction}. However, it is not a foregone conclusion that \textsc{Labial Attraction} should apply to the ``unstable'' vowel. Since it is as a morpheme structure constraint, this vowel must be underlying present and deleted in the 3.poss.; \citeauthor{Clements1982} prefer the converse analysis, in which epenthesis applies in the nom.sg., though they note that either approach requires lexically arbitrary diacritics. I conclude that unstable vowels provide no evidence for or against \textsc{Labial Attraction}.
+
+\begin{quotation}
+Lee's rule of \textsc{Labial Attraction}\ldots is not a real generalization about the Turkish lexicon. It is not true synchronically, either of native or nonnative items; nor, according to the historical and dialectical literature, does \textsc{Labial Attraction} appear to have been true at any stage going back as far as Old Turkic. \citep[][196]{Inkelas2001}
+\end{quotation}
+
+\begin{quotation}
+Vowel labialization following labials is not a synchronic alternation in Turkish, yet it (unlike \textsc{Labial Attraction} per se) \emph{is} a statistically supported tendency worthy of further research. \citep[][196, emphasis in original]{Inkelas2001}
+\end{quotation}
+
+\citet{Inkelas1997}
 \citet{Inkelas2001}
+\citet{TELL}
 
-%We might, for instance, consider methods based not on statistical \citep{Yang2005,Gorman2011b}.
+\subsubsection{Lexical statistics}
+
+%##TELL: 31,236
+%#Lexicon: 25,164
+
+\ex Lexical effects of \textsc{Labial Attraction} \citep[][186]{Inkelas2001}: \vspace{6pt} \\
+\begin{tabular}{l r r r | r r r}
+\toprule
+Corpus  & aPu & aPı & \% & aTu & aTı & $p$-value   \\ % & corpus size
+\midrule
+%TELL    & 378 & 248 & 446 & 1,140 & 2.83\e{-44} \\ % & 31,236 \\
+%TELL    & 77  & 30 & 72.6 & 115 & 356 & ?\e{-20} \\
+%Lexicon & 108 & 57 & 65.5 & 155 & 533 & 6.6\e{-25} \\
+\bottomrule
+\end{tabular} \xe
+
+
+BROAD labial attraction stats:
+
+TELL full:
+585 aPu (favored)
+230 aPI (disfavored)
+1,137 aTu
+1,461 aTI
+71.8\% labial attraction
+p = 3.4\e{-45}
+
+Lexicon:
+1,175 aPu (favored)
+446 aPI (disfavored)
+1,939 aTu
+2,878 aTI
+72.5\% labial attraction
+p = 3.1\e{-114}
+
+STUPID attraction stats:
+
+TELL full:
+267 aPu (favored)
+546 aPI (disfavored)
+346 aTu
+327 aTI
+67.1\% attraction
+p = 5.2\e{-13}
+
+Lexicon:
+357 aPu (favored)
+874 aPI (disfavored)
+488 aTu
+396 aTI
+71% attraction
+p = 9.7\e{-34}
+
+zimmer: 319-320 
+inkelas et al.: 196
+
+\subsubsection{External evidence}
+
+Beyond the experimental results of \citet{Zimmer1969} reviewed in the next section, there is no external evidence for or against \textsc{Labial Attraction}.
+
+%% HERE THERE BE DRAGONS
+%\ex Examples of \textsc{Labial Attraction} \citep[][285]{Lees1966b}: \\
+%\begin{tabular}{l l l}
+%a. & çapul &  `raid \\
+%b. & sabur & `patience' \\
+%c. & şaful & `wooden honey tub' \\
+%d. & avuç  & `palm of hand' \\
+%   & havuz & `hollow'       \\
+%e. & samur & sable'         \\
+%   & camus & `buffalo'      \\
+%\end{tabular}
+%\xe

@@ -3,13 +3,14 @@
 Having described the database of English syllable contact clsuters, I now consider constraints on sequences of URs as predictors of attested and unattested contact clusters. First, I describe the statistical technique used, then apply this technique to both phonologically derived constraints and a set of ``static'' phonotactic constraints proposed by \citet{Pierrehumbert1994}. 
 
 \subsubsection{Statistical technique}
+\label{stattech}
 
 Before the dawn of generative phonology, many linguists concerned themselves with documenting co-occurrence in various languages. \citet[][28]{Vogt1954} declares that a ``phonemic description of a language \ldots should also comprise a description of the phoneme combinations that occur or may be expected to occur in the language''. Studies in this tradition include the discussions of consononantal co-occurrence in Arabic and Javanese by \citet{Greenberg1950} and \citet{Uhlenbeck1950}, respectively. \citeauthor{Uhlenbeck1950}, for instance, puts forth co-occurrence dispreferences, rather than exceptionless generalizations of the sort given by \citet{Greenberg1950}. Years later, \citet{Mester1988} revisits \citeauthor{Uhlenbeck1950}'s study and proposes a statistical technique, based on the chi-square test, to distinguish between accidental and structural lexical dispreferences in the Javanese lexicon. 
 
 \citeauthor{Mester1988}'s technique has been adopted by many subsequent studies (e.g., \citealt{Padgett1992,Padgett1995} on Russian; \citealt{Pierrehumbert1993}, \citealt{Frisch1996}, and \citealt{Frisch2004} on Arabic; \citealt{Berkley1994b,Berkley1994a,Berkley2000}, \citealt{Dmitrieva2008a}, \citealt{Dmitrieva2008b} on English). The null hypothesis $H_0$ is that some sequence occurs at no different a rate than the researcher expects, and the alternative hypothesis $H_1$ is that it is underrepresented. Given an observed frequency $O$ and also a frequency $E$ expected under the null hypothesis, the test is as follows.
 
 \ex $\displaystyle \textrm{Reject } H_0 \textrm{ iff } \frac{(O E) ^ 2}{E} >
-\chi^2$ \xe
+χ^2$ \xe
 
 %\footnote{This is the one-tailed version of the test.}
   
@@ -70,7 +71,7 @@ I will first consider three well-known English phonological alternations, showin
 
 \subsubsection{Obstruent Voice Assimilation}
 
-English has a process of voice assimilation which is found in two inflectional suffixes. The suffix /-d/ forms regular pasts and denominal adjectives, and /-z/ forms regular noun plurals and genitives, and the 3sg. present active indicative verbs.\footnote{The URs /-d, -z/ are argued for by \citet[][282]{Hockett1958}, \citet[][210]{SPE}, \citet{Basboll1972}, \citet{Shibatani1972}, S. \citet[][]{Anderson1973a}, \citet[][102]{Pinker1988}, and \citet[][284f.]{Bakovic2005b}, and alternative views are presented by \citet[][211f.]{LANGUAGE}, \citet[][426]{Nida1948}, \citet{Luelsdorff1969}, \citet{Lightner1970}, \citet{Hoard1971}, \citet[]{Miner1975}, \citet{Zwicky1975}, \citet{Kiparsky1985}, and \citet[][135]{Borowsky1986}.}
+English has a process of voice assimilation which is found in two inflectional suffixes. The suffix /-d/ forms regular pasts and denominal adjectives, and /-z/ forms regular noun plurals and genitives, and the 3sg. present active indicative verbs.\footnote{The URs /-d, -z/ are argued for by \citet[][282]{Hockett1958}, \citet[][210]{SPE}, \citet{Basboll1972}, \citet{Shibatani1972}, S. \citet[][]{Anderson1973a}, \citet[][102]{Pinker1988}, and \citet[][284f.]{Bakovic2005b}, and alternative views are presented by \citet[][210f.]{LANGUAGE}, \citet[][426]{Nida1948}, \citet{Luelsdorff1969}, \citet{Lightner1970}, \citet{Hoard1971}, \citet[]{Miner1975}, \citet{Zwicky1975}, \citet{Kiparsky1985}, and \citet[][135]{Borowsky1986}.}
 
 \ex Voice assimilation in the past tense and noun plural: \vspace{6pt} \\
 \begin{tabular}{l l l l l l}
@@ -85,12 +86,11 @@ The voiced obstruent suffixes devoice when preceded by a voiceless obstruent.
 This is formalized as a rule spreading the [\textsc{Voice}] specification rightward over adjacent obstruents.
 
 \ex \textsc{Obstruent Voice Assimilation} (\emph{SPE}:178): \\
-\xymatrix@C=6pt@R=12pt{
+\xymatrix@R=12pt{
 \txt{[α \textsc{Voice}]}\ar@{-}[d]\ar@{..}[dr] & \\
 \txt{C}\ar@{-}[d]             & \txt{C}\ar@{-}[d] \\
 \txt{[$+$\textsc{Obstruent}]} & \txt{[$+$\textsc{Obstruent}]}}
-\label{ovar}
-\xe
+\label{ovar} \xe
 
 \noindent
 This rules out the possibility of surface clusters of obstruents with differing  [\textsc{Voice}] specifications. While the data in (\ref{ovad}) make it clear \textsc{Obstruent Voice Assimilation} applies in morphologically derived environments, it is not obvious that it applies to obstruent clusters in non-derived environments (e.g., obstruent clusters in the URs of morphs) as well. \citet{Pierrehumbert1994} does not mention voice assimilation in her study of gaps in English syllable contact clusters. \citet[][74f.]{Hammond1999a} notes the existence of words like \emph{a}[b.s]\emph{inth} and \emph{a}[s.b]\emph{estos}, which contain obstruent voice clusters disagreeing in [\textsc{Voice}], and takes this as evidence that obstruent voicing is restricted to derived environments.
@@ -107,8 +107,7 @@ and into those which are attested and those which are not.
 conforming & 80 & 370 & 0.178 & \multirow{2}{*}{1.1\e{-11}}\\
 violating  &  6 & 264 & 0.022 \\
 \bottomrule
-\end{tabular}
-\xe
+\end{tabular} \xe
 
 \noindent 
 18\% of the possible clusters containing adjacent obstruents with the same [\textsc{Voice}] specification are found, 
@@ -149,7 +148,7 @@ The shape of the prefix before other obstruents is somewhat more complex.
 
 \ex \textsc{Coda Nasal Place Assimilation} (\emph{SPE}:85): \\
 \label{CNPA}
-\xymatrix@C=6pt{
+\xymatrix@R=12pt{
                           & \txt{\textsc{Place}}\ar@{-}[d]\ar@{..}[dl] \\
 \txt{C}\ar@{-}[d]         & \txt{C}\ar@{-}[d] \\
 \txt{[$+$\textsc{Nasal}]} & \txt{[$+$\textsc{Obstruent}]} }
@@ -173,7 +172,8 @@ violating  & 8  & 20 & 0.286 \\
 \noindent
 Clusters which conform to this generalization are far more likely to be attested than those that violate it, and this is highly unlikely to be due to chance.
 
-There is some evidence that even young infants show a preference for nonce words that conform to this generalization. \citet{Jusczyk2003}, \citet{Mattys1999}, and \citet{Jusczyk2002} play nonce words containing nasal-obstruent clusters to 4.5, 9, and 10-month-old infants (respectively) acquiring English, All three studies find that infants prefer to listen to stimuli which conform to the above generalization (e.g., \emph{u}[m.b]\emph{o}) over those which do not (e.g., \emph{u}[n.b]\emph{o}). \citet{Wright1975} taught several nonce words to a group of adolescents, and asked them to repeat the words to each other in a game of ``Telephone''. In these nonse words, nasals do not agree in \textsc{Place} with the following obstruent in these nonsense words, and \citeauthor{Wright1975} observes that after a few rounds of the game, the nonce words had been adapted to conform to \textsc{Coda Nasal Place Assimilation}.
+There is some evidence that even young infants show a preference for nonce words that conform to this generalization. %\citet{Jusczyk2003}
+\citet{Davidson2004}, \citet{Mattys1999}, and \citet{Jusczyk2002} play nonce words containing nasal-obstruent clusters to 4.5, 9, and 10-month-old infants (respectively) acquiring English, All three studies find that infants prefer to listen to stimuli which conform to the above generalization (e.g., \emph{u}[m.b]\emph{o}) over those which do not (e.g., \emph{u}[n.b]\emph{o}). \citet{Wright1975} taught several nonce words to a group of adolescents, and asked them to repeat the words to each other in a game of ``Telephone''. In these nonse words, nasals do not agree in \textsc{Place} with the following obstruent in these nonsense words, and \citeauthor{Wright1975} observes that after a few rounds of the game, the nonce words had been adapted to conform to \textsc{Coda Nasal Place Assimilation}.
 
 \ex Artificial language adaptations \citep[][394, his transcriptions]{Wright1975}: \\
 \begin{tabular}{l l l l l l}
@@ -228,7 +228,7 @@ The rule deletes the first of two adjacent consonants agreeing in \textsc{Place}
 %\textsc{C}\ar@{-}[d]       & \longrightarrow & \emptyset & / & \gap\gap\gap & \textsc{C}\ar@{-}[d] \\
 %*+[F(][F)]\txt{β \textsc{Continuant} \\ γ \textsc{Obstruent} \\ δ \textsc{Sonorant} \\ ε \textsc{Lateral} \\ ζ \textsc{Nasal}} & & & & & *+[F(][F)]\txt{β \textsc{Continuant} \\ γ \textsc{Obstruent} \\ δ \textsc{Sonorant} \\ ε \textsc{Lateral} \\ ζ \textsc{Nasal}} \\ \\
 %}
-\xymatrix@C=6pt{
+\xymatrix@R=12pt{
 %{\textsc{α Place}}\ar@{-}[d] &                 &           &   &              & \textsc{α Place}\ar@{-}[d] \\
 \textsc{C}_1       & \longrightarrow & \emptyset & / & \gap\gap\gap & \textsc{C}_2 }
 \\ 

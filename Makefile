@@ -1,18 +1,22 @@
+SOURCE=gorman_diss
 TARGET=gorman_diss.pdf
-COMMAND=xelatex
+COMMAND=xelatex -halt-on-error
 
 pdf: 
-	$(COMMAND) gorman_diss
+	$(COMMAND) $(SOURCE)
 
 bib: $(TARGET)
-	bibtex gorman_diss
-	$(COMMAND) gorman_diss
-	$(COMMAND) gorman_diss
+	bibtex $(SOURCE)
+	$(COMMAND) $(SOURCE)
+	$(COMMAND) $(SOURCE)
 
 clean:
-	rm -f *.aux *.toc *.log *.lot *.bbl *.blg
+	rm -f *.aux *.toc *.log *.lot *.bbl *.blg $(TARGET)
+
+rmpdf:
+	rm $(TARGET)
 
 show: $(TARGET)
 	pdf $(TARGET) & open $(TARGET) &
 
-.PHONY: clean show
+.PHONY: clean rmpdf show
