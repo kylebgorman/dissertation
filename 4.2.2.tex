@@ -1,5 +1,94 @@
-\subsection{Assessing models}
+\subsection{Computational models}
 
-\subsubsection{Basic correlations}
-\subsubsection{Intramodal correlations}
-\subsubsection{Residual correlations}
+
+Applying these derived constraints to the lexicon increases saturation from 18.8\% to 28.8\% and incurs only a handful of exceptions. Yet, despite the fact that ``attestation'' is the minority pattern, attempts to identify static lexical constraints, whether by hand or computational model, lend little additional predictive power. There is no evidence that the English syllable contact inventory is subject to any static constraint at all. I am forced to conclude that most, if not all, of 71.2\% of possible clusters which are unattested are accidental gaps. Below, I show that this state of affairs follows directly from the sparse distribution of codas and onsets. 
+
+The three alternations targeting English syllable contact clusters have been shown to have the expected robust effects on the English lexicon. 
+
+
+Whereas the three alternations targeting English syllable contact clusters have robust lexical reflexes as measured by the Fisher exact test, such tests reveal no evidence for the static dispreferences identified by \citeauthor{Pierrehumbert1994}. There is now a growing literature on computational cognitive models of phonotactic learning. By applying these models to the syllable contact data, it is possible to exhaustively search for statistically motivated constraints, elimianting the possibility of human error. 
+
+To evaluate these statistical models, they are first trained on the set of attested clusters, then put to the task of classifying all possible clusters into those which are and are not attested. Four metrics are used to evaluate these computational models. Classification accuracy corresponds to the probability of a classification being either a true positive ($t.p.$), correctly predicting a cluster to occur, or a true negative ($t.n.$), correctly predicting a cluster to be absent. Incorrect outcomes are either false positives ($f.p.$), incorrectly predicting a cluster to occur, and false negatives ($f.n.$), incorrectly predicting a cluster to be absent. 
+
+%\ex Binary classification contingency table: \\
+%\begin{tabular}{c | l l} \toprule
+%                             & \multicolumn{2}{c}{prediction} \\
+%\midrule
+%\multirow{2}{*}{observation} & true positive ($tp$)  & false positive ($fp$) \\
+%                             & false negative ($fn$) & true negative ($tn$) \\
+%\end{tabular}
+%\begin{tabular}{|l l|}
+%\toprule
+%true positive ($tp$)  & false positive ($fp$) \\
+%false negative ($fn$) & true negative ($tn$) \\
+%\bottomrule
+%\end{tabular}
+%\xe 
+
+\begin{example}
+$\displaystyle \textrm{Accuracy} = \frac{t.p. + t.n.}{t.p. + t.n. + f.p. + f.n.}$
+\end{example}
+
+\noindent
+A few other metrics can be used to assess classification performance. Precision corresponds to the probability that a cluster predicted to occur is observed in the data. 
+\begin{example}
+$\displaystyle \textrm{Precision} = \frac{t.p.}{t.p. + f.p.}$ 
+\end{example}
+
+\noindent
+Recall (also known as sensitivity) is the probability a observed cluster is predicted to occur. 
+
+\begin{example}
+$\displaystyle \textrm{Recall} = \frac{t.p.}{t.p. + f.n.}$
+\end{example}
+
+It is possible to maximize recall at the expense of precision, by predicting more clusters to be attested, or to increase precision at the expense of recall by predicting fewer clusters to be attested. A common way to balance these concerns is the $F_1$ score, which is the harmonic mean of precision and recall.
+
+\begin{example}
+$\displaystyle F_1 = 2 \left( \frac{\textrm{Precision} \times \textrm{Recall}}{\textrm{Precision} + \textrm{Recall}}\right)$ 
+\end{example}
+
+\subsubsection{Null baseline}
+
+The 840 possible clusters have an 18.7\% of saturdaion rate. As a consequence of this sparsity, a null model which classifies all clusters as unattested achieves 81.3\% accuracy without the need to posit any constraints either derived or static. Since this model does not have any positive classifications, either true or false, precision, recall, and $F_1$ are undefined.
+
+\subsubsection{Alternations}
+
+As was shown above, \textsc{Obstruent Voice Assimiation}, \textsc{Coda Nasal Place Assimilation}, and \textsc{Degemination} are reliable predictors of what clusters are and are not attested and have few lexical exceptions. I generate another baseline by predicting only those clusters which do not violate any of these generalizations to be attested. This provides a significant improvement to the null baseline (accuracy = 0.857). As precision (0.401) is smaller than recall (0.708), there are more false positives (i.e., unattested clusters that do not violate any of these three alternation-derived generalizations) than there are false negatives (i.e., attested exceptions to these derived generalizations). 
+
+\subsubsection{\citet{Pierrehumbert1994}}
+
+\citet{Pierrehumbert1994} first proposes to measure the well-formedness of syllable contact clusters by the independent probabilities of codas and onsets, and \citet{Coleman1997} extend this model to whole words. \citet{Pierrehumbert1994} uses both medial and initial/final codas and onsets to compute these probabilities, but I obtain a better fit to the data by only using medial coda and onset frequencies. Medial coda and onset probabilities are multipled to obtain a well-formedness score. This produces a continuous value between 0 and 1. To derive a binary classification from these values, I use a soft-margin support vector machine \citep{Cortes1995} with a linear kernel. This technique derives a ``decision stump'' providing the best single split into attested and an unattested clusters. This is not put forth as a cognitively plausible model for relating this expected probability to attestation: it is simply the upper bound that such a model could reach. 
+
+Unfortunately, this score only provides a small improvement to the null baseline
+ (accuracy = 0.839), and has a lower accuracy and $F_1$ (0.328) than the alternation baseline. 
+
+\subsubsection{\citet{Hayes2008a}}
+
+\citeauthor{Hayes2008a} develop a sophisticated method of learning phonotactic distributions from positive data. They develop software for estimating probability distributions over sequences of (sets of) phonological features using the principle of maximum entropy and making few assumptions about the independence of features. As above, a support vector machine with a linear kernel is used to turn these probability values into binary predictions. The software provided by these authors exposes many ``metaparameters'', operational decisions to be made in conducting an experiment with this system. To avoid any potential bias induced by the choice of these metaparameters, I use the same settings as used by \citet{Hayes2008a} in their similar study of English onset consonants. This includes the ``accuracy schedule'' [0.001, 0.01, 0.1, 0.2, 0.3] and no constraints on the number of constraints learned, as well English consonantal features used by \citeauthor{Hayes2008a}. Since this model is inherently stochastic, producing slightly different outcomes on each run, I follow the practice of \citeauthor{Hayes2008a} (p.~396) and report the lowest-accuracy of ten runs, though in general there is not a great deal of variation between individual runs.  
+
+This model provides a small improvement in accuracy (0.877) and $F_1$ (0.703) compared to the alternation baseline, but it has lower recall (0.642) than this baseline, indicating that the \citeauthor{Hayes2008a} model introduces many false negatives. 
+%; it assigns the lowest probability value to 122 unattested clusters.
+More specifically, it suggests that this model prefers narrower phonotactic generalizations than those derived from alternations. For instance, unattested *[m.kl] is assigned the highest probability, whereas it is ruled out by \textsc{Coda Nasal Place Assimilation}. On the other hand, the \citeauthor{Hayes2008a} model assigns a low score to clusters like those found in \emph{hu}[z.b]\emph{and} and \emph{pla}[t.f]\emph{orm}, though they are both attested and consistent with all three alternation-derived constraints. 
+
+\citet{Berent2012} identify an important defect with the \citeauthor{Hayes2008a} model used here: it does not make use of variables over features and thus fails to unify the constraint against geminate clusters. While the model may miss this unifying generalization, it correctly predicts all clusters containing geminates to be unattested. 
+
+The results for the four models are summarized below.
+
+\begin{example}
+Summary of computational model accuracy: 
+
+\vspace{0.5\baselineskip} 
+\begin{tabular}{l | r r r r}
+\toprule
+                          & accuracy & precision & recall & $F_1$ \\ 
+\midrule
+Null baseline             & 0.813    & n.a.      & n.a.   & n.a.  \\
+Alternations              & 0.857    & 0.401     & 0.708  & 0.512 \\
+\citet{Pierrehumbert1994} & 0.839    & 0.210     & 0.750  & 0.328 \\
+\citet{Hayes2008a}        & 0.877    & 0.777     & 0.642  & 0.703 \\
+\bottomrule
+\end{tabular}
+\end{example}
+
+One additional model was evaluated for this study. \citet{McGowan2011} claims that the type frequency of individual syllable contact clusters in English is predicted by the change of sonority in the clusters.\footnote{Thanks to Maria Gouskova for bringing this study to my attention.} Using a sonority scale proposed by \citet{Jespersen1904}, \citeauthor{McGowan2011} reports that clusters like [m.p], with sharply falling sonority, are slightly more frequent than those like [t.j], with rising sonority. However, \citeauthor{McGowan2011} finds that sonority of clusters accounts for only a tiny amount of the variance in cluster frequency ($R^2 = 0.077$). In this study, inclusion of sonority distance provided no improvement over the null baseline, and therefore was not considered further.

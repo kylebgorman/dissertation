@@ -1,20 +1,33 @@
-Anderson
-Clements
-Epenethesis
-Stats
+3
+   x3.1 
+       x3.1.1
+       x3.1.2
+        3.1.3
+    3.2
+        3.2.1
+        3.2.2
+    3.3   
+
+4
+    4.1
+         4.1.1
+        x4.1.2
+        x4.1.3
+    4.2
+         4.2.1
+        x4.2.2
+         4.2.3
+    4.3
+
 
 % chapter 1: circulate phonotactics material and write
 % chapter 5
 % chapter 6
 % chapter 7
-% defense
 
-% header stuff
+preface
+abstract edit
+acknowledgements
 abs.tex
 ack.tex
 pre.tex
-A.tex
-B.tex
-C.1.tex
-C.2.tex
-C.3.tex

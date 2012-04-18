@@ -1,10 +1,13 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-
 \documentclass{upenndiss}
 
+% bibliography stuff
+\usepackage[round]{natbib}
+\bibpunct[:]{(}{)}{,}{a}{}{,}
+
+% graphics
 \usepackage{longtable}
-\usepackage{tipa}
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{pifont}
@@ -12,85 +15,91 @@
 \usepackage{latexsym}
 \usepackage{colortbl}
 \usepackage{arydshln} % colortbl >> arydshln is a crit. ordering
-\usepackage{courier}
-\usepackage{expex}
-\usepackage[all]{xy}
+\usepackage{xypic}
+\usepackage{graphicx}
 
+% fonts
 \usepackage{mathspec}
 \setmainfont[Mapping=tex-text]{Linux Libertine O}
 \setmathfont(Digits,Greek,Latin){Linux Libertine O}
 
+% symbols
 %\usepackage{tipx} % OT commands
 %\usepackage{wasysym}  
 %\usepackage{marvosym}
-\usepackage{graphicx}
 %\newcommand{\frwn}{\frownie}
 %\newcommand{\hand}{\ding{43}} 
 %\newcommand{\np}{\textObullseye}
 
-%\usepackage[T1]{fontenc} % allows for dh, th, etc.
-%\usepackage[utf8x]{inputenc}
-
-% programming language syntax highlighting
-\usepackage{listings}
+% syntax highlighting
+%\usepackage{listings}
+%\usepackage{courier}
 
 % my shortcuts
-\newcommand{\zr}{$\emptyset$}
 \newcommand{\lm}{ː}
+\newcommand{\zr}{$\emptyset$}
 \newcommand{\buf}{\hspace{0pt}}
 \newcommand{\gap}{\rule{1em}{0.5pt}}
+\newcommand{\alt}{\ensuremath{\sim}}
+\newcommand{\asp}{\textsuperscript{h}}
 \newcommand{\pal}{\textsuperscript{j}}
 \newcommand{\shade}{\cellcolor[gray]{0.7}}
-\newcommand{\arrow}{$\longrightarrow$}
-
-% lorem ipsum FIXME
-\usepackage{lipsum}
-
-\usepackage[round]{natbib}
-\bibpunct[:]{(}{)}{,}{a}{}{,}
-
-%\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\goesto}{$\longrightarrow$}
 \providecommand{\e}[1]{\textsc{e}{$#1$}}
+%\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+% a nice example environment
+\newcounter{exampleno}
+\setcounter{exampleno}{1}
+\newenvironment{example}%
+{\vspace{\baselineskip}%
+\noindent\ignorespaces%
+(\arabic{exampleno}) }%
+{\par\noindent%
+\ignorespacesafterend \addtocounter{exampleno}{1}%
+\vspace{0.5\baselineskip}}
+\newcommand{\lastx}{\arabic{exampleno}} %FIXME
+\newcommand{\nextx}{\arabic{exampleno}} %FIXME
 
 \title{Words \& Gaps}
-
 \author{Kyle Gorman}
 \supervisor{Charles Yang \\ Associate Professor, Linguistics, Computer and Information Science, \& Psychology}
 \gradchair{Eugene Buckley \\ Associate Professor, Linguistics}
-\committee{Stephen R. Anderson \\ Dorothy R. Diebold professor of Linguistics, Psychology, \& Cognitive Science, Yale University \and
-Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science \and
+\committee{Stephen R. Anderson \\ Dorothy R. Diebold professor of Linguistics, Psychology, \& Cognitive Science, Yale University
+ \and
+Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science 
+\and
 Rolf Noyer \\ Associate Professor, Linguistics}
 
 \copyrighttrue
-%\copyrightyear{2011}  % Defaults to the current year
+%\copyrightyear{2012}  % Defaults to the current year
 
 \department{Linguistics}
 
 \abstractfile{abs} 
 \acknowledgementsfile{ack}
 %\dedicationfile{ded} % will probably not use this -- KG
-%\prefacefile{pre}
-
 \dedication{\center To my parents}
+%\prefacefile{pre}
 
 \begin{document}
 \frenchspacing
 
-\FrontMatter
-\include{1}
+%\FrontMatter
+%\include{1}
 \include{2}
-\include{3}
-\include{4}
-\include{5}
-\include{6}
-\include{7}
+%\include{3}
+%\include{4}
+%\include{5}
+%\include{6}
+%\include{7}
 
 \appendix
 \renewcommand{\arraystretch}{0.25}
 
 \include{A}
 %\chapter{Data from Chapter \ref{turkish}} %\input{B}
-\include{C}
+%\include{C}
 %\chapter{Data from Chapter \ref{theory}} %\input{D}
 %\chapter{Data from Chapter \ref{insufficient}} %\input{E}
 

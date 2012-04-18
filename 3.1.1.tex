@@ -1,107 +1,129 @@
 \subsection{Backness harmony}
 
-One of the most salient aspects of spoken Turkish is the presence of vowel harmony. To a first approximation, 
-the high vowels of a Turkish prosodic word are all either all round or all unround. Here we will focus on backness harmony
-
-vowels agree 
-
-all the vowels in a Turkish prosodic words agree for backness, and in addition, high vowels agree in roundness.
+One of the most salient properties of Turkish is its harmony system, which \citeauthor{Lees1966b} (\citeyear[][35]{Lees1966b}, \citeyear[][284]{Lees1966a}) derives by means of feature spreading rules. The least constrained of these processes is the rule of backness harmony described in this section. 
 
 \subsubsection{Phonological description}
 
-\citeauthor{Lees1966a} (\citeyear[][284]{Lees1966b}, \citeyear[][35]{Lees1966a}) proposes a number of phonological rules to describe the harmony processes that act on roots and regularly spread rightward to suffixes (Turkish has no prefixes); one such rule consists of rightward spreading of the feature [\textsc{Back}].
+Backness harmony spreads the value of \textsc{Back} rightward over any intervening consonants onto the next vowel. 
 
-\ex \textsc{Backness Harmony} \citep[e.g.,][229]{Clements1982}: \\
-\xymatrix@R=12pt{
-\txt{[α \textsc{Back]}}\ar@{-}[d]\ar@{..}[drr] &             \\
-\txt{V}                                        & \txt{C$_0$} & \txt{V}}
-\xe
+%\citep[after][229]{Clements1982}: \\
+\begin{example}
+\textsc{Backness Harmony}: 
 
-%\citet{Clements1982}
-%\citet{Inkelas1997}
+\xymatrix@R=24pt@C=24pt{
+\txt{V}                                        & \txt{C$_0$} & \txt{V} \\
+\txt{[α \textsc{Back}]}\ar@{-}[u]\ar@{..}[urr] \\
+}
+\end{example}
 
-This rule accounts for much of the suffix allomorphy found in Turkish. The dat.sg. (and the vowel of the gen.sg.) is always a [$+$\textsc{High}] vowel, and in general, it agrees with the final stem vowel for backness and roundness. Similarly, the vowel of the nom.pl. is [$-$\textsc{High}, $-$\textsc{Round}], and takes its backness from the stem-final vowel. Similar patterns obtain for many other Turkish suffixes.
+Along with the rule of \textsc{Roundness Harmony} discussed in the next section, this rule accounts for a great deal of the suffix allomorphy found in Turkish. The nominative plural (nom.pl.) is formed by adding the suffixes \emph{-ler} or \emph{-lar} to the nominative singular (nom.sg.). 
 
-\ex Turkish nominal suffix allomorphy: \vspace{6pt} \\
-\begin{tabular}{l l l l l l l}
-   & \emph{nom.sg.} & \emph{dat.sg.} & \emph{gen.sg.} & \emph{nom.pl.} \\
-a. & ip             & ipi            & ipin           & ipler          & `rope' & (C\&S:216) \\
-   & el             & eli            & elin           & eller          & `hand'    \\
-   & kız            & kızı           & kızın          & kilzar         & `girl'    \\
-   & sap            & sapı           & sapın          & saplar         & `stalk'   \\
-   & yüz            & yüzü           & yüzün          & yüzler         & `face'    \\
-   & köy            & köyü           & köyün          & köyler         & `village' \\
-   & pul            & pulu           & pulun          & pullar         & `stamp'   \\
-   & son            & sonu           & sonun          & sonlar         & `end'     \\
-b. & neden          & nedeni         & nedenin        & nedenler       & `reason'  & (TELL) \\
-   & boğaz          & boğazı         & boğazın        & boğazlar       & `throat'  \\
-   & kiler          & kileri         & kilerin        & kilerler       & `pantry'  \\
-   & pelür          & pelürü         & pelürün        & pelürler       & `tissue paper' \\
-   & sapık          & sapığı         & sapığın        & sapıklar       & `pervert' \\
-\end{tabular} \xe
+\begin{example}
+The Turkish nominative: 
+
+\vspace{0.5\baselineskip}
+\begin{tabular}{l l l l l}
+   & \emph{nom.sg.} & \emph{nom.pl.} \\ 
+a. & ip             & ipler          & `rope' & \citep[][216]{Clements1982} \\
+   & el             & eller          & `hand'    \\
+   & köy            & köyler         & `village' \\
+   & yüz            & yüzler         & `face'    \\
+   & kız            & kizlar         & `girl'    \\
+   & sap            & saplar         & `stalk'   \\
+   & son            & sonlar         & `end'     \\
+   & pul            & pullar         & `stamp'   \\
+b. & neden          & nedenler       & `reason'  & (TELL) \\
+   & boğaz          & boğazlar       & `throat'  \\
+   & kiler          & kilerler       & `pantry'  \\
+   & pelür          & pelürler       & `tissue paper' \\
+   & sapık          & sapıklar       & `pervert' \\
+\end{tabular}
+\end{example}
 
 \noindent
-If the vowel of the nom.pl. suffix is specified as [$-$\textsc{High}, $-$\textsc{Round}], then the \emph{a} $\sim$ \emph{e} pattern follows naturally from \textsc{Backness Harmony}. If the dat.sg. suffix is a vowel specified only as [$+$\textsc{High}], then \textsc{Backness Harmony}, along with the rightward spreading of \textsc{Round}, will produce the correct results.
+\textsc{Backness Harmony} correctly predicts the choice of suffix. There are a few complications, however. First, while most polysyllabic roots conform to \textsc{Backness Harmony} (\lastx b), not all do. In this case, suffix vowels generally harmonize with the final root vowel (\nextx a). Yet there is also a small class of nouns which exhibit [$-$\textsc{Back}] suffix vowels despite the fact that their final root vowel is [$+$\textsc{Back}] (\nextx b).
 
-There are a few complications, however. First, while most polysyllabic roots conform to \textsc{Backness Harmony} (\lastx b), not all do. In this case, suffix vowels generally harmonize with the final root vowel (\nextx a). Finally, here is a small class of nouns which exhibit [$-$\textsc{Back}] suffix vowels despite the fact that their final root vowel is [$+$\textsc{Back}] (\nextx b).
+\begin{example}
+Exceptional Turkish nominatives: 
 
-\ex Turkish nominal suffix allomorphy: \vspace{6pt} \\
-\begin{tabular}{l l l l l l l}
-   & \emph{nom.sg.} & \emph{dat.sg.} & \emph{gen.sg.} & \emph{nom.pl.} \\
-a. & mezar          & mezarı         & mezarın        & mezarlar       & `grave' & (TELL) \\
-   & model          & modeli         & modelin        & modeller       & `model' \\
-   & silah          & silahı         & silahın        & silahlar       & `weapon'     \\
-   & memur          & memuru         & memurun        & memurlar       & `bureaucrat' \\
-   & sabun          & sabunu         & sabunun        & sabunlar       & `soap'       \\
-b. & saat           & saati          & saatin         & saatler        & `hour, clock' \\
-   & harf           & harfi          & harfin         & harfler        & `(alphabetic) letter' \\ %& \citep{Goksel2005}
-   & etol           & etolü          & etolün         & etoller        & `fur stole' \\
-\end{tabular} \xe
+\vspace{0.5\baselineskip}
+\begin{tabular}{l l l l l}
+   & \emph{nom.sg.} & \emph{nom.pl.} \\
+a. & mezar          & mezarlar       & `grave' & \citep{TELL} \\
+   & model          & modeller       & `model' \\
+   & silah          & silahlar       & `weapon'     \\
+   & memur          & memurlar       & `bureaucrat' \\
+   & sabun          & sabunlar       & `soap'       \\
+b. & saat           & saatler        & `hour, clock' \\
+   & harf           & harfler        & `(alphabetic) letter' \\ %& \citep{Goksel2005}
+   & etol           & etoller        & `fur stole' \\
+\end{tabular}
+\end{example}
 
-While it is uncontroversial that disharmonic suffixes (\lastx b) constitute no more than sporadic exceptions to \textsc{Backness Harmony}, the status of root disharmony (\lastx a) has been the subject of much debate. 
+While it is uncontroversial that disharmonic suffixes (\lastx b) are no more than sporadic exceptions to \textsc{Backness Harmony}, the status of root disharmony (\lastx a) has been the subject of much debate. \citet[][212, 289]{Anderson1974} views the fact that disharmonic roots still trigger suffix harmony as evidence that suffix harmony is distinct from root harmony, the latter being a sequence structure constraint. 
 
-1. \citet[][289]{Anderson1974} 
-%2. \citet[][]{Kiparsky1981} makes a similar objection regarding Finnish vowel harmony.
-3. \citet{Clements1982}
-4. \citet{Inkelas1997}
+%Once additional source of evidence on root (dis)harmony is inconclusive. There is a small class of bisyllabic words in which the second vowel, always [$+$\textsc{High}, $-$\textsc{Back}], alternates with zero. 
 
-have identified (\lastx b) as sporadic exceptions to 
-A number of objections can be made for 
+%\ex High-vowel/zero alternations \citep[][243]{Clements1982}: \\
+%\begin{tabular}{l l l l}
+%   & nom.sg. & gen.sg. \\
+%a. & fikir   & fikri  & `idea' \\
+%   & hüküm   & hükmün & `judgement' \\
+%%  & filim   & filmi & `film' & \citep[][178]{Inkelas2001} \\
+%b. & vakit   & vaktin & `time' \\
+%   & rahim   & rahmin & `womb' \\
+%\end{tabular} \xe
+%
+%\noindent
+%It is possible that \textsc{Backness Harmony} might produce a fluctuating \emph{ı} after root \emph{a}, but this does not obtain (\lastx b). However, this might simply indicate that the fluctuating vowel is epenthetic and that harmony applies before epenthesis (see \citealt{Clements1982} for both sides of this argument), making it less than a counterexample. 
 
-\subsubsection{Lexical statistics}
+Underspecification provides an alternative under which the exceptionality of disharmonic roots is only apparent. While it is clear that the first vowel of Turkish roots are contrastively specified for backness (e.g., \emph{kül} `ash' vs.  \emph{kul} `servant', \emph{kepek} `bran' vs. \emph{kapak} `lid'), there are also some minimal pairs with regards to backness (dis)harmony (e.g., \emph{deve} `camel' vs. \emph{deva} `medicine', \emph{sene} `year' vs. \emph{sena} `praise'). This supports the possibility, first suggested by \citet{Clements1982}, that harmonic roots may be underspecified and disharmonic roots fully specified, exemplified below.
 
-\citet{TELL}
-%\citet{Inkelas2001}
+%There is some further evidence that individual vowels may differ in specification for this feature even within individual roots or affixes. For instance, the present continuous suffix has harmony-determined allomorphs \emph{-iyor}, \emph{-üyor}, \emph{-ıyor}, \emph{-uyor}, but the \emph{o} of the suffix is invariant. A similar situation might obtain in Turkish roots. 
 
-\ex Lexical effects of \textsc{Obstruent Voice Assimilation}: \vspace{6pt} \\
-\begin{tabular}{l r r r r}
-\toprule
-           & attested & unattested & saturation & $p$-value \\
-\midrule
-conforming & 80 & 370 & 0.178 & \multirow{2}{*}{1.1\e{-11}}\\
-violating  &  6 & 264 & 0.022 \\
-\bottomrule
-\end{tabular} \xe 
+\begin{example}
+Underlying specification of \textsc{Back} for (dis)harmonic roots: 
 
-\subsubsection{External evidence}
+\xymatrix@R=24pt@C=24pt{
+\txt{a.} & \txt{s} & \txt{V} & \txt{n} & \txt{V}  & \txt{\emph{sene} `year'} \\
+&        & \txt{[$-$\textsc{Back}]}\ar@{-}[u]     \\
+\txt{b.} & \txt{s} & \txt{V} & \txt{n} & \txt{V} & \txt{\emph{sena} `praise'} \\
+         &         & \txt{[$-$\textsc{Back}]}\ar@{-}[u] & & \txt{[$+$\textsc{Back}]}\ar@{-}[u]
+}
+\end{example}
 
-The data reviewed thus far leaves open the possibility that speakers do not internalize the generalization that roots conform to \textsc{Backness Harmony}. One piece of evidence against this hypothesis comes from a Turkic language game \citep{Harrison2001}.\footnote{Thanks to Bert Vaux for bringing this study to my attention.} This game is not indigenous to Turkish, but it corresponds to a morphological process native to the related langauge Tuvan, and is quickly taught to even young Turkish speakers. The process consists of reduplication of the base with the base-initial vowel replaced by \emph{a} or \emph{u}, which conveys a sense of ``vagueness'' or ``jocularity''. Reduplication interacts with root harmony in both Tuvan and Turkish. When the base is harmonically [$-$\textsc{Back}], the non-initial vowels of the reduplicant do not surface faithfully: they surface as [$+$\textsc{Back}] (\nextx a).
+\noindent
+Harmonizing suffix vowels will also be underspecified for \textsc{Back}. Of course, \textsc{Backness Harmony} needs to be prevented from overwriting the [$+$\textsc{Back}] specification of disharmonic roots, one option being the use of a a \textsc{Structure Preservation} condition \citep{Kiparsky1985}. Unfortunately, this detail reintroduces the duplication alluded to above. Any condition on the rule of \textsc{Backness Harmony} which prevents overwriting entails that it has no control over the distribution of harmonic and disharmonic roots, and thus fails to account for predominance of harmonic roots.
 
-\ex Turkish reduplication game \citep[][231]{Harrison2001}: \\
+However, the theory of exceptionality presented in \emph{SPE} (p.~374f.) provides a direct account of suffix harmony in disharmonic roots without duplication. In \emph{SPE}, the specification of the target (i.e., the segment to be changed) of every rule $R$ must be [$+$rule $R$] by convention.  A root or affix which fails to undergo $R$ despite otherwise matching the structural description is simply said to be marked [$-$rule $R$], and thus failing to meet the full structural description. If disharmonic roots are [$-$\textsc{Backness Harmony}], then suffix vowels are correctly predicted to undergo \textsc{Backness Harmony}, since the [$-$\textsc{Backness Harmony}] root is no longer the target but rather the environment, which is not required to be [$+$rule $R$]. 
+
+
+
+
+\subsubsection{Psycholinguistic evidence}
+
+The evidence from alternations leaves open the question of whether speakers internalize a generalization regarding the tendency of roots to conform to \textsc{Backness Harmony}. One piece of evidence that speaks in favor of root-internal harmony comes from a language game discussed by \citet{Harrison2001}.\footnote{Thanks to Bert Vaux for bringing this study to my attention.} This game is not indigenous to Turkish, but it corresponds to a morphological process native to the related language Tuvan, in which it conveys a sense of ``vagueness or jocularity'', and \citeauthor{Harrison2001} report that it can be quickly taught to even young Turkish speakers. The game consists of reduplication of the base and replacement of the first vowel in the reduplicant with \emph{a} or \emph{u}. 
+
+In both Tuvan and Turkish, the unchanged reduplicant vowel is also affected. Reduplication interacts with root harmony in both Tuvan and Turkish. When the base is harmonically [$-$\textsc{Back}], the insertion of a [$+$\textsc{Back}] results in what \citeauthor{Harrison2001} call ``reharmonization'' (\nextx a). 
+
+\begin{example}
+\label{redupgame}
+Turkish reduplication game \citep[][231]{Harrison2001}: 
+
+\vspace{0.5\baselineskip}
 \begin{tabular}{l l l l}
 a. & kibrit & kibrit-kabrıt & `match'    \\
    & bütün  & bütün-batın   & `whole'    \\
 b. & mali   & mali-muli     & `Mali'     \\
    & butik  & butik-batik   & `boutique' \\
-\end{tabular} \xe
+\end{tabular}
+\end{example}
 
 \noindent
-Interestingly, reharmonization is absent in disharmonic bases (\lastx b). This is not an isolated fact about Turkic, as \citeauthor{Harrison2001} note similar outcomes in an unrelated Finnish language game \citep{Campbell1986}. The simplest explanation of this contrast is to treat \textsc{Backness Harmony} as a feature-filling process, as proposed by \citet{Clements1982} and \citet{Inkelas1997}. In harmonic roots, the non-initial vowels are underspecified for \textsc{Back} and are spelled out by \textsc{Backness Harmony}. In reduplication, this produces reharmonization. In disharmonic roots, the vowels are fully specified and do not meet the structural description of \textsc{Backness Harmony}. 
+Under the underspecification hypothesis, non-initial harmonic vowels lack an underlying \textsc{Back} feature, so it comes as no surprise that changing the \textsc{Back} specification of the root-initial vowel results in reharmonization. And the full specification of disharmonic roots correctly predicts that they will be exempt from reharmonization (\lastx b), which is also borne out in Tuvan and in an unrelated Finnish language game \citep{Campbell1986}.
 
-A number of studies have found that speakers of Finnish use disharmony as a clue to segment running speech.\footnote{Thanks to Charles Yang for pointing out the relevance of these studies to me.} \citet{Suomi1997} and \citet{Vroomen1998} generate nonce trisyllabic words by adding a monosyllabic pseudo-prefix to real and nonce disyllabic words, all of which are harmonic for the feature \textsc{Back}. These stimuli are auditorily presented to subjects who are asked to press a button when the nonce trisyllable ends with a target nonce disyllable, or a real disyllabic word. Speakers are quicker to press the button when the prefix and disyllabic word disagree for \textsc{Back}. This is taken to indicate that speakers are attuned to the fact that disharmonic transistions are good predictors of word boundaries. On the other hand, if this also indicates that speakers recognize that harmonic transistions are more likely to be root-internal, then harmony is active not just where it is triggered by alternations (i.e., in Finnish affixes) but also in roots. 
+A number of studies have found that speakers of Finnish use disharmony in speech processing experiments.\footnote{Thanks to Charles Yang for pointing out the relevance of these studies to me.} \citet{Suomi1997} and \citet{Vroomen1998} generate nonce trisyllabic words by adding a monosyllabic pseudo-prefix to real and nonce disyllabic words, all of which are harmonic for the feature \textsc{Back}. These stimuli are auditorily presented to subjects who are asked to press a button when the nonce trisyllable ends with a target nonce disyllable, or a real disyllabic word. Speakers are quicker to press the button when the prefix and disyllabic word disagree for \textsc{Back}. These results suggest that speakers are attuned to the fact that disharmonic transisitions are good predictors of word boundaries. If speakers have also internalized the converse generalization, that harmonic transistions are more likely to be root-internal, then there is additional evidence that harmony is active not just in Finnish affix alternations but also in roots. 
 
-\citet{Kabak2010} report that Turkish \textsc{Backness Harmony} has the same effect on word-spotting as it does in Finnish: speakers are quicker and more accurate at the task of spotting the nonce target word \emph{pavo} when it preceded by the disharmonic pseudo-prefix \emph{gölü-} than when it is prefixed with harmonic nonce prefix \emph{golu-}. The effect of harmony does not obtain for speakers of French, which lacks vowel harmony. As in Finnish, the results imply speakers have internalized the predominance of root-internal harmony.
+\citet{Kabak2010} report that Turkish \textsc{Backness Harmony} has the same effect on word-spotting as it does in Finnish: speakers are quicker and more accurate at the task of spotting the nonce target word \emph{pavo} when preceded by the pseudo-prefix \emph{gölü-}, a disharmonic transistion, than when it is preceded by the pseudo-prefix \emph{golu-}, a harmonic transition. \citeauthor{Kabak2010} find that effect of harmony does not obtain for speakers of French, a language which lacks vowel harmony. As in Finnish, the results imply speakers have internalized the predominance of root-internal harmony.
 
-It seems that root-internal harmony is not only present in adults, but in fact is learned very early. The pseudoword spotting experiment has been adapted for 9-month-old Turkish infants by \citet{Kampen2008}. Infants are familiarized with harmonic disyllabic pseudowords bearing a pseudo-prefix, which may be harmonic or disharmonic. At test time, the infants are played the disyllabic pseudowords in isolation using the head turn preference paradigm. Infants show a preference to listen to those pseudowords which were familiarized with a disharmonic pseudo-prefix over those which were familiarized with a harmonic pseudo-prefix. This preference is not observed in 9-month-old infants learning German, which lacks vowel harmony. Similarly, \citeauthor{Kampen2008} report that Turkish 6-month-old infants prefer to listen to harmonic pseudowords such as \emph{paroz} over disharmonic pseudowords like \emph{nelok}, but German 6-month-old infants do not.
-
-%We might suggest methods not based only on statistical significance, but rather substantive computational properties of the linguistic objects in question \citep[e.g.,][]{Yang2005a}.
+It seems that the root-internal harmony bias is in fact learned by Turkish speakers very early. The pseudoword spotting experiment has been adapted for 9-month-old Turkish infants by \citet{Kampen2008}. Infants are familiarized with harmonic disyllabic pseudowords bearing a pseudo-prefix, which may be harmonic or disharmonic. At test time, the infants are played the disyllabic pseudowords in isolation using the head turn preference paradigm. Infants show a preference to listen to those pseudowords which were familiarized with a disharmonic pseudo-prefix over those which were familiarized with a harmonic pseudo-prefix. This preference is not observed in 9-month-old infants learning German, which also lacks vowel harmony. Similarly, \citeauthor{Kampen2008} report that Turkish 6-month-old infants prefer to listen to harmonic pseudowords such as \emph{paroz} over disharmonic pseudowords like \emph{nelok}, but German 6-month-old infants show no such preference.
