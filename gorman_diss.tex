@@ -50,16 +50,13 @@
 
 % a nice example environment
 \newcounter{exampleno}
-\setcounter{exampleno}{1}
+\setcounter{exampleno}{0}
 \newenvironment{example}%
 {\vspace{\baselineskip}%
 \noindent\ignorespaces%
-(\arabic{exampleno}) }%
-{\par\noindent%
-\ignorespacesafterend \addtocounter{exampleno}{1}%
-\vspace{0.5\baselineskip}}
-\newcommand{\lastx}{\arabic{exampleno}} %FIXME
-\newcommand{\nextx}{\arabic{exampleno}} %FIXME
+\refstepcounter{exampleno}
+(\arabic{exampleno}) }
+{\par\noindent}
 
 \title{Words \& Gaps}
 \author{Kyle Gorman}
@@ -87,8 +84,8 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 
 %\FrontMatter
 %\include{1}
-\include{2}
-%\include{3}
+%\include{2}
+\include{3}
 %\include{4}
 %\include{5}
 %\include{6}
@@ -97,7 +94,7 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 \appendix
 \renewcommand{\arraystretch}{0.25}
 
-\include{A}
+%\include{A}
 %\chapter{Data from Chapter \ref{turkish}} %\input{B}
 %\include{C}
 %\chapter{Data from Chapter \ref{theory}} %\input{D}

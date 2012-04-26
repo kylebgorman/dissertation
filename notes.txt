@@ -1,16 +1,23 @@
-Adam Ussishkin
-The inadequacy of the consonantal root: Modern Hebrew denominal verbs and output-output correspondence
-Phonology
-16
-?
-441-442
-1999
+- phonotactic effects in visual nonce word recognition
+    - nonce word 
+    - 
+    - 
 
-sd-t
-zd-t
+Word, base, and relative frequency effects /t, d/-\textsc{Deletion}
+    - 
 
-s-d -> 
-nz-d
+\citet{Gallagher2010a,Gallagher2011b}
+AB task with English speakers
+
+1 vs 2 < 1 vs 0 < 2 vs 0
+
+p\pal{}itu & p\pal{}it\pal{}u & p\asp{}itu & p\asp{}it\asp{}u \\
+pitu       & p\pal{}it\pal{}u & p\asp{}itu & p\asp{}it\asp{}u \\
+pitu       & p\pal{}it\pal{}u & pitu       & p\asp{}it\asp{}u \\
+
+\citet{GallagherInPress}
+
+
 
 Imagine a word $W$ from some donor language borrowed into a recipient language as $W'$. For the sake of simplicity, I further assume speakers of both languages are monolingual and that the contact is not in any way mediated by writing. There are many possible explanations for a nonvacuous function mapping $W$ to $W'$. 
 
