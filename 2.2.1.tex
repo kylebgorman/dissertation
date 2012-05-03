@@ -38,12 +38,75 @@ A\&H & 0.431 & 0.266    & 0.301   & 0.200      & 0.559     & 0.595   & 0.246    
 %\bottomrule
 %\xe
 
-%\subsubsection{Prediction distributions}
+\subsubsection{Prediction distributions}
 
-\citet{Coltheart1977}
+\begin{table}
+\centering
 
-\citet{Hayes2008a}
-\citet{Albright2009a}
+\begin{tabular}{l l l l l}
+\toprule
+Spearman $\rho$             & MaxEnt         & density        & bigram         & attested onsets/rimes \\
+\midrule
+\citeauthor{Greenberg1964a} & 0.765          & 0.648          & 0.863          & \textbf{0.845}        \\
+\citeauthor{Scholes1966}    & 0.762          & 0.718          & \textbf{0.827} & 0.791                 \\
+\citeauthor{Albright2003a}  & 0.429          & \textbf{0.742} & 0.708          & 0.725                 \\
+\citeauthor{Albright2007}   & \textbf{0.926} & 0.619          & 0.523          & 0.793                 \\
+\bottomrule
+Kendall $\tau_b$            & MaxEnt         & density & bigram & attested onsets/rimes \
+\midrule
+\citeauthor{Greenberg1964a} & 0.585          & 0.462   & 0.692  & \textbf{0.716}      \\
+\citeauthor{Scholes1966}    & 0.597          & 0.565   & 0.652  & \textbf{0.664}      \\
+\citeauthor{Albright2003a}  & 0.343          & 0.556   & 0.506  & \textbf{0.599}      \\
+\citeauthor{Albright2007}   & \textbf{0.788} & 0.462   & 0.371  & 0.659               \\
+\bottomrule
+Goodman-Kruskal $\gamma$    & MaxEnt & density & bigram & attested onsets/rimes
+\midrule
+\citeauthor{Greenberg1964a} & 0.684  & 0.462   & 0.692  & \textbf{1.000} \\
+\citeauthor{Scholes1966}    & 0.634  & 0.614   & 0.667  & \textbf{0.995} \\
+\citeauthor{Albright2003a}  & 0.656  & 0.575   & 0.509  & \textbf{0.953} \\
+\citeauthor{Albright2007}   & 0.871  & 0.498   & 0.373  & \textbf{0.977} \\
+\bottomrule
+\end{tabular}
+
+\caption{Here is my caption.  All values are significant at $\alpha = 0.05$}
+\end{table}
+
+
+\begin{table}
+\centering
+
+\begin{tabular}{l r r r}
+\toprule
+Spearman $\rho$             & MaxEnt              & density             & bigram              \\
+\midrule
+\citeauthor{Greenberg1964a} & 0.185               & 0.154               & \textbf{0.319}      \\
+\citeauthor{Scholes1966}    & 0.122               & 0.174               & \ul{\textbf{0.292}} \\
+\citeauthor{Albright2003a}  & 0.011               & \ul{\textbf{0.246}} & 0.203               \\
+\citeauthor{Albright2007}   & \ul{\textbf{0.440}} & \ul{0.340}          & 0.016               \\ 
+\bottomrule
+Kendall $\tau_b$            & MaxEnt              & density             & bigram \\
+\midrule
+\citeauthor{Greenberg1964a} & 0.135               & 0.077               & \textbf{0.205}      \\
+\citeauthor{Scholes1966}    & 0.098               & 0.124               & \ul{\textbf{0.206}} \\
+\citeauthor{Albright2003a}  & 0.005               & \ul{\textbf{0.157}} & 0.126               \\
+\citeauthor{Albright2007}   & \ul{\textbf{0.340}} & 0.215               & $-$0.017            \\
+\bottomrule
+Goodman-Kruskal $\gamma$    & MaxEnt              & density             & bigram \\
+\midrule
+\citeauthor{Greenberg1964a} & \ul{0.158}          & 0.077               & \ul{\textbf{0.205}} \\
+\citeauthor{Scholes1966}    & 0.105               & 0.137               & \ul{\textbf{0.214}} \\
+\citeauthor{Albright2003a}  & 0.010               & \ul{\textbf{0.162}} & \ul{0.127}          \\
+\citeauthor{Albright2007}   & \ul{\textbf{0.376}} & 0.232               & 0.017               \\
+\bottomrule
+\end{tabular}
+
+\caption{Here is my caption; underlined values are significant at $\alpha = 0.05$}
+\end{table}
+
+%\citet{Coltheart1977}
+%
+%\citet{Hayes2008a}
+%\citet{Albright2009a}
 
 % stats thereof
 %\citet{Schilling2002}
