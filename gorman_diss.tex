@@ -46,25 +46,30 @@
 \newcommand{\shade}{\cellcolor[gray]{0.7}}
 \newcommand{\goesto}{$\longrightarrow$}
 \providecommand{\e}[1]{\textsc{e}{$#1$}}
-%\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+% for compatibility with the WCCFL class
+\newcommand{\immedsubsection}{\subsection}
+\newcommand{\immedsubsubsection}{\subsubsection}
 
 % a nice example environment
 \newcounter{exampleno}
 \setcounter{exampleno}{0}
 \newenvironment{example}%
-{\vspace{\baselineskip}%
-\noindent\ignorespaces%
+{\vspace{0.5\baselineskip}
+\noindent\ignorespaces
 \refstepcounter{exampleno}
 (\arabic{exampleno}) }
-{\par\noindent}
+{\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
 
 \title{Words \& Gaps}
 \author{Kyle Gorman}
 \supervisor{Charles Yang \\ Associate Professor, Linguistics, Computer and Information Science, \& Psychology}
-\gradchair{Eugene Buckley \\ Associate Professor, Linguistics}
+\gradchair{Robin Clark \\ Associate Professor, Linguistics}
 \committee{Stephen R. Anderson \\ Dorothy R. Diebold professor of Linguistics, Psychology, \& Cognitive Science, Yale University
  \and
 Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science 
+\and
+Eugene Buckley \\ Associate Professor, Linguistics
 \and
 Rolf Noyer \\ Associate Professor, Linguistics}
 
@@ -76,26 +81,22 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 \abstractfile{abs} 
 \acknowledgementsfile{ack}
 %\dedicationfile{ded} % will probably not use this -- KG
-\dedication{\center To my parents}
+\dedication{\center To my parents, Mark and Bev, for never saying *\emph{bnick} or *\emph{forwent}}
 %\prefacefile{pre}
 
 \begin{document}
 \frenchspacing
-
 %\FrontMatter
-%\include{1}
-%\include{2}
-\include{3}
-%\include{4}
-%\include{5}
-%\include{6}
-%\include{7}
-
+%\chapter{Sequence structure constraints in generative grammar} \include{1} 
+%\chapter{Gradient and categorical aspects of wordlikeness judgements} \include{2}
+\chapter{Static and derived phonotactic constraints} \input{3}
+%\chapter{Accidental and structural gaps in English syllable contact\footnote{An abridged version of this chapter will appear in the proceedings of the 30th West Coast Conference on Formal Linguistics.}} \include{4}
+%\chapter{Inflectional gaps in generative grammar} \include{5}
+%\chapter{Inflectional gaps and the elsewhere principle} \include{6}
+%\chapter{Evaluating competing theories of inflectional gaps} \include{7}
 \appendix
 \renewcommand{\arraystretch}{0.25}
-
 %\include{A}
-%\chapter{Data from Chapter \ref{turkish}} %\input{B}
 %\include{C}
 %\chapter{Data from Chapter \ref{theory}} %\input{D}
 %\chapter{Data from Chapter \ref{insufficient}} %\input{E}
