@@ -13,18 +13,18 @@ Applying these derived constraints to the lexicon increases saturation from 18.8
 In a sparse distribution, many types occur at the same low frequencies. \citet{Good1953} notes that this produces a type of quantization, an artificially long and flat right tail in the frequency spectrum. \citet[][29]{Church1991} propose a method to eliminate this quantization, the $Z_r$ transform, defined as follows.
 Let $r, n$ be defined such that $n_i$ is the number of types which occur at frequency $r_i$ (i.e., $n$ contains frequencies of type frequencies). Further, let $r$ be sorted in increasing order. $Z$ is simply each element of $n$ scaled by the nearest points to the left and right. 
 
-\begin{example}
+\begin{example}[Zi]
 $\displaystyle Z_i = \frac{2 n_i}{r_{i + 1} - r_{i - 1}}$
 \end{example}
 
 \noindent
 \citeauthor{Church1991} do not define this transform for the lowest and highest points (i.e., when $i = 1$ or $i = N$), and so I extend the definition by scaling these points using only one inward-facing point.
 
-\begin{example}
+\begin{example}[Z1]
 $\displaystyle Z_1 = \frac{n_1}{r_2 - r_1}$
 \end{example}
 
-\begin{example}
+\begin{example}[Zn]
 $\displaystyle Z_N = \frac{n_N}{r_N - r_{N - 1}}$
 \end{example}
 
@@ -42,22 +42,22 @@ $\displaystyle Z_N = \frac{n_N}{r_N - r_{N - 1}}$
 
 A number of previous studies \citep[e.g.,][]{Sigurd1968,Good1969,Borodovsky1989,Witten1990,Martindale1996,Tambovtsev2007} have observed that phonemes and graphemes exhibit sparse type (i.e., lexical) and token frequency distributions. The lexical frequencies of the medial codas ond onsets which make up syllable contact clusters show a similar distribution. In Figure \ref{codaonset}, $Z_r$-transformed lexical frequencies of codas and onsets are plot against rank, in log-log spaces. The near-linear relationship that obtains indicates that the data can be modeled by a generalization of Zipf's law \citep{Zipf1949}.
 
-\begin{figure}
-\centering
-\includegraphics{coda.pdf} 
-\includegraphics{onset.pdf}
-\caption{Medial coda and medial onset lexical frequency exhibit the Zipfian log-log-linear relationship between rank and frequency.}
-\label{codaonset}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics{coda.pdf} 
+%\includegraphics{onset.pdf}
+%\caption{Medial coda and medial onset lexical frequency exhibit the Zipfian log-log-linear relationship between rank and frequency.}
+%\label{codaonset}
+%\end{figure}
 
-\begin{example}
+\begin{example}[example]
 $\displaystyle f(r; C, \alpha) = \frac{C}{r^\alpha}$ 
 \end{example}
 
 \noindent
 The parameters $C$, a constant sensitive to sample size, and $\alpha$, the slope of the rank/frequency relationship in log-log space, are easily computed using the method of least squares in a linear regression, where $\epsilon$ represents the error term.
 
-\begin{example}
+\begin{example}[example]
 $\displaystyle \textrm{log}~Z_r \sim C + \alpha~\textrm{log}~r + \epsilon$ 
 \end{example}
 
@@ -75,12 +75,11 @@ That clusters (and the codas and onsets that make them up conforms to Zipf's law
 
 \citet{Good1953} puts forth a simple theory of just how frequent unobserved events might be. He proposes to estimate $\hat{p}_0$, the probability of all unseen events, as the ratio of events which occur just once $n_1$, to the number of observations, $\sum N$. This quantity is known as the Good-Turing estimate, since it was originally developed by Alan Turing for codebreaking during the second World War.
 
-\begin{example}
+\begin{example}[example]
 $\displaystyle \hat{p}_0 = \frac{n_1}{\sum N}$ 
 \end{example}
 
-\noindent
-In the CELEX data, $65$ clusters occur only once, and there are 873 clusters in all, so $\hat{p}_0 = 0.074$. One way to interpret this quantity is with respect to a ``replication''. If it were possible to generate a new corpus of syllable contact clusters, approximately 7\% of cluster tokens will be ones that were not attested in the previous sample, i.e., they accidentally failed to be sampled. This is a not-inconsiderable quantity. 
+\noindent In the CELEX data, $65$ clusters occur only once, and there are 873 clusters in all, so $\hat{p}_0 = 0.074$. One way to interpret this quantity is with respect to a ``replication''. If it were possible to generate a new corpus of syllable contact clusters, approximately 7\% of cluster tokens will be ones that were not attested in the previous sample, i.e., they accidentally failed to be sampled. This is a not-inconsiderable quantity. 
 
 Unfortunately, the Good-Turing estimate does not provide a way to determine which unattested clusters might be found in a replication. But I have already proposed that the null hypothesis of generative phonology, combined with the principle of Stampean occultation, provides a way out of this conundrum. Unattested clusters like *[m.kl] are structurally excluded (since such a cluster is occulted by \textsc{Coda Nasal Place Assimilation}), whereas *[s.l] is probably an accidental gap.
 
@@ -88,17 +87,15 @@ Unfortunately, the Good-Turing estimate does not provide a way to determine whic
 
 As a final investigation into this data, I consider the statistical properties of a randomly generated novel ``lexicon''. The simulated lexicon is generated by  generating a distribution of clusters, by repeatedly applying the following procedure.
 
-\begin{example}
-Simulation procedure: \\
-    \begin{tabular}{l l}
-    a. & Sample a medial coda according to the observed probabilities  \\
-    b. & Sample a medial onset according to the observed probabilities \\
-    c. & Apply the SPE rules to the resulting cluster                  \\
-    \end{tabular}
+\begin{example}[Simulation procedure]
+\begin{tabular}{l l}
+a. & Sample a medial coda according to the observed probabilities  \\
+b. & Sample a medial onset according to the observed probabilities \\
+c. & Apply the SPE rules to the resulting cluster                  \\
+\end{tabular}
 \end{example}
 
-\noindent
-This is a simulation version of the model proposed by \citet{Pierrehumbert1994} and \citet{Coleman1997}, but also takes occulting phonology into account. 
+\noindent This is a simulation version of the model proposed by \citet{Pierrehumbert1994} and \citet{Coleman1997}, but also takes occulting phonology into account. 
 
 While this procedure can be repeated indefinitely 
 %(using the CELEX data, listed in Appendix \ref{A}), 

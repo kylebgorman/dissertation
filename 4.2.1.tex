@@ -21,11 +21,15 @@ I now consider constraints on sequences of URs as predictors of attested and una
 \subsubsection{Statistical technique}
 \label{stattech}
 
-Before the dawn of generative phonology, many linguists concerned themselves with documenting co-occurrence in various languages. \citet[][28]{Vogt1954} declares that a ``phonemic description of a language \ldots should also comprise a description of the phoneme combinations that occur or may be expected to occur in the language''. Studies in this tradition include the discussions of consononantal co-occurrence in Arabic and Javanese by \citet{Greenberg1950} and \citet{Uhlenbeck1950}, respectively. \citeauthor{Uhlenbeck1950}, for instance, puts forth co-occurrence dispreferences, rather than exceptionless generalizations of the sort given by \citet{Greenberg1950}. Years later, \citet{Mester1988} revisits \citeauthor{Uhlenbeck1950}'s study and proposes a statistical technique, based on the chi-square test, to distinguish between accidental and structural lexical dispreferences in the Javanese lexicon. 
+Before the dawn of generative phonology, many linguists concerned themselves with documenting co-occurrence in various languages. \citet[][28]{Vogt1954} declares that a ``phonemic description of a language \ldots should also comprise a description of the phoneme combinations that occur or may be expected to occur in the language''. Studies in this tradition include the discussions of consononantal co-occurrence in Arabic and Javanese by \citet{Greenberg1950} and \citet{Uhlenbeck1950}, respectively. \citeauthor{Uhlenbeck1950}, for instance, puts forth co-occurrence dispreferences, rather than exceptionless generalizations of the sort given by \citet{Greenberg1950}. 
+
+\citet{McCarthy1988}
+
+Years later, \citet{Mester1988} revisits \citeauthor{Uhlenbeck1950}'s study and proposes a statistical technique, based on the chi-square test, to distinguish between accidental and structural lexical dispreferences in the Javanese lexicon. 
 
 \citeauthor{Mester1988}'s technique has been adopted by many subsequent studies (e.g., \citealt{Padgett1992,Padgett1995} on Russian; \citealt{Pierrehumbert1993}, \citealt{Frisch1996}, and \citealt{Frisch2004} on Arabic; \citealt{Berkley1994b,Berkley1994a,Berkley2000}, \citealt{Dmitrieva2008a}, \citealt{Dmitrieva2008b} on English). The null hypothesis $H_0$ is that some sequence occurs at no different a rate than the researcher expects, and the alternative hypothesis $H_1$ is that it is underrepresented. Given an observed frequency $O$ and also a frequency $E$ expected under the null hypothesis, the test is as follows.
 
-\begin{example}
+\begin{example}[null hypothesis testing]
 $\displaystyle \textrm{Reject } H_0 \textrm{ iff } \frac{(O E) ^ 2}{E} >
 χ^2$
 \end{example}
@@ -44,10 +48,7 @@ As an example of the Fisher exact test as it is applied here, consider some of t
 
 % APPLY THIS TO JAVANESE
 
-\begin{example}
-Javanese root co-occurrence (\citealp[][264]{Uhlenbeck1950}, \citealp[][139]{Mester1988}): 
-
-\vspace{0.5\baselineskip}
+\begin{example}[Javanese root co-occurrence] %(\citealp[][264]{Uhlenbeck1950}, \citealp[][139]{Mester1988})]
 \begin{tabular}{l r r r r}
 \toprule
            & attested & unattested & saturation & $p$-value \\
@@ -164,8 +165,8 @@ a. & possible & i[m.p]ossible \\
    & balance  & i[m.b]alance  \\
 b. & tangible & i[n.t]angible \\
    & decent   & i[n.d]ecent   \\
-c. & elegant  & i[n.]elegant  \\
-   & ability  & i[n.]ability  \\
+c. & elegant  & i[n]elegant  \\
+   & ability  & i[n]ability  \\
 \end{tabular} 
 \end{example}
 

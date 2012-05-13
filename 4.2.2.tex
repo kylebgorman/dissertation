@@ -25,26 +25,26 @@ To evaluate these statistical models, they are first trained on the set of attes
 %\end{tabular}
 %\xe 
 
-\begin{example}
+\begin{example}[Accuracy]
 $\displaystyle \textrm{Accuracy} = \frac{t.p. + t.n.}{t.p. + t.n. + f.p. + f.n.}$
 \end{example}
 
 \noindent
 A few other metrics can be used to assess classification performance. Precision corresponds to the probability that a cluster predicted to occur is observed in the data. 
-\begin{example}
+\begin{example}[exasmple]
 $\displaystyle \textrm{Precision} = \frac{t.p.}{t.p. + f.p.}$ 
 \end{example}
 
 \noindent
 Recall (also known as sensitivity) is the probability a observed cluster is predicted to occur. 
 
-\begin{example}
+\begin{example}[hi]
 $\displaystyle \textrm{Recall} = \frac{t.p.}{t.p. + f.n.}$
 \end{example}
 
 It is possible to maximize recall at the expense of precision, by predicting more clusters to be attested, or to increase precision at the expense of recall by predicting fewer clusters to be attested. A common way to balance these concerns is the $F_1$ score, which is the harmonic mean of precision and recall.
 
-\begin{example}
+\begin{example}[thing]
 $\displaystyle F_1 = 2 \left( \frac{\textrm{Precision} \times \textrm{Recall}}{\textrm{Precision} + \textrm{Recall}}\right)$ 
 \end{example}
 

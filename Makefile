@@ -12,7 +12,7 @@ bib: $(TARGET)
 	$(COMMAND) $(SOURCE)
 
 clean:
-	$(RM) -f *.aux *.toc *.log *.lot *.bbl *.blg *.fls *.lof $(TARGET)
+	latexmk -c
 
 show: $(TARGET)
 	open $(TARGET)

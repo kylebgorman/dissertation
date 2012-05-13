@@ -1,9 +1,10 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass{upenndiss}
+\documentclass[draft]{upenndiss}
+\includeonly{4}
 
 % bibliography stuff
-\usepackage[round]{natbib}
+\usepackage[sort,round]{natbib}
 \bibpunct[:]{(}{)}{,}{a}{}{,}
 
 % graphics
@@ -35,8 +36,10 @@
 %\usepackage{listings}
 %\usepackage{courier}
 
-% my shortcuts
+%% KG's definitions
+% shortcuts
 \newcommand{\lm}{ː}
+\newcommand{\ul}{\underline}
 \newcommand{\zr}{$\emptyset$}
 \newcommand{\buf}{\hspace{0pt}}
 \newcommand{\gap}{\rule{1em}{0.5pt}}
@@ -47,18 +50,24 @@
 \newcommand{\goesto}{$\longrightarrow$}
 \providecommand{\e}[1]{\textsc{e}{$#1$}}
 
-% for compatibility with the WCCFL class
+% compatibility with the WCCFL class
 \newcommand{\immedsubsection}{\subsection}
 \newcommand{\immedsubsubsection}{\subsubsection}
 
-% a nice example environment
+% symbol footnotes for chapter headers
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+% a simple example environment
 \newcounter{exampleno}
 \setcounter{exampleno}{0}
-\newenvironment{example}%
+\newenvironment{example}[1][]%
 {\vspace{0.5\baselineskip}
 \noindent\ignorespaces
-\refstepcounter{exampleno}
-(\arabic{exampleno}) }
+\refstepcounter{exampleno}%
+(\arabic{exampleno})~~\protect #1: 
+
+\vspace{0.25\baselineskip}}
 {\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
 
 \title{Words \& Gaps}
@@ -74,36 +83,36 @@ Eugene Buckley \\ Associate Professor, Linguistics
 Rolf Noyer \\ Associate Professor, Linguistics}
 
 \copyrighttrue
-%\copyrightyear{2012}  % Defaults to the current year
+\copyrightyear{2012}  % Defaults to the current year
 
 \department{Linguistics}
 
 \abstractfile{abs} 
 \acknowledgementsfile{ack}
 %\dedicationfile{ded} % will probably not use this -- KG
-\dedication{\center To my parents, Mark and Bev, for never saying *\emph{bnick} or *\emph{forwent}}
-%\prefacefile{pre}
+\dedication{\center To my parents, Mark and Bev, for teaching me to never say *\emph{bnick} or *\emph{forwent}}
+\prefacefile{pre}
 
 \begin{document}
 \frenchspacing
 %\FrontMatter
-%\chapter{Sequence structure constraints in generative grammar} \include{1} 
-%\chapter{Gradient and categorical aspects of wordlikeness judgements} \include{2}
-\chapter{Static and derived phonotactic constraints} \input{3}
-%\chapter{Accidental and structural gaps in English syllable contact\footnote{An abridged version of this chapter will appear in the proceedings of the 30th West Coast Conference on Formal Linguistics.}} \include{4}
-%\chapter{Inflectional gaps in generative grammar} \include{5}
-%\chapter{Inflectional gaps and the elsewhere principle} \include{6}
-%\chapter{Evaluating competing theories of inflectional gaps} \include{7}
+%\include{1}
+%\include{2}
+%\include{3}
+\include{4}
+%\chapter{Inflectional gaps in generative grammar} \input{5}
+%\chapter{Inflectional gaps and the elsewhere principle} \input{6}
+%\chapter{Evaluating competing theories of inflectional gaps} \input{7}
 \appendix
 \renewcommand{\arraystretch}{0.25}
-%\include{A}
-%\include{C}
+\include{A}
+%\input{B}
 %\chapter{Data from Chapter \ref{theory}} %\input{D}
 %\chapter{Data from Chapter \ref{insufficient}} %\input{E}
 
 %\lstset{language=Python, basicstyle=\scriptsize\ttfamily, showstringspaces=false, upquote=false}
 %\lstinputlisting{zipf_sim.py}
 
-\bibliographystyle{pwpl}
 \bibliography{kgorman}
+\bibliographystyle{pwpl}
 \end{document}
