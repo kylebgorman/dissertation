@@ -1,7 +1,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 \documentclass[draft]{upenndiss}
-\includeonly{4}
+\includeonly{4,A}
 
 % bibliography stuff
 \usepackage[sort,round]{natbib}
@@ -58,9 +58,10 @@
 \long\def\symbolfootnote[#1]#2{\begingroup%
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
 
-% a simple example environment
+% two simple example environments
 \newcounter{exampleno}
 \setcounter{exampleno}{0}
+
 \newenvironment{example}[1][]%
 {\vspace{0.5\baselineskip}
 \noindent\ignorespaces
@@ -70,17 +71,21 @@
 \vspace{0.25\baselineskip}}
 {\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
 
+\newenvironment{unlabeledexample}%
+{\vspace{0.5\baselineskip}
+\noindent\ignorespaces
+\refstepcounter{exampleno}%
+(\arabic{exampleno})~~}
+{\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
+
 \title{Words \& Gaps}
 \author{Kyle Gorman}
 \supervisor{Charles Yang \\ Associate Professor, Linguistics, Computer and Information Science, \& Psychology}
 \gradchair{Robin Clark \\ Associate Professor, Linguistics}
 \committee{Stephen R. Anderson \\ Dorothy R. Diebold professor of Linguistics, Psychology, \& Cognitive Science, Yale University
- \and
-Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science 
-\and
-Eugene Buckley \\ Associate Professor, Linguistics
-\and
-Rolf Noyer \\ Associate Professor, Linguistics}
+\and Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science 
+\and Eugene Buckley \\ Associate Professor, Linguistics
+\and Rolf Noyer \\ Associate Professor, Linguistics}
 
 \copyrighttrue
 \copyrightyear{2012}  % Defaults to the current year
@@ -97,8 +102,8 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 \frenchspacing
 %\FrontMatter
 %\include{1}
-%\include{2}
-%\include{3}
+\include{2}
+\include{3}
 \include{4}
 %\chapter{Inflectional gaps in generative grammar} \input{5}
 %\chapter{Inflectional gaps and the elsewhere principle} \input{6}
@@ -106,7 +111,7 @@ Rolf Noyer \\ Associate Professor, Linguistics}
 \appendix
 \renewcommand{\arraystretch}{0.25}
 \include{A}
-%\input{B}
+\include{B}
 %\chapter{Data from Chapter \ref{theory}} %\input{D}
 %\chapter{Data from Chapter \ref{insufficient}} %\input{E}
 

@@ -3,18 +3,19 @@ TARGET=gorman_diss.pdf
 BIBTEX=bibtex
 COMMAND=xelatex -halt-on-error
 
-pdf: 
+all:
 	$(COMMAND) $(SOURCE)
 
 bib: $(TARGET)
 	$(BIBTEX) $(SOURCE)
-	$(COMMAND) $(SOURCE)
-	$(COMMAND) $(SOURCE)
+	$(COMMAND) -interaction=batchmode -no-pdf $(SOURCE)
+	$(COMMAND) -interaction=batchmode $(SOURCE)
 
 clean:
-	latexmk -c
+	latexmk -C
+	$(RM) $(SOURCE).bbl $(SOURCE).xdv
 
 show: $(TARGET)
 	open $(TARGET)
 
-.PHONY: clean rmpdf show
+.PHONY: clean show

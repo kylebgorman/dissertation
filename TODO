@@ -1,33 +1,37 @@
-3
-   x3.1 
-       x3.1.1
-       x3.1.2
-        3.1.3
-    3.2
-        3.2.1
-        3.2.2
-    3.3   
+3. Intro 
+3.1: The sequence structure constraints
+3.1.1: backness
+3.1.2: roundness
+3.1.3: labial attraction
+3.2: Evaluation
+3.2.1: backness
+    lexical statistics
+    zimmer
+    other evidence
+3.2.2: roundness
+    lexical statistics
+    zimmer
+    other evidence
+3.2.3: labial attraction
+    lexical statistics
+    zimmer
+    other evidence
+3.3: conclusion
+4::
+4.1:
+4.1.1:
+4.1.2: x
+4.1.3: x
+4.2:
+4.2.1:
+4.2.2: x
+4.2.3: 
+4.3: 
 
-4
-    4.1
-         4.1.1
-        x4.1.2
-        x4.1.3
-    4.2
-         4.2.1
-        x4.2.2
-         4.2.3
-    4.3
-
-
-% chapter 1: circulate phonotactics material and write
-% chapter 5
-% chapter 6
-% chapter 7
-
-preface
-abstract edit
+abstract
 acknowledgements
-abs.tex
-ack.tex
-pre.tex
+preface
+
+ 5
+ 6
+ 7
