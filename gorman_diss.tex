@@ -1,7 +1,8 @@
+%This chapter attempts to derive which phonotactic judgemetns are internalized by 
+
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass[draft]{upenndiss}
-\includeonly{4,A}
+\documentclass{upenndiss}
 
 % bibliography stuff
 \usepackage[sort,round]{natbib}
@@ -78,6 +79,13 @@
 (\arabic{exampleno})~~}
 {\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
 
+\newenvironment{mathexample}
+{\vspace{0.5\baselineskip}
+\noindent\ignorespaces
+\refstepcounter{exampleno}%
+(\arabic{exampleno})~~$\displaystyle}
+{$\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
+
 \title{Words \& Gaps}
 \author{Kyle Gorman}
 \supervisor{Charles Yang \\ Associate Professor, Linguistics, Computer and Information Science, \& Psychology}
@@ -103,15 +111,15 @@
 %\FrontMatter
 %\include{1}
 \include{2}
-\include{3}
-\include{4}
+%\include{3}
+%\include{4}
 %\chapter{Inflectional gaps in generative grammar} \input{5}
 %\chapter{Inflectional gaps and the elsewhere principle} \input{6}
 %\chapter{Evaluating competing theories of inflectional gaps} \input{7}
 \appendix
 \renewcommand{\arraystretch}{0.25}
 \include{A}
-\include{B}
+%\include{B}
 %\chapter{Data from Chapter \ref{theory}} %\input{D}
 %\chapter{Data from Chapter \ref{insufficient}} %\input{E}
 

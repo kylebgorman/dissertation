@@ -1,6 +1,3 @@
-burzio 1994 (52f.), Halle 1998 (551, fn. 9)
-rely on geminates in Tib\'et, Tib\'etan vs.  R\'ussell/Russ\'ellian (cf. c\'omedy/com\'edian
-
 \citet{Chomsky1965} argue that speakers internalize not only generalizations governing phonological alternations in their language, but also about the shapes of possible words and underlying representations in their language. The persistent challenge to developing a theory of this knowledge is to identify which of the countless such possible competing generalizations are actually internalized by speakers, and which are ignored. 
 
 \citet{Gallagher2010a,Gallagher2011b}

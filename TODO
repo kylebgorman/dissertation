@@ -17,21 +17,27 @@
     zimmer
     other evidence
 3.3: conclusion
-4::
-4.1:
-4.1.1:
-4.1.2: x
-4.1.3: x
-4.2:
-4.2.1:
-4.2.2: x
-4.2.3: 
-4.3: 
+
+4: Intro
+%% ??
+% Outline
+4.1: Domain
+% description of syllable contact clusters
+% relevance of context
+4.1.1: The corpus
+% CELEX database
+% corpus counts
+X4.1.2: Syllabification 
+X4.1.3: Inventory considerations
+4.2: Evaluation
+% Claim being evaluated
+% local outline
+% Statistical technique
+4.2.1: derived constraints
+4.2.2: static constraints
+4.2.3: computational models
+4.3: conclusion
 
 abstract
 acknowledgements
 preface
-
- 5
- 6
- 7
