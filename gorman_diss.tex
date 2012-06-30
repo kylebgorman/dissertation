@@ -1,7 +1,6 @@
-%This chapter attempts to derive which phonotactic judgemetns are internalized by 
-
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
+%\documentclass[draft]{upenndiss}
 \documentclass{upenndiss}
 
 % bibliography stuff
@@ -16,7 +15,7 @@
 \usepackage{amsmath}
 \usepackage{latexsym}
 \usepackage{colortbl}
-\usepackage{arydshln} % colortbl >> arydshln is a crit. ordering
+%\usepackage{arydshln} % colortbl >> arydshln is a crit. ordering
 \usepackage{xypic}
 \usepackage{graphicx}
 
@@ -103,29 +102,30 @@
 \abstractfile{abs} 
 \acknowledgementsfile{ack}
 %\dedicationfile{ded} % will probably not use this -- KG
-\dedication{\center To my parents, Mark and Bev, for teaching me to never say *\emph{bnick} or *\emph{forwent}}
+\dedication{\center To my parents, Mark and Bev, who never 
+said *\emph{bnick} or *\emph{forwent}}
 \prefacefile{pre}
 
 \begin{document}
 \frenchspacing
-%\FrontMatter
+\FrontMatter
+
 %\include{1}
+\include{1placeholder}
 \include{2}
+\include{3placeholder}
 %\include{3}
-%\include{4}
-%\chapter{Inflectional gaps in generative grammar} \input{5}
-%\chapter{Inflectional gaps and the elsewhere principle} \input{6}
-%\chapter{Evaluating competing theories of inflectional gaps} \input{7}
+\include{4}
+%\input{5}
+%\input{6}
 \appendix
 \renewcommand{\arraystretch}{0.25}
 \include{A}
-%\include{B}
-%\chapter{Data from Chapter \ref{theory}} %\input{D}
-%\chapter{Data from Chapter \ref{insufficient}} %\input{E}
+\include{B}
 
 %\lstset{language=Python, basicstyle=\scriptsize\ttfamily, showstringspaces=false, upquote=false}
 %\lstinputlisting{zipf_sim.py}
 
-\bibliography{kgorman}
+\bibliography{\jobname}
 \bibliographystyle{pwpl}
 \end{document}

@@ -8,6 +8,7 @@ all:
 
 bib: $(TARGET)
 	$(BIBTEX) $(SOURCE)
+	sed -e 's!?\\/}\.!?\\/}!' < $(SOURCE).bbl > TEMP; mv TEMP $(SOURCE).bbl
 	$(COMMAND) -interaction=batchmode -no-pdf $(SOURCE)
 	$(COMMAND) -interaction=batchmode $(SOURCE)
 

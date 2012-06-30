@@ -1,5 +1,4 @@
-%\chapter{Static and derived phonotactic constraints in Turkish} 
-\label{turkish}
+\chapter{Static and derived phonotactic preferences in Turkish}
 
 \citet{Chomsky1965} argue that speakers internalize not only generalizations governing phonological alternations in their language, but also about the shapes of possible words in their language. It is certainly possible to imagine that speakers would not bother at all. \citet[][320]{Zimmer1969} claims these generalizations ``have no observable consequences in the course of the normal use of the language'' and a similar sentiment is echoed more recently by \citeauthor{PE}:
 
@@ -7,8 +6,7 @@
 Even if we, as linguists, find some generalizations in our description of the lexicon, there is no reason to posit these generalizations as part of the speaker's knowledge of their language, since they are computationally inert and thus irrelevant to the input-output mapping that the grammar is responsible for. \citep[][18]{PE}
 \end{quote}
 
-This is a principled null hypothesis, but one which can be quickly rejected. \citeauthor{Chomsky1965} point to robust contrasts between equally unattested items like *\emph{blick}, which is recognized by speakers a possible word of English, and *\emph{bnick}, which is not.\footnote{Any readers who are skeptical that \citeauthor{Chomsky1965}'s intuitions generalize will find support for their claim in the wordlikeness judgement data reported in Appendix \ref{albright}.}
-%As a quick validation of this claim, consider the results reported by \citet{Albright2007} and discussed in the previous chapter. English speakers asked to rate non-words on a scale from 1-7, where 7 indicates ``most like English'', favor non-words [blʌs, blɑd] (average scores 4.67 and 5.13) over [bnʌs, bnɑd] (average scores 2.06, 2.00).
+This is a principled null hypothesis, but one which can be quickly rejected. \citeauthor{Chomsky1965} point to robust contrasts between equally unattested items like *\emph{blick}, which is recognized by speakers a possible word of English, and *\emph{bnick}, which is not.
 This preference must be regarded as a learned behavior, since many languages permit  \emph{bn} onsets (e.g., Moroccan Arabic \emph{bni} `building', \emph{bnat} `daughters', \emph{bniqa} `closet'). It is also possible to show speakers access this knowledge not just in wordlikeness judgement tasks but also in naturalistic and quotidien tasks like segmenting spontaneous speech into words, as \citet{McQueen1998} and \citet{Mattys2001b} argue for adult and infant subjects, respectively.
 
 \citeauthor{Chomsky1965} were not the first to take an interest in characterizing the lexicon, which was also a major concern for the scholars of the Copenhagen school. In two sophisticated studies dealing with possible and impossible onsets in Georgian, \citet{Fischer-Jorgensen1952} and \citet{Vogt1954} recognize the inherent difficulty of distinguishing between structural and accidental phonotactic gaps in the lexicon on the basis of statistical criteria alone. What distinguishes the early generativist approach to phonotactics is the mentalistic concern with what generalizations speakers have internalized. By grounding the study of phonotactics in the minds of speakers, it is possible to give a precise definition to the previously vague notions; an accidental phonotactic gap is simply one which speakers do not attend to or internalize. Yet few studies of phonotactics are explicitly concerned with what speakers have internalized, despite the increasing sophistication of the phonological representations used. In a seminal paper, \citet{McCarthy1988} uses a simple statistical technique, a chi-square test, in an attempt to validate a generalization about Arabic root consonant co-occurrence faces originally due to \citet{Greenberg1950}. While this particular generalization was ultimately also evaluated using a wordlikeness task \citep{Frisch2004}, there is now an extensive literature in which phonotactic knowledge is inferred directly from lexical statistics, with no psycholinguistic component of any kind \citep[e.g.,][]{Mester1988,Padgett1992,Padgett1995,Berkley1994b,Berkley1994a,Berkley2000,Buckley1997,MacEachern1999,Kinney2005,Kawahara2006,Martin2007,Martin2011,Pozdniakov2007,Anttila2008,Coetzee2008a,Dmitrieva2008a,Dmitrieva2008b,Graff2011}. The (usually tacit) assumption of most of this work is made explicit by \citet{Brown2010} in his study of consonant cluster co-occurrence restrictions in Gitksan: any statistically significant pattern in the lexicon is one that is internalized by speakers. 
@@ -36,8 +34,6 @@ Work in this vein sought to use sequence structure constraints to compress the l
 
 
 This work has a second interest, namely in ``compressing'' the lexicon as much as possible, 
-
-
 
 It is important to know that this wor It is important to know that this wor It is important to know that this wor It is important to know that this work
 
@@ -92,15 +88,12 @@ synchronically motivated phonological processes such as alternation or syllabifi
 \citet{Lees1966b,Lees1966a} 
 proposes three constraints on Turkish vowel sequences which have been the focus of many subsequent studies. In this section, these constraints are formalized, and where possible, related to phonological alternations in Turkish and to evidence that speakers have internalized these restrictions. The following feature specification for the Turkish vowels is assumed throughout.
 
-\begin{example}
-Turkish vowel features:
-
-\vspace{0.5\baselineskip}
+\begin{example}[Turkish vowel features]
 \begin{tabular}{c | c c c c}
                        & \multicolumn{2}{c}{[$-$\textsc{Back}]} & \multicolumn{2}{c}{[$+$\textsc{Back}]} \\
                        & [$-$\textsc{Round}] & [$+$\textsc{Round}] & [$-$\textsc{Round}] & [$+$\textsc{Round}] \\ \midrule
-\buf[$+$\textsc{High}] & {i} & {ü} [y] & {ı} [ɯ] & {u} \\
-\buf[$-$\textsc{High}] & {e} & {ö} [ø] & {a} [ɑ] & {o} \\
+\buf[$+$\textsc{High}] & \emph{i} & \emph{ü} [y] & \emph{ı} [ɯ] & \emph{u} \\
+\buf[$-$\textsc{High}] & \emph{e} & \emph{ö} [ø] & \emph{a} [ɑ] & \emph{o} \\
 \end{tabular}
 \end{example}
 
@@ -113,9 +106,7 @@ Turkish vowel features:
 \textsc{Backness Harmony} spreads the backness specification of a vowel rightward ignoring any intervening consonants.
 
 %\citep[after][229]{Clements1982}: \\
-\begin{example}
-\textsc{Backness Harmony}:
-
+\begin{example}[\textsc{Backness Harmony}]
 \xymatrix@R=24pt@C=24pt{
 \txt{V}                                        & \txt{C$_0$~~~~~} & \txt{V} & \txt{(condition: rightward application)} \\
 \txt{[α \textsc{Back}]}\ar@{-}[u]\ar@{--}[urr] \\
@@ -126,50 +117,42 @@ This rule accounts for the tendency of polysyllablic roots to either contain all
 %, as can be seen in the nominative singulars in (\ref{turknom}b); 
 this tendency is quantified in \S\ref{lexstats} below. \textsc{Backness Harmony} also accounts for the allomorphs of several inflectional suffixes. For instance, the nominative plural (nom.pl.) suffix is \emph{-ler}, when the final root vowel is [$-$\textsc{Back}], and \emph{-lar} when it is [$+$\textsc{Back}]. 
 
-\begin{example}
-\label{turknom}
-The Turkish nominative:
-
-%\vspace{0.5\baselineskip}
+\begin{example}[The Turkish nominative] \label{turknom}
 \begin{tabular}{l l l l l}
-   & \emph{nom.sg.} & \emph{nom.pl.} \\
-a. & ip             & ipler          & `rope' & \citep[][216]{Clements1982} \\
-   & el             & eller          & `hand'    \\
-   & köy            & köyler         & `village' \\
-   & yüz            & yüzler         & `face'    \\
-   & kız            & kizlar         & `girl'    \\
-   & sap            & saplar         & `stalk'   \\
-   & son            & sonlar         & `end'     \\
-   & pul            & pullar         & `stamp'   \\
-b. & neden          & nedenler       & `reason'  & (TELL) \\ % front
-   & kiler          & kilerler       & `pantry'           \\ % front
-   & pelür          & pelürler       & `tissue paper'     \\ % back
-   & boğaz          & boğazlar       & `throat'           \\ % back
-   & sapık          & sapıklar       & `pervert'          \\ % back
+   & nom.sg.      & nom.pl. \\
+a. & \emph{ip}    & \emph{ipler}    & `rope'        & \citep[][216]{Clements1982} \\
+   & \emph{el}    & \emph{eller}    & `hand'    \\
+   & \emph{köy}   & \emph{köyler}   & `village' \\
+   & \emph{yüz}   & \emph{yüzler}   & `face'    \\
+   & \emph{kız}   & \emph{kızlar}   & `girl'    \\
+   & \emph{sap}   & \emph{saplar}   & `stalk'   \\
+   & \emph{son}   & \emph{sonlar}   & `end'     \\
+   & \emph{pul}   & \emph{pullar}   & `stamp'   \\
+b. & \emph{neden} & \emph{nedenler} & `reason'       & (TELL) \\ % front
+   & \emph{kiler} & \emph{kilerler} & `pantry'       \\ % front
+   & \emph{pelür} & \emph{pelürler} & `tissue paper' \\ % back
+   & \emph{boğaz} & \emph{boğazlar} & `throat'       \\ % back
+   & \emph{sapık} & \emph{sapıklar} & `pervert'      \\ % back
 \end{tabular}
 \end{example}
 
 There are a few complications, however. First, not all polysyllabic roots conform to \textsc{Backness Harmony}. In this case, as shown in (\ref{turkexcept}a), suffix vowels generally harmonize with the final root vowel. There is also a very small class of nouns, shown in (\ref{turkexcept}b), which take \emph{-ler} despite the fact that their final root vowel is [$+$\textsc{Back}].
 
-\begin{example}
-\label{turkexcept}
-Exceptional Turkish nominatives:
-
-%\vspace{0.5\baselineskip}
+\begin{example}[Exceptional Turkish nominatives] \label{turkexcept}
 \begin{tabular}{l l l l l}
-   & \emph{nom.sg.} & \emph{nom.pl.} \\
-a. & mezar          & mezarlar       & `grave' & \citep{TELL} \\
-   & model          & modeller       & `model' \\
-   & silah          & silahlar       & `weapon'     \\
-   & memur          & memurlar       & `bureaucrat' \\
-   & sabun          & sabunlar       & `soap'       \\
-b. & saat           & saatler        & `hour, clock' \\
-   & harf           & harfler        & `(alphabetic) letter' \\ %& \citep{Goksel2005}
-   & etol           & etoller        & `fur stole' \\
+   & {nom.sg.}    & {nom.pl.} \\
+a. & \emph{mezar} & \emph{mezarlar} & `grave' & \citep{TELL} \\
+   & \emph{model} & \emph{modeller} & `model' \\
+   & \emph{silah} & \emph{silahlar} & `weapon'     \\
+   & \emph{memur} & \emph{memurlar} & `bureaucrat' \\
+   & \emph{sabun} & \emph{sabunlar} & `soap'       \\
+b. & \emph{saat}  & \emph{saatler}  & `hour, clock' \\
+   & \emph{harf}  & \emph{harfler}  & `(alphabetic) letter' \\ %& \citep{Goksel2005}
+   & \emph{etol}  & \emph{etoller}  & `fur stole' \\
 \end{tabular}
 \end{example}
 
-While it is uncontroversial that the disharmonic suffixes of (\ref{turkexcept}b) are no more than very sporadic exceptions to \textsc{Backness Harmony}, root disharmony has ben the subject of much debate. As disharmonic roots still trigger suffix harmony, \citet[][212, 289]{Anderson1974} and \citet{Iverson1978} propose to separate suffix harmony, an alternation, from a sequence structure constraint governing root harmony. 
+While it is uncontroversial that the disharmonic suffixes of (\ref{turkexcept}b) are no more than very sporadic exceptions to \textsc{Backness Harmony}, root disharmony has ben the subject of much debate. As disharmonic roots still trigger suffix harmony, \citet[][212, 289]{Anderson1974} and \citet{Iverson1978} propose to separate suffix harmony, an alternation, from a sequence structure constraint governing root harmony.
 
 The disadvantage of this account is that it introduces a sort of ``duplication'' (in the sense of \citealt{Kenstowicz1977}) of sequence structure and phonological generalizations, differning only in their patterns of exceptionality.
 %\citep{Kisseberth1970b} (see also \citealp[][401]{Stanley1967} and \emph{SPE}:382)
@@ -198,15 +181,11 @@ Before moving on, it is necessary to dispense with an alternative analysis origi
 %(e.g., \emph{deve} `camel' vs. \emph{deva} `medicine', \emph{sene} `year' vs. \emph{sena} `praise'). 
 %There is some further evidence that individual vowels may differ in specification for this feature even within individual roots or affixes. For instance, the present continuous suffix has harmony-determined allomorphs \emph{-iyor}, \emph{-üyor}, \emph{-ıyor}, \emph{-uyor}, but the \emph{o} of the suffix is invariant. A similar situation might obtain in Turkish roots. 
 
-\begin{example}
-\label{spec}
-Underspecification in harmonic roots (after \citealp{Clements1982}):
-
-%\vspace{0.5\baselineskip}
+\begin{example}[Underspecification in harmonic roots (after \citealp{Clements1982})] \label{spec}
 \xymatrix@R=24pt@C=24pt{
-\txt{a.} & \txt{harmonic root:~~~~} & \txt{C} & \txt{V} & \txt{C} & \txt{V} \\
+\txt{a.} & \txt{harmonic root:~~~~} & \txt{C} & \txt{V} & \txt{C} & \txt{V} & \txt{\ldots} \\
 &   &    & \txt{[$-$\textsc{Back}]}\ar@{-}[u]\ar@{--}[urr] \\
-\txt{b.} & \txt{disharmonic root:} & \txt{C} & \txt{V} & \txt{C} & \txt{V} \\
+\txt{b.} & \txt{disharmonic root:} & \txt{C} & \txt{V} & \txt{C} & \txt{V} & \txt{\ldots} \\
     &    &         & \txt{[$-$\textsc{Back}]}\ar@{-}[u] & & \txt{[$+$\textsc{Back}]}\ar@{-}[u]
 }
 \end{example}
@@ -233,22 +212,19 @@ Even if we, as linguists, find some generalizations in our description of the le
 \end{quote}
 
 Several independent pieces of external evidence argue that this is not the case for root harmony in Turkish. 
-The adaptation of non-native word-initial onset clusters, discussed by \citet{Clements1982} and \citet{Kaun1999}, is one such case.\footnote{Thanks to Kie Zuraw for bringing this data to my attention.} While some speakers are said to be capable of pronouncing these non-native clusters, in normal speech the cluster is resolved by epenthesis of a [$+$\textsc{High}] vowel. In most cases, the epenthetic vowel matches the following root vowel for backness, suggesting that adapt foreign words in a way that conforms to the root harmony generalization.
+The adaptation of non-native word-initial onset clusters, discussed by \citet{Clements1982} and \citet{Kaun1999}, is one such case.\footnote{Thanks to Kie Zuraw for bringing this data to my attention.} While some speakers are said to be capable of pronouncing these non-native clusters, in normal speech the cluster is resolved by epenthesis of a [$+$\textsc{High}] vowel. In most cases, the epenthetic vowel matches the following root vowel for backness, suggesting that adapt foreign words in a way that conforms to the root harmony generalization.\footnote{At the same time, this shows that adaptation is not simply applying rules, like \textsc{Backness Harmony}, to foreign forms. Rather, foreign forms are restructured as non-exceptional Turkish lexical items.}
 
 %the epenthetic vowel is always [$+$\textsc{High}],
 %and in general, it conforms to \textsc{Backness Harmony}.
 %For reasons that are 
 %and when the first consonant of the cluster is non-dorsal, it shows backness harmony
 
-\begin{example}
-Adaptation of initial foreign clusters \citep[][247]{Clements1982}: 
-
-%\vspace{0.5\baselineskip}
+\begin{example}[Adaptation of initial foreign clusters (\citealp{Clements1982}:247)] 
 \begin{tabular}{l l l l l l}
-a. & spiker  & \alt{} & sipiker  & `announcer' \\
-   & fren    & \alt{} & firen    & `break'     \\
-b. & brom    & \alt{} & burom    & `bromide'   \\
-   & prusya  & \alt{} & purusya  & `Prussia'   \\
+a. & \emph{spiker}  & \alt{} & \emph{sipiker}  & `announcer' \\
+   & \emph{fren}    & \alt{} & \emph{firen}    & `break'     \\
+b. & \emph{brom}    & \alt{} & \emph{burom}    & `bromide'   \\
+   & \emph{prusya}  & \alt{} & \emph{purusya}  & `Prussia'   \\
 %b. & grip    & \alt{} & gırip    & `grippe'    \\ % unexpectedly back
 %   & kredi   & \alt{} & kıredi   & `credit'    \\
 %   & trablus & \alt{} & tırablus & `Tripoli'   \\
@@ -259,22 +235,18 @@ b. & brom    & \alt{} & burom    & `bromide'   \\
 
 Similar evidence comes from a language game discussed by \citet{Harrison2001}.\footnote{Thanks to Bert Vaux for bringing this study to my attention.} This game is not indigenous to Turkish, but is identical to a morphological process in the related language Tuvan, in which it conveys a sense of ``vagueness or jocularity'', and \citeauthor{Harrison2001} report that it can be quickly taught to Turkish speakers. The game consists of reduplication of the base and replacement of the first vowel in the reduplicant with the [$+$\textsc{Back}] vowels \emph{a} or \emph{u}. Both in the native Tuvan process and in the Turkish game, the second vowel of the reduplicant (shown in braces below) is affected by this process: when the base is harmonically [$-$\textsc{Back}], the insertion of a [$+$\textsc{Back}] results in what \citeauthor{Harrison2001} call ``reharmonization'', shown in  (\ref{redupgame}a).
 
-\begin{example}
-\label{redupgame}
-Turkish reduplication game \citep[][231]{Harrison2001}:
-
-\vspace{0.5\baselineskip}
+\begin{example}[Turkish reduplication game (\citealp{Harrison2001}:231)] \label{redupgame}
 \begin{tabular}{l l l l}
-a. & kibrit & kibrit-\{kabrıt\} & `match'    \\
-   & bütün  & bütün-\{batın\}   & `whole'    \\
-b. & mali   & mali-\{muli\}     & `Mali'     \\
-   & butik  & butik-\{batik\}   & `boutique' \\
+a. & \emph{kibrit} & \emph{kibrit}-\{\emph{kabrıt}\} & `match'    \\
+   & \emph{bütün}  & \emph{bütün}-\{\emph{batın}\}   & `whole'    \\
+b. & \emph{mali}   & \emph{mali}-\{\emph{muli}\}     & `Mali'     \\
+   & \emph{butik}  & \emph{butik}-\{\emph{batik}\}   & `boutique' \\
 \end{tabular}
 \end{example}
 
 \noindent \citeauthor{Harrison2001} analyze this in terms of the \citeauthor{Clements1982} underspecification analysis, but it is equally consistent with full specification. Reharmonization is simply the spread of the backness specification of the \emph{a} or \emph{u} in the reduplicant. On the other hand, (\ref{redupgame}b) shows that this does not obtain for disharmonic roots; presumably, the [$-$\textsc{Backness Harmony}] exception feature is copied under reduplication as well. Similar results obtain both in Tuvan and in an unrelated Finnish language game \citep{Campbell1986}.
 
-A number of studies on Finnish suggest that speakers of that language, which has a vowel harmony system similar to that of Turkish, make use of (dis)harmony to processing running speech.\footnote{Thanks to Charles Yang for bringing these studies to my attention.} \citet{Suomi1997} and \citet{Vroomen1998} generate nonce trisyllabic words by adding a monosyllabic pseudo-prefix to real and nonce disyllabic words, all of which conform to backness harmony. These stimuli are auditorily presented to subjects who are asked to press a button when the nonce trisyllable ends with a target nonce disyllable, or a real disyllabic word. Speakers are quicker to press the button when the prefix and disyllabic word have different backness specifications. These results suggest that speakers are attuned to the fact that disharmonic transisitions are good predictors of word boundaries. If speakers have also internalized the converse generalization, that harmonic transistions are more likely to be root-internal, then there is additional evidence that harmony is active not just in Finnish affix alternations but also in roots. 
+\label{harmonyandsegmentation} A number of studies on Finnish suggest that speakers of that language, which has a vowel harmony system similar to that of Turkish, make use of (dis)harmony to processing running speech.\footnote{Thanks to Charles Yang for bringing these studies to my attention.} \citet{Suomi1997} and \citet{Vroomen1998} generate nonce trisyllabic words by adding a monosyllabic pseudo-prefix to real and nonce disyllabic words, all of which conform to backness harmony. These stimuli are auditorily presented to subjects who are asked to press a button when the nonce trisyllable ends with a target nonce disyllable, or a real disyllabic word. Speakers are quicker to press the button when the prefix and disyllabic word have different backness specifications. These results suggest that speakers are attuned to the fact that disharmonic transisitions are good predictors of word boundaries. If speakers have also internalized the converse generalization, that harmonic transistions are more likely to be root-internal, then there is additional evidence that harmony is active not just in Finnish affix alternations but also in roots. 
 
 \citet{Kabak2010} report that Turkish \textsc{Backness Harmony} has the same effect in word-spotting tasks as it does in Finnish: speakers are quicker and more accurate at the task of spotting the nonce target word \emph{pavo} when preceded by the pseudo-prefix \emph{gölü-}, a disharmonic transistion, than when it is preceded by the pseudo-prefix \emph{golu-}, a harmonic transition. \citeauthor{Kabak2010} find that effect of harmony does not obtain for speakers of French, a language which lacks vowel harmony. As in Finnish, the results imply speakers have internalized the predominance of root-internal harmony.
 
@@ -288,9 +260,7 @@ Roundness harmony is a closely related process with a somewhat narrower scope.
 
 Roundness harmony is quite similar to \textsc{Backness Harmony}, with the additional stipulation that the target must be [$+$\textsc{High}]. 
 
-\begin{example}
-\textsc{Roundness Harmony}:
-
+\begin{example}[\textsc{Roundness Harmony}]
 \xymatrix@R=24pt@C=24pt{
 \txt{[α \textsc{Round}]}\ar@{-}[d]\ar@{--}[drr] &             & \txt{[$+$\textsc{High}]} \\
 \txt{V}                                         & \txt{C$_0$} & \txt{V}\ar@{-}[u] \\
@@ -299,25 +269,22 @@ Roundness harmony is quite similar to \textsc{Backness Harmony}, with the additi
 
 This rule, in concert with \textsc{Backness Harmony}, accounts for the forms of the dative singular (dat.sg.) and genitive singular (gen.sg.), among other suffixes.
 
-\begin{example}
-Turkish nominal suffix allomorphy: 
-
-%\vspace{0.5\baselineskip}
+\begin{example}[Turkish nominal suffix allomorphy]
 \begin{tabular}{l l l l l l l}
-   & \emph{nom.sg.} & \emph{dat.sg.} & \emph{gen.sg.}  \\
-a. & ip             & ipi            & ipin           & `rope' & \citep[][216]{Clements1982} \\
-   & el             & eli            & elin           & `hand'    \\
-   & kız            & kızı           & kızın          & `girl'    \\
-   & sap            & sapı           & sapın          & `stalk'   \\
-   & yüz            & yüzü           & yüzün          & `face'    \\
-   & köy            & köyü           & köyün          & `village' \\
-   & pul            & pulu           & pulun          & `stamp'   \\
-   & son            & sonu           & sonun          & `end'     \\
-b. & boğaz          & boğazı         & boğazın        & `throat'  & (TELL) \\
-   & pelür          & pelürü         & pelürün        & `tissue paper' \\
-   & döviz          & dövizi         & dövizin        & `currency' \\
-   & yamuk          & yamuğu         & yamuğun        & `trapezoid' \\
-   & ümit           & ümiti          & ümitin         & `hope'     \\
+   & {nom.sg.}    & {dat.sg.}     & {gen.sg.}  \\
+a. & \emph{ip}    & \emph{ipi}    & \emph{ipin}    & `rope' & \citep[][216]{Clements1982} \\
+   & \emph{el}    & \emph{eli}    & \emph{elin}    & `hand'    \\
+   & \emph{kız}   & \emph{kızı}   & \emph{kızın}   & `girl'    \\
+   & \emph{sap}   & \emph{sapı}   & \emph{sapın}   & `stalk'   \\
+   & \emph{yüz}   & \emph{yüzü}   & \emph{yüzün}   & `face'    \\
+   & \emph{köy}   & \emph{köyü}   & \emph{köyün}   & `village' \\
+   & \emph{pul}   & \emph{pulu}   & \emph{pulun}   & `stamp'   \\
+   & \emph{son}   & \emph{sonu}   & \emph{sonun}   & `end'     \\
+b. & \emph{boğaz} & \emph{boğazı} & \emph{boğazın} & `throat'  & (TELL) \\
+   & \emph{pelür} & \emph{pelürü} & \emph{pelürün} & `tissue paper' \\
+   & \emph{döviz} & \emph{dövizi} & \emph{dövizin} & `currency' \\
+   & \emph{yamuk} & \emph{yamuğu} & \emph{yamuğun} & `trapezoid' \\
+   & \emph{ümit}  & \emph{ümiti}  & \emph{ümitin}  & `hope'     \\
 \end{tabular}
 \end{example}
 
@@ -340,9 +307,8 @@ Second, \textsc{Roundness Harmony} participates in reharmonization in \citeautho
 
 \citet[][36]{Lees1966a} describes \textsc{Labial Attraction} as a process by which ``a high, short harmonic vowel is rounded in the second syllable of a disyllabic word whose first vowel is /a/, and whose medial consonant cluster contains a labial /p, b, m, v/, and then it is de-harmonified''. This description is transalted into an autosegmental rule below.
 
-\begin{example}
-\textsc{Labial Attraction}: %(after \citealt[][286]{Lees1966b}, \citealt[][171]{Inkelas2001}): 
-
+\begin{example}[\textsc{Labial Attraction}]
+%(after \citealt[][286]{Lees1966b}, \citealt[][171]{Inkelas2001}): 
 \xymatrix@R=24pt@C=8pt{
 \txt{[$-$\textsc{Round}]} &                                         & \txt{[$-$\textsc{High}]} & \txt{[$+$\textsc{Labial}]}    & \txt{[$+$\textsc{High}]}\ar@{-}[dr] &         & \txt{[$+$\textsc{Round}]}\ar@{--}[dl] \\
 %                         & \txt{V}\ar@{-}[ul]\ar@{-}[ur]\ar@{-}[d] &                           & \txt{C}\ar@{-}[u] &                                      & \txt{V} & \\
@@ -361,7 +327,7 @@ There is reason to believe that \textsc{Labial Attraction} is at best a sequence
 \citet{Zimmer1969}
 
 \begin{quote}
-\ldots decisive evidence against a rule of Labial Attraction is the existence of a further, much larger set of roots containing /\ldots~aCu~\ldots/ sequences in which the intervening consonant or consonant cluster does not contain a labial\ldots We conclude that there is no systematic restriction on the set of consonants that may occur medially in rotos of the form /\ldots~aCu~\ldots/. \citep[][225]{Clements1982}
+\ldots{}decisive evidence against a rule of Labial Attraction is the existence of a further, much larger set of roots containing /\ldots~aCu~\ldots/ sequences in which the intervening consonant or consonant cluster does not contain a labial\ldots We conclude that there is no systematic restriction on the set of consonants that may occur medially in roots of the form /\ldots~aCu~\ldots/. \citep[][225]{Clements1982}
 \end{quote}
 
 \noindent
@@ -387,8 +353,7 @@ The results reveal a dissociation between the lexical statistics and wordlikenes
 
 There is some disagreement in the literature about just what \citet{Zimmer1969} finds regarding \textsc{Backness Harmony} and \textsc{Labial Attraction}.
 
-\subsection{Lexical statistics}
-\label{lexstats}
+\subsection{Lexical statistics} \label{lexstats}
 
 This choice of statistical test is justified in Section \ref{stattech}.
 
@@ -467,23 +432,20 @@ Vowel labialization following labials is not a synchronic alternation in Turkish
 
 \citet{Goodman1954}
 
-\begin{example}
-$\displaystyle \gamma = \frac{C - D}{C + D}$
-\end{example}
 
 \subsubsection{Backness harmony}
 
 
-\begin{example}[Backness harmony wordlikeness forced choices (\citealp{Zimmer1967}:314)]
+\begin{example}[Backness harmony wordlikeness forced choices (\citealp{Zimmer1969}:314)]
 \begin{tabular}{l r l r}
 \toprule
 \multicolumn{2}{l}{harmonic} & \multicolumn{2}{l}{disharmonic} \\
 \midrule
-pemez & 30                   & pemaz & 2  \\
-tipez & 24                   & tipaz & 8  \\ 
-terüz & 19                   & teruz & 13 \\ % roundness violator
-teriz & 28                   & terız & 3  \\
-tokaz & 26                   & tokez & 6  \\ % roundness violator
+\emph{pemez} & 30            & \emph{pemaz} & 2  \\
+\emph{tipez} & 24            & \emph{tipaz} & 8  \\ 
+\emph{terüz} & 19            & \emph{teruz} & 13 \\ % roundness violator
+\emph{teriz} & 28            & \emph{terız} & 3  \\
+\emph{tokaz} & 26            & \emph{tokez} & 6  \\ % roundness violator
 \bottomrule
 \end{tabular}
 \end{example}
@@ -497,10 +459,10 @@ $\gamma = 0.597$, $p = 5.2$\e{-29}
 \toprule
 \multicolumn{2}{l}{harmonic} & \multicolumn{2}{l}{disharmonic} \\
 \midrule
-pörüz & 32 & pöriz & 0  \\
-tatız & 20 & tatuz & 12 \\
-tüpüz & 31 & tüpiz & 1  \\
-takız & 22 & takuz & 10 \\
+\emph{pörüz} & 32            & \emph{pöriz} & 0  \\
+\emph{tatız} & 20            & \emph{tatuz} & 12 \\
+\emph{tüpüz} & 31            & \emph{tüpiz} & 1  \\
+\emph{takız} & 22            & \emph{takuz} & 10 \\
 \bottomrule
 \end{tabular}
 \end{example}
@@ -515,13 +477,13 @@ $\gamma = 0.641$, $p = 7.7$\e{-27}
 \begin{example}[Wordlikeness comparisons]
 \begin{tabular}{l r l r}
 \toprule
-\multicolumn{2}{l}{aPu} & \multicolumn{2}{l}{aPı} \\
+\multicolumn{2}{l}{\emph{a}P\emph{u}} & \multicolumn{2}{l}{\emph{a}P\emph{ı}} \\
 \midrule
-pamuz & 17              & pamız & 15 \\
-tafuz & 21              & tafız & 11 \\
-tapuz & 17              & tapız & 15 \\
-mavuz & 16              & mavız & 16 \\
-tabuz & 16              & tabız & 16 \\
+\emph{pamuz} & 17       & \emph{pamız} & 15 \\
+\emph{tafuz} & 21       & \emph{tafız} & 11 \\
+\emph{tapuz} & 17       & \emph{tapız} & 15 \\
+\emph{mavuz} & 16       & \emph{mavız} & 16 \\
+\emph{tabuz} & 16       & \emph{tabız} & 16 \\
 \bottomrule
 \end{tabular}
 \end{example}
@@ -550,9 +512,9 @@ Classical Arabic adjectives often have stative verbs in which the root melody is
 
 \begin{example}[Arabic stative verbs]
 \begin{tabular}{l l l l}
-kabiːr  & `big'        & kabura  & `become big'       \\
-ħasan   & `handsome'   & ħasuna  & `become beautiful' \\
-dʒadiːb & `barren'     & dʒaduba & `become dry'       \\
+\hspace{0pt}[kabiːr]  & `big'      & [kabura]  & `become big'       \\
+\hspace{0pt}[ħasan]   & `handsome' & [ħasuna]  & `become beautiful' \\
+\hspace{0pt}[dʒadiːb] & `barren'   & [dʒaduba] & `become dry'       \\
 \end{tabular}
 %b. & saʁiir & }`become small'     & (cf. \emph{saʁiːr} `small') \\
 \end{example}
@@ -564,9 +526,9 @@ dʒadiːb & `barren'     & dʒaduba & `become dry'       \\
 
 \begin{example}[\textsc{Labial harmony} and etymology in TELL \citealp{Inkelas2001}:187]
 \begin{tabular}{l r r r}
-        & aPu & aPı & $p$-value \\
-Native  & 12  & 11  & \multirow{2}{*}{0.042} \\
-Foreign & 84  & 28  \\
+        & \emph{a}P\emph{u} & \emph{a}P\emph{ı} & $p$-value \\
+Native  & 12                & 11                & \multirow{2}{*}{0.042} \\
+Foreign & 84                & 28                \\
 \end{tabular}
 \end{example}
 
@@ -579,17 +541,16 @@ Ther
 
 %It is important to note that the nature of the \emph{blick}/\emph{bnick} contrast is no longer a mystery. 
 %Generative phonological theory at the time of \emph{SPE} lacked the representational vocabulary to directly distinguish between word-initial /bn/, which is disallowed, and /bn/ as a licit syllable contact cluster (e.g., \emph{o}[b.n]\emph{oxious}), a point first made by \citep{Hooper1973}. It is not the introduction of prosodic primitives into generative phonology that explains the contrast between \emph{blick} and \emph{bnick}, though, but rather the principle that surface forms must be syllabified \citep[e.g.,][63f.]{Kiparsky1982b} which \emph{bnick} fails. If, as is standardly assumed, phonology repairs unsyllabifiable outputs \citep[e.g.][]{Ito1989a,Noske1992}, then \emph{bnick} is an impossible output, doomed to be modified (perhaps to \emph{nick}; \citealt[][19f.]{Wolf2009}), and /bnɪk/ is an impossible UR by Stampean occultation. 
-
 %\footnote{I note a potential problem with this account: \citet{Davidson2005,Davidson2006a} argue that this ``excrescent'' schwa is distinct from the both in acoustics and articulation from ``lexical schwa'': English speakers' [z${^\textrm{ə}}$k] is more similar to \emph{scum} than \emph{succumb}.}
-
 %\noindent A nuanced version of this alternative hypothesis would recognize that there may be other necessary conditions. Any explicit theory of static constraints will have to impose formal restrictions on possible co-occurrence restrictions. The set of possible constraints must respect results in formal learning theory, and may also be constrained by markedness considerations, for example.
-
 %A further widespread assumption is that static co-occurrence restrictions validated statistically will be reflected by wordlikeness judgements. This assumption is so deeply entrenched that a number of recent studies of phonotactic learning forgo wordlikeness judgements altogether and instead model the lexical statistics themselves (e.g., \citealt{Coetzee2008a} and \citealt{Anttila2008} on Muna and Arabic, \citealt[][385]{Hayes2008a} on Shona and Wargamay, \citealt{Brown2010} on Gitksan). 
-
 %Since the null hypothesis does not countenance statistical significance as evidence for the synchronic reality of a static lexical pattern, such patterns do not adjudicate between the null hypothesis and the alternative, and another source of evidence is needed. In the remainder of Part I, I turn to data from wordlikeness judgement tasks for these purposes. 
-
 %In a wordlikeness task, a speaker is presented with nonce words and asked to report such intuitions about the ``possibility'' of a word. 
 %The alternative hypothesis, then, is that a statistically reliable co-occurrence restriction will be reflected in native speakers' wordlikeness judgements. 
 %The data below, drawn from Turkish, shows that 
-
 %This chapter takes the argument one step farther by showing a contrast between static and derived constraints on URs in Turkish. Whereas the derived constraint has a robust effect on native speakers' wordlikeness judgements, the static constraint, which is equally statistically valid, has no effect on these judgements. Anticipating the conclusion, the simplest explanation for the non-effect of this static constraint on wordlikeness judgements is that speakers do not internalize static co-occurrence restrictions at all. 
+%\begin{unlabeledexample}
+%$\displaystyle \gamma = \frac{C - D}{C + D}$
+%\end{unlabeledexample}
+%\footnote{Any readers who are skeptical that \citeauthor{Chomsky1965}'s intuitions generalize will find support for their claim in the wordlikeness judgement data reported in Appendix \ref{albright}.}
+%As a quick validation of this claim, consider the results reported by \citet{Albright2007} and discussed in the previous chapter. English speakers asked to rate non-words on a scale from 1-7, where 7 indicates ``most like English'', favor non-words [blʌs, blɑd] (average scores 4.67 and 5.13) over [bnʌs, bnɑd] (average scores 2.06, 2.00).
