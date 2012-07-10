@@ -1,11 +1,53 @@
-\citet{Chomsky1965} argue that speakers internalize not only generalizations governing phonological alternations in their language, but also about the shapes of possible words and underlying representations in their language. The persistent challenge to developing a theory of this knowledge is to identify which of the countless such possible competing generalizations are actually internalized by speakers, and which are ignored. 
+debel
+rebel
+
+According to \citet[467]{Kibrik1998} \citep[cited in][122]{Bauer2001}, Archi has 1.5e6 verb forms per root.
+
+children hear 165000 * 52 * 7 words
+zipf's law
+
+EXCERPTS from preface:
+
+The second half of the dissertation develops a theory of inflectional gaps. I was pleased to hear (from Greville Corbett) that Stephen Anderson regarded inflectional gaps as ``the biggest scandal in morphology'', and even more so when Prof. Anderson agreed to serve as the external member of my committee.
+
+In developing this theory, I have focused primarily on how inflectional gaps could be learned, and thus my approach is does not directly bear on competing morphological theories. At the same time, this theory is consistent with a proposal by \citet{Pesetsky1979} that inflectional gaps provide novel evidence for the ordering of various components of morphology. As an example, consider a few Russian verbs exhibiting inflectional gaps in the 1sg non-past. 
+
+\begin{example}[Russian 1sg. imperfect gaps (after \citealp{Pesetsky1979})]
+\begin{tabular}{l l l@{}l@{}l@{}l@{}l@{} l}
+   & infinitive &   & 1sg. non-past \\
+a. & pobedit{j} & * & pobeʒu  & / & * & pobeʒdu  & `conquer'   \\
+   & ubedit{j}  & * & ubeʒu   & / & * & ubeʒdu   & `persuade'  \\
+b. & tʃudit{j}  & * & tʃuʒu   & / & * & tʃuʒdu   & `act oddly' \\
+   & naʃudit{j} & * & natʃuʒu & / & * & natʃuʒdu & `alienate'  \\
+\end{tabular}
+\end{example}
+
+\noindent \citeauthor{Pesetsky1979} notes that the ill-formedness of the 1sg. non-past forms is shared by verbs related by prefixation. The opposite pattern can be seen in English.
+
+\begin{example}[English preterite gaps]
+\begin{tabular}{l l l@{}l@{}l@{}l@{}l@{}}
+a. & \emph{foresee}  &   & \emph{foresaw}   &   &   &                   \\
+   & \emph{sightsee} & * & \emph{sightsaw}  & / & * & \emph{sightsee'd} \\
+b. & \emph{undergo}  &   & \emph{underwent} &   &   &                   \\
+   & \emph{forgo}    & * & \emph{forwent}   & / & * & \emph{forgo'd}    \\
+\end{tabular}
+\end{example}
+
+Unlike the pattern observed in Russian, verbs that appear to share the same root do not show the same patterns of defectivity. If we simply label the process of verbal inflection as the source of inflectional gaps, we can understand this contrast as follows: in Russian, inflection precedes and feeds prefixation; in English, the formation of complex verb stems and feeds the inflectional system. 
+
+While at this time I do not have any insights derived from these facts, there exists a potential to use inflectional gaps for evidence of ordered operations in morphology. These inferences are available to any account that recognizes inflectional gaps as something about the inflectional system, including the one presented here, but not if inflectional gaps are due to phonological properties of the derived objects.
+
+The two parts of this dissertation were conceived and executed separately, but some uniting principles can be identified. Both parts argue against inviolable, language-specific constraints in favor of a derivational explanation for the facts at hand. Both parts derive the phenomena at hand using novel acquisitional strategies (\emph{occultation} and \emph{tolerance}, respectively) and independently motivated components of the grammatical architecture (alternation phonology and the elsewhere principle). And the accounts presented in both parts are inspired by concerns for the sparsity of the primary linguistic data.
+
+Mattys
+
+DLP:                39 participants
+Baayen & Schreuder: 100 participants, 93 lemmas, -en only, no orthographic diffs, no                    possibly-verb ones, excluded those wrong more than 10% the time
+                    has appendix w/ per-word vals
 
 \citet{Gallagher2010a,Gallagher2011b}
-
 AB task with English speakers
-
 1 vs 2 < 1 vs 0 < 2 vs 0
-
 \citet{GallagherInPress}
 \begin{tabular}{l l l l}
 p\pal{}itu & p\pal{}it\pal{}u & p\asp{}itu & p\asp{}it\asp{}u \\
@@ -878,7 +920,6 @@ Both (\lastx c) forms contain a /t\pal-s/ juncture, though palatalization is onl
 % Pike 
 
 A natural consequence of this view is that generalizations about sound sequences found within morphemes are necessarily different within and across morpheme boundaries, and \citet{Pike1947b} argues that the distributional analysis of sound sequences must take morphology into account. \citeauthor{Pike1947b} discusses limitations on possible vowel sequences in Mixteco monomorphs, but none of these generalizations hold across morpheme boundaries, at least according to the phonological analysis of a short Mixteco text in one of \citeauthor{Pike1944}'s earlier papers.
-
 
 \noindent
 \citet[][166]{Pike1947b} affirms that the morpheme is ``marked'' by the violation of morpheme-internal sequence restrictions, an idea further developed by \citet{Harris1955} as a morpheme discovery routine.

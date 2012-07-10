@@ -1321,7 +1321,7 @@ FUNCTION {calc.label}
   *
   year duplicate$ empty$
      { pop$ "" } % changes here by KG
-     { "l" change.case$ } 
+     { "l" change.case$ }
   if$
   *
   'label :=

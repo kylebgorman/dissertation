@@ -3,9 +3,14 @@
 %\documentclass[draft]{upenndiss}
 \documentclass{upenndiss}
 
+% REMOVE
+\usepackage{tocvsec2}
+
 % bibliography stuff
-\usepackage[sort,round]{natbib}
+\usepackage[sort&compress]{natbib}
 \bibpunct[:]{(}{)}{,}{a}{}{,}
+\usepackage{natbibspacing}
+\setlength{\bibspacing}{0.25\baselineskip}
 
 % graphics
 \usepackage{longtable}
@@ -85,7 +90,7 @@
 (\arabic{exampleno})~~$\displaystyle}
 {$\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
 
-\title{Words \& Gaps}
+\title{Generative Phonotactics}
 \author{Kyle Gorman}
 \supervisor{Charles Yang \\ Associate Professor, Linguistics, Computer and Information Science, \& Psychology}
 \gradchair{Robin Clark \\ Associate Professor, Linguistics}
@@ -108,7 +113,6 @@ said *\emph{bnick} or *\emph{forwent}}
 
 \begin{document}
 \frenchspacing
-\FrontMatter
 
 %\include{1}
 \include{1placeholder}
@@ -122,6 +126,7 @@ said *\emph{bnick} or *\emph{forwent}}
 \renewcommand{\arraystretch}{0.25}
 \include{A}
 \include{B}
+\include{C}
 
 %\lstset{language=Python, basicstyle=\scriptsize\ttfamily, showstringspaces=false, upquote=false}
 %\lstinputlisting{zipf_sim.py}
