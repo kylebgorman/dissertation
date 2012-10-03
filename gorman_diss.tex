@@ -1,10 +1,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-%\documentclass[draft]{upenndiss}
-\documentclass{upenndiss}
-
-% REMOVE
-\usepackage{tocvsec2}
+\documentclass[draft]{upenndiss}
+%\documentclass{upenndiss}
 
 % bibliography stuff
 \usepackage[sort&compress]{natbib}
@@ -13,21 +10,26 @@
 \setlength{\bibspacing}{0.25\baselineskip}
 
 % graphics
+\usepackage{graphicx}
+
+% tables
 \usepackage{longtable}
 \usepackage{multirow}
 \usepackage{booktabs}
-\usepackage{pifont}
+
+% my example environments
+\usepackage{simplex}
+
+% feature matrices
 \usepackage{amsmath}
-\usepackage{latexsym}
-\usepackage{colortbl}
-%\usepackage{arydshln} % colortbl >> arydshln is a crit. ordering
+
+% (occasional) autosegmental diagrmans
 \usepackage{xypic}
-\usepackage{graphicx}
 
 % fonts
 \usepackage{mathspec}
-\setmainfont[Mapping=tex-text]{Linux Libertine O}
-\setmathfont(Digits,Greek,Latin){Linux Libertine O}
+\setmainfont[Mapping=tex-text]{Linux Libertine}
+\setmathfont(Digits,Greek,Latin){Linux Libertine}
 
 % symbols
 %\usepackage{tipx} % OT commands
@@ -43,16 +45,13 @@
 
 %% KG's definitions
 % shortcuts
-\newcommand{\lm}{ː}
-\newcommand{\ul}{\underline}
 \newcommand{\zr}{$\emptyset$}
 \newcommand{\buf}{\hspace{0pt}}
 \newcommand{\gap}{\rule{1em}{0.5pt}}
 \newcommand{\alt}{\ensuremath{\sim}}
 \newcommand{\asp}{\textsuperscript{h}}
 \newcommand{\pal}{\textsuperscript{j}}
-\newcommand{\shade}{\cellcolor[gray]{0.7}}
-\newcommand{\goesto}{$\longrightarrow$}
+\newcommand{\goesto}{\ensuremath{\longrightarrow}}
 \providecommand{\e}[1]{\textsc{e}{$#1$}}
 
 % compatibility with the WCCFL class
@@ -62,33 +61,6 @@
 % symbol footnotes for chapter headers
 \long\def\symbolfootnote[#1]#2{\begingroup%
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
-
-% two simple example environments
-\newcounter{exampleno}
-\setcounter{exampleno}{0}
-
-\newenvironment{example}[1][]%
-{\vspace{0.5\baselineskip}
-\noindent\ignorespaces
-\refstepcounter{exampleno}%
-(\arabic{exampleno})~~\protect #1: 
-
-\vspace{0.25\baselineskip}}
-{\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
-
-\newenvironment{unlabeledexample}%
-{\vspace{0.5\baselineskip}
-\noindent\ignorespaces
-\refstepcounter{exampleno}%
-(\arabic{exampleno})~~}
-{\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
-
-\newenvironment{mathexample}
-{\vspace{0.5\baselineskip}
-\noindent\ignorespaces
-\refstepcounter{exampleno}%
-(\arabic{exampleno})~~$\displaystyle}
-{$\ignorespacesafterend\vspace{0.5\baselineskip}\noindent}
 
 \title{Generative Phonotactics}
 \author{Kyle Gorman}
@@ -115,18 +87,19 @@ said *\emph{bnick} or *\emph{forwent}}
 \frenchspacing
 
 %\include{1}
-\include{1placeholder}
-\include{2}
-\include{3placeholder}
+%\include{1placeholder}
+%\include{2}
+\include{3}
 %\include{3}
-\include{4}
+%\include{4}
 %\input{5}
 %\input{6}
 \appendix
 \renewcommand{\arraystretch}{0.25}
-\include{A}
-\include{B}
-\include{C}
+%\include{A}
+%\include{B}
+%\include{C}
+%\include{D}
 
 %\lstset{language=Python, basicstyle=\scriptsize\ttfamily, showstringspaces=false, upquote=false}
 %\lstinputlisting{zipf_sim.py}

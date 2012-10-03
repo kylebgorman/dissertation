@@ -1,154 +1,78 @@
-\chapter{Sequence structure constraints in generative grammar} \label{msc}
+\chapter{A generative theory of phonotactics and phonotactic learning}
 
-The first part of this text concerns the empirical substance of the theory of \textsc{Morpheme Structure Constraints} (MSCs), that is, language-specific constraints on the shapes of morphs stored in lexical memory.
-Evidence is presented to support the claim that such constraints are solely derived by other components of grammar, and do not have an ontology of their own.
+\section{\emph{Táxis} and generativity}
 
-The first section of this chapter outlines a brief history of MSCs.
-The following section draws upon this material to present the above claim as a null hypothesis, and presents conditions for falsifying it.
-The final section outlines the remainder of Part I (chapters 2--4), which present evidence in support of this hypothesis.
+%\emph{τάξις}
+(\emph{táxis} `order, arrangement; the prefix \emph{syn-} means `together')
 
-% it is not clear what follows from a phonotactic description
-% pater on NC
-% can't be right tho, see stanley, kisseberth, clayton, shibatani, hooper, etc.
+This etymology gives little clue to just what syntacticians do, however. This is not merely a consequence of the ``generative revolution'', as the predecessors of transformational grammars associated with Zellig Harris and Noam Chomsky were also more than theories of arrangement, but also instantiate the notion of derivation \citep[e.g.,][]{Post1943}.
 
-\section{A brief history of MSCs}
+\subsection{?}
 
+\subsection{Units of description}
+\subsubsection{Segment inventory}
+\subsubsection{Surface segment sequences}
+\subsubsection{Underlying segment sequences}
 
-A more expressive approach to problems of this type, making no reference to \citeauthor{Bloomfield1930}'s study, was published only two years later. \citet{Jakobson1932}, then a member of the Prague circle, attributes a number of phonological properties of the Russian imperative to particular types of juncture, a precursor of morphological levels \citep[e.g.,][]{Siegel1974} in Lexical Phonology. Nearly all Russian infinitives are marked with a final theme vowel and /-t\pal{}/. In reflexives, this is followed by a suffix realized as [s\pal{}ə], which triggers a general process of regressive voicing assimilation. In the reflexive infinitive, the palatalization of infinitive /-t\pal/ is lost, but palatalization of a stem-final consonant is preserved in the reflexive imperative, even when the root-final consonant is /t\pal/, as in (\ref{rusreflex}c).\footnote{Thanks to Lev Blumenfeld for discussion of this data.}
+\subsection{The morph}
 
-\begin{example}[Russian reflexives] \label{rusreflex}
-\begin{tabular}{l l l l}   & \emph{infinitive} & \emph{imperative} \\
-a. & [slav\pal{}itsə]  & [slaf\pal{}s\pal{}ə]  & `be glorious'   \\
-   & [upram\pal{}itsə] & [upram\pal{}s\pal{}ə] & `be stubborn'   \\
-b. & [kras\pal{}itsə]  & [kras\pal{}s\pal{}ə]  & `put on makeup' \\
-   & [ʒar\pal{}itsə]   & [ʒar\pal{}{}s\pal{}ə] & `roast'         \\
-c. & [zəbytsə]         & [zəbut\pal{}s\pal{}ə] & `forget'        \\
+The notion of blocking in non-derived environments (\citealp[163]{Kiparsky1973a}, \citeyear[152]{Kiparsky1982a}, \citealp{Mascaro1976}) is well-known, but \citet{Hall2006} also amasses evidence for phonological processes restricted to non-derived environments. One of the most famous examples is the distribution of \emph{ich-laut} [ç] and \emph{ach-laut} [x] in German \citep{Bloomfield1930}. As shown in (\label{ichach}), [x] appears only before back vowels; in all other contexts, the only dorsal fricative is [ç]. 
+
+\begin{example}[German \emph{ich}- and \emph{ach-laut}]
+\begin{tabular}{l l l}
+a. & \emph{B}[uːx]          & `book'           \\
+   & \emph{T}[ɔx]\emph{ter} & `daughter'       \\
+   & \emph{N}[ax]\emph{t}   & `night'          \\
+b. & \emph{S}[iç]\emph{t}   & `view'           \\
+   & \emph{Sp}[eç]\emph{t}  & `woodpecker'     \\
+   & \emph{Ger}[yç]\emph{t} & `rumor'          \\
+   & \emph{Kn}[øç]\emph{el} & `ankle, knuckle' \\
+   & \emph{Fl}[ɛç]\emph{e}  & `surface'        \\
 \end{tabular}
 \end{example}
 
-\noindent \citeauthor{Jakobson1932} proposes that the preservation of palatalization in /\ldots{}t\pal{}-s\ldots{}/ is a special property of the imperative. Both (\ref{rusreflex}c) forms contain a /t\pal-s/ juncture, though palatalization is only preserved in the imperative. \citeauthor{Jakobson1932} proposes that the phonology treats them differently: the imperative does not undergo loss of palatalization.
-%A few years later, \citet{Trnka1936} makes the connection between \citeauthor{Jakobson1932}'s hypothesis and phonotactic gener
+%a. & \emph{B}[uːx]          & \emph{B}[yːç]\emph{er} & `book' \\
+%   & \emph{L}[ɔx]           & \emph{L}[øç]\emph{er}  & `hole' \\
+%%   &\emph{T}[ɔx]\emph{ter} & \emph{T}[øç]\emph{ter}
+%   & \emph{N}[ax]\emph{t}   & \emph{N}[ɛç]\emph{te} & `night' \\
 
-nstraints.
+\emph{K}[uːx]\emph{en}
+\emph{K}[uːç]\emph{en}
 
-\subsection{Static phonotactics and the lexicon}
+%\emph{Mas}[oːx]-\emph{Mas}
+\footnote{Examples like \emph{Mas}[oːç]\emph{ist} `masochist', \emph{Eun}[uːç]\emph{ismus} `eunichism', first noted by \citet{Merchant1994}, suggest that this should also be restricted to assimilation within the same foot \citep[226f.]{Jensen2000}.}
 
-If juncture may give rise to sound sequences not found in what are now called \emph{non-derived environments}, it follows that the morph represents a privileged domain for phonotactic generalizations. \citet{SPR,Halle1962} and \citet{Chomsky1965,SPE} posit a system of a system of \emph{morpheme structure constraints}---more precisely, \emph{sequence structure constraints} \citep{Stanley1967}---used to fill out redundant specifications in underlying forms, and to account for speakers' knowledge of possible words.
+%\emph{Mas}[oːx]-\emph{Mas}[oːç]\emph{ist}
 
-This too can be traced to late structuralist thinkers, for example Kenneth Pike. \citet{Pike1947b} discusses a number of constraints on vowel sequences in Mixteco. It is apparent that \citeauthor{Pike1947b} does not expect these constraints to hold across junctures when comparing these constraints to his analysis of a Mixteco text published a few years earlier \citep{Pike1944}.\footnote{The junctures posited by \citet{Pike1944} are indicated with a dash, but this is not intended to imply that juncture is necessarily a phonetic event \citep[cf.][55f.]{Scheer2011}.}
+The concept of non-derived environment blocking 
 
-\begin{example}[Mixteco MSCs and complex words \citep{Pike1944,Pike1947b}]\begin{tabular}{l l@{} l l l}
-a. & * & {C}a{C}e & [ká-\textsuperscript{n}dee]     & `kept inside'   \\
-b. & * & {C}ə{C}e & [nì-k\`əbə]                     & `and entered'   \\
-c. & * & {C}e{C}i & [te-ní-ke\textsuperscript{n}da] & `was walking    \\
-d. & * & {C}i{C}e & [te-nì-kee]                     & `and went away' \\
-\end{tabular}
-\end{example}
+\section{The model}
 
-\noindent \citet[][166]{Pike1947b} writes that junctures are ``marked'' by the presence of sequences which cannot be found morph-internal, an idea further developed by \citet{Harris1955} as a discovery procedure for morphs (see also \citet{H
+\subsection{Prosodic parsing}
+\subsubsection{Syllabification}
+\subsubsection{Autosegmental tiers}
 
-Much later, \citet{McCarthy1988} and \citet{Mester1988} assume that these lexical constraints do not have to be exceptionless to be psychologically real; any statistically reliable pattern is potential evidence for the organization of feature systems, structural descriptions, and the like. Though these two studies have been widely imitated and in dozens of languages (a near-exhaustive list can be found in \citealp[?]{Brown2010} ), \citeauthor{McCarthy1988} and \citeauthor{Mester1988} never present a linking hypothesis for the connection between static lexical patterns and phonology. What follows is a sketch of such an argument. First, lexical patterns are delimited in the units of phonology \citep[9]{Berkley2000}: phonemes, syllables, and the like. The acquisition heuristic known as \emph{Stampean occultation} \citep[54]{OT} imposes phonological alternations root-internally, so that statistically reliable lexical patterns can plausibly be traced to the phonology of the recent past. For instance, virtually all obstruent-obstruent sequences in the English lexicon consist either of two voiced, or two unvoiced, consonants (see \S\ref{ova} below). This corresponds to the fact that English has---and has had for at least a millenium---a process of \textsc{Obstruent Voice Assimilation}. Unfortunately, few of these later studies distinguish between phonotactics derived by alternations and those which are have no analogue in the synchronic phonology and thus are ``static''. This chapter is a first attempt to fill this lacuna.
+\subsection{Rule application}
+\subsubsection{Violation detection}
+\subsubsection{Rule exceptionality}
 
-\subsubsection{Biuniqueness and neutralization}
 
-joos
-harris
-chomsky
 
-\subsection{Early generativism}
 
-\subsubsection{\citealt{Stanley1967}}
+\section{Consequences of the model}
 
-inventory constraints
-sequence constraints
+\subsection{Gradience}
+\subsubsection{Probabilistic well-formedness}
+\subsubsection{Cumulativity}
+\subsubsection{External factors}
 
-\subsubsection{Surface constraints and occultation}
+\subsection{Static phonotactics}
+\subsubsection{Statistical insensitivity}
+\subsubsection{Saussurean arbitrariness}
 
-shibatani
-stampe
-dell
+\subsection{Order of acquisition}
+\subsubsection{Lexical acquisition}
+\subsubsection{Prosodic parsing}
+\subsubsection{Rule application}
 
-\emph{A}[mt] `office', \emph{Anbau} `cultivation'
-\emph{ei}[n.g]\emph{reifen} `to intervene',
-
-\subsubsection{The duplication problem}
-
-\citeauthor{Anderson1974} sees the duplication of \textsc{Backness Harmony} as both sequence structure constraint and phonological rule as a foregone conclusion
-.The tendency of sequence structure constraints to duplicate phonological rules was noted by \citet[][401f.]{Stanley1967} and in \emph{SPE} (p.~382) in the discussion of morpheme structure constraints, and is labeled ``the duplication problem'' by \citet[][?]{Kenstowicz1977}.
-
-inventory problems 
-dell, chung, but also problems
-
-conspiracies
-
-\subsection{Autosegmentalism}
-
-also ``supersegmentalism''
-
-The proposals during this period are very diverse. 
-
-\subsubsection{Syllable structure}
-
-hooper
-noske
-
-\subsubsection{Morph features}
-
-Leben
-Kaye
-
-\subsubsection{The Obligatory Contour Principle}
-
-\subsection{Classic Optimality Theory}
-
-%(page numbers here are taken from the published version)
-
-\subsubsection{Richness of the Base}
-
-some quotes from OT doc
-\citet{PE}
-\citet{Bye2001}
-
-\subsubsection{Freedom of Analysis}
-
-\citet{Smolensky1996}
-\citet{PE}
-
-\subsubsection{Undominated constraints}
-
-% complaints about maceahern, gallagher
-% bit on loanword adaptation
-
-\subsection{Recent developments}
-
-\subsubsection{Language acquisition}
-% jusczyk forever
-% white et al.
-% early word learning
-% syllables
-
-\subsubsection{Psycholinguistic tasks in adults}
-
-% wordlikeness
-% spotting
-% error correction, etc.
-
-\subsubsection{Non-native word adaptation}
-
-% perceptual factors
-
-\section{The null hypothesis}
-
-\subsection{The empirical proposal}
-
-\subsection{The acquisition principle}
-
-\subsection{Falsifiability}
-
-%\subsection{Universal constraints?}    \input{1.2.4}
-
-\section{Outline of the dissertation}
-
-%Chapter 2
-%Chapter 3
-%Chapter 4
+%\subsubsection{Exceptionality}
