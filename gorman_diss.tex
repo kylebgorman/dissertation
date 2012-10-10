@@ -4,7 +4,8 @@
 %\documentclass{upenndiss}
 
 % bibliography stuff
-\usepackage[sort&compress]{natbib}
+\usepackage{url}
+\usepackage{natbib}
 \bibpunct[:]{(}{)}{,}{a}{}{,}
 \usepackage{natbibspacing}
 \setlength{\bibspacing}{0.25\baselineskip}
@@ -20,10 +21,10 @@
 % my example environments
 \usepackage{simplex}
 
-% feature matrices
+% nice feature matrices
 \usepackage{amsmath}
 
-% (occasional) autosegmental diagrmans
+% (occasional) autosegmental diagrams
 \usepackage{xypic}
 
 % fonts
@@ -31,26 +32,17 @@
 \setmainfont[Mapping=tex-text]{Linux Libertine}
 \setmathfont(Digits,Greek,Latin){Linux Libertine}
 
-% symbols
-%\usepackage{tipx} % OT commands
-%\usepackage{wasysym}  
-%\usepackage{marvosym}
-%\newcommand{\frwn}{\frownie}
-%\newcommand{\hand}{\ding{43}} 
-%\newcommand{\np}{\textObullseye}
-
 % syntax highlighting
 %\usepackage{listings}
 %\usepackage{courier}
 
-%% KG's definitions
-% shortcuts
-\newcommand{\zr}{$\emptyset$}
+%% KG's shortcuts
 \newcommand{\buf}{\hspace{0pt}}
 \newcommand{\gap}{\rule{1em}{0.5pt}}
 \newcommand{\alt}{\ensuremath{\sim}}
 \newcommand{\asp}{\textsuperscript{h}}
 \newcommand{\pal}{\textsuperscript{j}}
+\newcommand{\zero}{\ensuremath{\emptyset}}
 \newcommand{\goesto}{\ensuremath{\longrightarrow}}
 \providecommand{\e}[1]{\textsc{e}{$#1$}}
 
@@ -77,29 +69,25 @@
 \department{Linguistics}
 
 \abstractfile{abs} 
-\acknowledgementsfile{ack}
-%\dedicationfile{ded} % will probably not use this -- KG
-\dedication{\center To my parents, Mark and Bev, who never 
-said *\emph{bnick} or *\emph{forwent}}
+%\acknowledgementsfile{ack}
+%\dedication{\center To my parents, Mark and Bev, who never once said *\emph{bnick} or *\emph{forwent}}
 \prefacefile{pre}
 
 \begin{document}
 \frenchspacing
+\FrontMatter
 
-%\include{1}
-%\include{1placeholder}
-%\include{2}
+\include{1}
+\include{2}
 \include{3}
-%\include{3}
-%\include{4}
-%\input{5}
-%\input{6}
-\appendix
+\include{4}
+
+\appendix 
 \renewcommand{\arraystretch}{0.25}
-%\include{A}
-%\include{B}
-%\include{C}
-%\include{D}
+\include{A}
+\include{B}
+\include{C}
+\include{D}
 
 %\lstset{language=Python, basicstyle=\scriptsize\ttfamily, showstringspaces=false, upquote=false}
 %\lstinputlisting{zipf_sim.py}

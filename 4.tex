@@ -1,6 +1,7 @@
-\chapter{Structural and accidental gaps} \label{clusters}
+\chapter{Structural and accidental gaps} 
+\label{clusters}
 
-Early work in generative phonology recognized that neutralizing, surface-true phonological alternations impose constraints on surface forms and underlying representations (\citealp[283]{Anderson1974}, \citealp[382]{SPE}, \citealp[205f.]{Dell1973}, \citealp[22f.]{SPR}, \citealp{Kenstowicz1977}: chapter 3, \citealp[28f.]{Stampe1979}, \citealp[410f.]{Stanley1967}). Despite isolated claims to the contrary (e.g., \citealp[297]{Hale1965}; \citealp[212f.]{Postal1968}), however, the \emph{communis opinio} (including many of the authors cited above) holds that not all phonotactics---that is, language-specific sound sequence co-occurrence restrictions---can be derived in this fashion, and phonotactic knowledge is independent of the phonology.
+Early work in generative phonology recognized that neutralizing, surface-true phonological alternations impose constraints on surface forms and underlying representations (\citealp[283]{Anderson1974}, \citealp[382]{SPE}, \citealp[205f.]{Dell1973}, \citealp[22f.]{SPR}, \citealp{Kenstowicz1977}: chapter 3, \citealp[28f.]{Stampe1973}, \citealp[410f.]{Stanley1967}). Despite isolated claims to the contrary (e.g., \citealp[297]{Hale1965}; \citealp[212f.]{Postal1968}), however, the \emph{communis opinio} (including many of the authors cited above) holds that not all phonotactics---that is, language-specific sound sequence co-occurrence restrictions---can be derived in this fashion, and phonotactic knowledge is independent of the phonology.
 
 \begin{quote}
 It would be a result of the greatest interest if it were to turn out that every intramorphemic regularity was necessarily reflected in an alternation, and thus in a rule; but this position cannot seriously be maintained. \citep[283]{Anderson1974}
@@ -63,6 +64,9 @@ CELEX includes broad, syllabified Received Pronunciation transcriptions of indiv
 
 A systematic syllabification requires an automated procedure for delimiting medial clusters and parsing them into coda and onset. Since this procedure is applied only to medial clusters, this study remains agnostic on several contentious issues concerning syllabification of English; for instance, there is no need to address the status of so-called ``ambisyllabic'' consonants, since this does not occur with medial clusters, or morphological effects on syllabification, since no complex words are included. The technique used here is a variation on the theme of onset maximization (e.g., \citealp[42f.]{Kahn1976}, \citealp{Kurylowicz1948}, \citealp[75]{Pulgram1970}, \citealp[][358f.]{Selkirk1982b}) which favors parses of word-medial clusters in which as much of the cluster as possible is assigned to the onset. Initial onsets are used to define what is a ``possible'' medial onset \citep[though cf.][36]{Fischer-Jorgensen1952}. Medial clusters in words like \emph{neu}[.tɹ]\emph{on} or \emph{bi}[.stɹ]\emph{o} are found in word-initial position (e.g., [tɹ]\emph{ansit}, [stɹ]\emph{ike}), so onset maximization assigns the entire medial cluster to the onset, leaving the medial coda empty. In contrast, the cluster in \emph{mi}[n.stɹ]\emph{el} is not found word-initially; the maximal onset here is [stɹ], and the residual [n] is assigned to the coda.
 
+%\citet[208]{Wetzels2001}, cite English as an example of a language without ``general devoicing or assimilatory effects''
+%\citet[?]{Lombardi1999} says that English lacks devoicing in Level II.
+
 \paragraph{Stressed lax vowels} When a medial consonant cluster is preceded by a stressed lax vowel, as in words like \emph{wh}[ɪs.p]\emph{er}, \emph{v}[ɛs.t]\emph{ige}, or \emph{m}[ʌs.k]\emph{et}, the first consonant of the cluster checks the lax vowel \citep[e.g.,][3]{Hammond1997}. \citet[][55]{Harris1994} notes that onset maximization produces an incorrect result when, in addition, the medial cluster is a valid onset: in \emph{whisper}, \emph{vestige}, and \emph{musket}, onset maximization incorrectly assigns [sp, st, sk] to the medial onset, leaving the lax vowel unchecked. Consequently, the first consonant of a medial cluster is assigned to the coda of a preceding syllable before a stressed lax vowel \citep[cf.][48]{Pulgram1970}, a minimal modification of the onset maximization parse.
 
 \paragraph{Affricates} If the ffricates [tʃ, dʒ] are treated as stop-fricative sequences \citep[e.g.,][]{Hualde1988,Lombardi1990}, the previous principle will incorrectly assign the two segments of the affricate to separate syllables before stressed lax vowels (e.g., *\emph{ra}[t.ʃ]\emph{et} or \emph{a}[d.ʒ]\emph{ile}) unless some ad hoc constraint \citep[e.g.,][]{Wells1990} is in place. A more traditional analysis of affricates, in which they are simple segments distinguished from pure stops by stridency \citep[24]{Jakobson1961} or delayed release (\emph{SPE}:321f.) is assumed here, following \citeauthor{Pierrehumbert1994}. This assumption can be motivated by the tendency of affricates to pattern with individual segments in phonotactic generalizations. For instance, Classical Nahua allows the affricate series [ts, tʃ, tɬ] in onsets, but bans true onset clusters \citep[9]{Launey2011}.
@@ -119,11 +123,12 @@ b. & {lap} & {lap}[s] & & {lab} & {lab}[z] \\
 rule spreading the voicing specification of an obstruent rightward.
 
 \begin{example}[\textsc{Obstruent Voice Assimilation}]
-\xymatrix@R=24pt@C=24pt{
-\txt{[α \textsc{Voice}]}\ar@{-}[d]\ar@{--}[dr] &                               \\
-\txt{C}\ar@{-}[d]                              & \txt{C}\ar@{-}[d]             \\
-\txt{[$-$\textsc{Sonorant}]}                  & \txt{[$-$\textsc{Sonorant}]} \\
-}
+%\xymatrix@R=24pt@C=24pt{
+%\txt{[α \textsc{Voice}]}\ar@{-}[d]\ar@{--}[dr] &                               \\
+%\txt{C}\ar@{-}[d]                              & \txt{C}\ar@{-}[d]             \\
+%\txt{[$-$\textsc{Sonorant}]}                  & \txt{[$-$\textsc{Sonorant}]} \\
+%}
+$\begin{bmatrix} -\textsc{Son} \end{bmatrix}~\goesto~\begin{bmatrix} =\textsc{Voi} \end{bmatrix}~/~\gap~\begin{bmatrix} =\textsc{Voi} \\ -\textsc{Son} \end{bmatrix}$
 \end{example}
 
 It is quite apparent that root-internal hetero-voiced obstruent clusters like [s.b] or [z.t] are also rare compared to clusters which are uniformly voiced or uniformly voiceless, as predicted the assimilation rule. Yet, \citet{Pierrehumbert1994} does not mention voice assimilation in her study of English syllable contact clusters. \citet[][74f.]{Hammond1999a} cites words like \emph{a}[b.s]\emph{inth} and \emph{a}[s.b]\emph{estos}, which contain hetero-voiced obstruent clusters, as evidence that the process does not apply root-internally, though few of his examples are in fact simplex according to CELEX.\footnote{The \textsc{Revised Alternation Condition} (RAC) proposed by \citeauthor{Kiparsky1973a} (\citeyear{Kiparsky1973a}:163, \citeyear{Kiparsky1982a}:152) blocks the application of obligatory neutralization processes like \textsc{Obstruent Voice Assimilation} in root-internal (i.e., non-derived) environments. Simply because there are exceptions in non-derived environments, \textsc{Obstruent Voice Assimilation} is always consistent with the RAC whether or not it actually applies in non-derived environments. This is due to the ``obligatory'' condition of the RAC. If the rule applies in non-derived environments, then it has lexical exceptions (e.g., \emph{a}[s.b]\emph{estos}) and is not obligatory and thus free from the RAC. On the other hand, if the rule is subject to the RAC, it only applies in derived environments, in which it is obligatory.}
@@ -144,9 +149,10 @@ violating  &  6       & 264        & 2.2           \\
 \end{tabular}
 \end{example}
 
-There are two possible analyses of the small number of roots that violate the derived generalization. Some hetero-voiced obstruent clusters, like the one in \emph{ja}[k.d]\emph{aw}, for instance, might be analyzed as compounds by native speakers, and this analysis might itself be driven by the rarity of morph-internal adjacent hetero-voiced obstruents (cf. \citealp[546]{Rice2009d} on compounds in Slave). In fact, \citet{Mattys2001b} find that 9-month-old infants are sensitive to the contrast between [f.t] and exceptional (and unattested) [v.t], treating the latter as an indication of a word boundary and this heuristic is also available to adults \citep{Brown1956,McQueen1998}. Less explanatorily, exceptional roots can be marked [$-$\textsc{Obstruent Voice Assimilation}].
+There are two possible analyses of the small number of roots that violate the derived generalization. Some hetero-voiced obstruent clusters, like the one in \emph{ja}[k.d]\emph{aw}, for instance, might be analyzed as compounds by native speakers, and this analysis might itself be driven by the rarity of morph-internal adjacent hetero-voiced obstruents (cf. \citealp[546]{Rice2009d} on compounds in Slave). In fact, \citet{Mattys2001b} find that 9-month-old infants are sensitive to the contrast between [f.t] and exceptional (and unattested) [v.t], treating the latter as an indication of a word boundary and this heuristic is also available to adults \citep{Brown1956,McQueen1998b}. Less explanatorily, exceptional roots can be marked [$-$\textsc{Obstruent Voice Assimilation}].
 
-\subsubsection{Nasal place assimilation} \label{npa}
+\subsubsection{Nasal place assimilation} 
+\label{npa}
 
 In addition to [n $\sim$ ŋ] allophony, \textsc{Nasal Place Assimilation} (\emph{SPE}:85) is responsible for the allomorphs of the \emph{im-}/\emph{in-} prefix, determined by the place of the following consonant.
 
@@ -157,12 +163,15 @@ b. & {tangible} & {i}[n.t]{angible} & & {decent}  & {i}[n.d]{ecent}  \\
 \end{tabular}
 \end{example}
 
+% mention Jensen here
+
 \begin{example}[\textsc{Nasal Place Assimilation}]
-\xymatrix@R=24pt@C=24pt{
-                          & \txt{\textsc{Place}}\ar@{-}[d]\ar@{--}[dl] \\
-\txt{C}\ar@{-}[d]         & \txt{C}\ar@{-}[d]                          \\
-\txt{[$+$\textsc{Nasal}]} & \txt{[$-$\textsc{Sonorant}]}              \\
-}
+%\xymatrix@R=24pt@C=24pt{
+%                          & \txt{\textsc{Place}}\ar@{-}[d]\ar@{--}[dl] \\
+%\txt{C}\ar@{-}[d]         & \txt{C}\ar@{-}[d]                          \\
+%\txt{[$+$\textsc{Nasal}]} & \txt{[$-$\textsc{Sonorant}]}              \\
+%}
+$\begin{bmatrix} $+$\textsc{Nas} \end{bmatrix}~\goesto~\begin{bmatrix} =\textsc{Lab} \\ =\textsc{Cor} \\ =\textsc{Dor} \end{bmatrix}~/~\gap{}~\begin{bmatrix} =\textsc{Lab} \\ =\textsc{Cor} \\ =\textsc{Dor} \\ -\textsc{Son} \end{bmatrix}$
 \end{example}
 
 The shape of the prefix before the velar stops /k, g/ is somewhat more complex. \citet[][62]{Halle1985a} and \citet[][90]{Borowsky1986} report that coda nasals assimilate to [ŋ] before dorsal consonants, but that assimilation of \emph{im-}/\emph{in-} is blocked by stress on the following syllable, citing contrasts like the one between \emph{í}[ŋ.k]\emph{ubate} and \emph{i}[n.k]\emph{lúde}. However, the stress condition does not hold for simplex words (e.g., \emph{a}[ŋ.ɡ]\emph{óra}), and is ignored here.
@@ -185,6 +194,12 @@ violating  & 8        & 20         & 28.6                                    \\
 \subsubsection{Degemination} \label{deg}
 
 A final alternation targeting English syllable contact clusters is the simplification of geminates derived by certain affixes. For instance, the deadjectival adverbial suffix \emph{-ly} rarely produces a geminate when it attaches to /l/-final roots (e.g., \emph{fu}[l]\emph{y}, cf. \emph{free}[l]\emph{y}). Degemination is also found in /d/-final roots selecting the irregular /-t/ past tense suffixes (e.g., \emph{bend}/\emph{ben}[t], \emph{build}/\emph{buil}[t]). More complicated cases of \textsc{Degemination} can be found in Latinate prefix allomorphy (see \emph{SPE}:148 and \citealt[102]{Borowsky1986}). Identical adjacent consonants do not occur in the corpus, nor do obstruent clusters which differ only in voice (e.g., *[p.b]), which would be made identical by the operation of \textsc{Obstruent Voice Assimilation}. As shown by the results of the Fisher test, this absence is unlikely to be due to chance.
+
+\begin{example}[\textsc{Degemination}]
+$\begin{bmatrix} =\textsc{Lab} \\ =\textsc{Cor} \\ =\textsc{Dor} \\ =\textsc{Son} \\ =\textsc{Nas} \\ =\textsc{Cont} \end{bmatrix}~\goesto~\zero~/~\gap~\begin{bmatrix} =\textsc{Lab} \\ =\textsc{Cor} \\ =\textsc{Dor} \\ =\textsc{Son} \\ =\textsc{Nas} \\ =\textsc{Cont} \end{bmatrix}$
+\end{example}
+
+% consider what coda-final consonants there are
 
 \begin{example}[Lexical effects of \textsc{Degemination}]
 \begin{tabular}{l r r r r}
@@ -359,7 +374,7 @@ A number of previous studies \citep[e.g.,][]{Weiss1961,Sigurd1968,Good1969,Borod
 \label{clus}
 \end{figure}
 
-Sparse distributions characterize the frequencies of many linguistic objects, from syntactic rules \citep{Yang2009} to word \citep{Teahan1998,Baroni2009} and phoneme \citep{Belevitch1956,Daland2011a} $n$-grams, but are also found in non-linguistic symbol systems \citep{Mandelbrot1954,Miller1957,Chomsky1958,Sproat2010} and randomly generated texts \citep{Miller1957,Li1992}. The importance of sparsity in this context is that it entails a long right tail, making it difficult to determine on statistical grounds alone which unobserved events are impossible and which are accidental gaps.
+Sparse distributions characterize the frequencies of many linguistic objects, from syntactic rules \citep{Yang2011b} to word \citep{Baroni2009} and phoneme \citep{Belevitch1956,Daland2011a} $n$-grams, but are also found in non-linguistic symbol systems \citep{Mandelbrot1954,Miller1957,Chomsky1958,Sproat2010} and randomly generated texts \citep{Miller1957,Li1992}. The importance of sparsity in this context is that it entails a long right tail, making it difficult to determine on statistical grounds alone which unobserved events are impossible and which are accidental gaps.
 
 \subsection{Good-Turing estimate}
 

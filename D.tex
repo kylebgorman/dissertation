@@ -1,18 +1,19 @@
-\chapter{Estimating Zipf's Law parameters} \label{zr}
+\chapter{Parameterizing Zipf's Law} \label{zr}
 
-\citet{Zipf1949} notes that word frequencies show a sparse distribution. \citeauthor{Zipf1949} notes a linear relationship between log word frequency $r$ and log frequency $r$. A generalized form of this relationship is what is now known as Zipf's Law.
+\citet{Zipf1949} observes a 1-to-1 linear relationship between log rank $r$ and log word frequency $f(r)$ in a number of linguistic samples. What is now known as Zipf's Law generalizes this log-log linear relationship.
 
 \begin{unlabeledexample} 
 $\displaystyle f(C, \alpha) = \frac{C}{r^\alpha}$ 
 \end{unlabeledexample} 
 
-\noindent $C$ is a constant which is primarily sensitive to sample size. \citeauthor{Zipf1949}'s assumes that $\alpha = -1$, but both $C$ and $\alpha$ can be estimated using the method of least squares ($\epsilon$ represents the error term).
- 
+\noindent 
+$C$ is a constant sensitive to sample size. \citeauthor{Zipf1949}'s assumes that $\alpha = -1$, but it is possible to estimate an optimal value for these parameters by taking the logarithm of both sides of the equation and solving for values of $C$ and $\alpha$ that minimize the error term $\epsilon$.
+
 \begin{unlabeledexample} 
-$\displaystyle \textrm{log}~f \sim C + \alpha~\textrm{log}~r + \epsilon$  
+$\displaystyle \textrm{log}~f(r) \sim \textrm{log}~C + \alpha~\textrm{log}~r + \epsilon$  
 \end{unlabeledexample}
 
-\citet{Good1953} notes that sparse empirically-estimated distributions exhibit quantization at low frequencies, producing an artificially long and flat right tail and biasing $\alpha$ upward. \citet[][29]{Church1991} describe a transform to eliminate this quantization. The vectors $r, n$ are defined so such that $n_i$ is the number of types which occur at frequency $r_i$ (that is, $n$ is a vector of frequencies of individual type frequencies). $Z$ is simply a vector in which each element of $n$ scaled by the nearest points to the left and right.
+\citet{Good1953} notes that sparse empirically-estimated distributions exhibit quantization at low frequencies, producing an artificially long and flat right tail and biasing $\alpha$ upwards, especially in large samples. \citet[][29]{Church1991} describe a transform which eliminates this quantization. The vectors $r, n$ are defined so such that $n_i$ is the number of types which occur at frequency $r_i$ (that is, $n$ is a vector of frequencies of individual type frequencies). $Z$ contains the elements of $n$ by normalized by the points to the left and right.
 
 \begin{unlabeledexample}
 $\displaystyle Z_i = \frac{2 n_i}{r_{i + 1} - r_{i - 1}}$
@@ -33,6 +34,6 @@ $\displaystyle Z_N = \frac{n_N}{r_N - r_{N - 1}}$
 \begin{figure}
 \centering
 \includegraphics{zr.pdf}
-\caption{The left panel shows the empirical word frequencies in SUBTLEX-US \citep{Brysbaert2009}. The right panel shows the effect of the $Z_r$ transform.}
+\caption{The left panel shows the empirical word frequencies from the SUBTLEX-US frequency norms \citep{Brysbaert2009}. The right panel shows the same frequencies smoothed with the $Z_r$ transform.}
 \label{subtlex}
 \end{figure}
