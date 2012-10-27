@@ -1,25 +1,27 @@
-\chapter{Parameterizing Zipf's Law} \label{zr}
+\chapter{Parameterizing Zipf's Law} 
+\label{zr}
 
-\citet{Zipf1949} observes a 1-to-1 linear relationship between log rank $r$ and log word frequency $f(r)$ in a number of linguistic samples. What is now known as Zipf's Law generalizes this log-log linear relationship.
+\citet{Zipf1949} observes a 1-to-1 linear relationship between log rank $r$ and log word frequency $f(r)$ in several linguistic samples. What is now known as Zipf's Law is a generalization of this log-log linear relationship.
 
 \begin{unlabeledexample} 
 $\displaystyle f(C, \alpha) = \frac{C}{r^\alpha}$ 
 \end{unlabeledexample} 
 
 \noindent 
-$C$ is a constant sensitive to sample size. \citeauthor{Zipf1949}'s assumes that $\alpha = -1$, but it is possible to estimate an optimal value for these parameters by taking the logarithm of both sides of the equation and solving for values of $C$ and $\alpha$ that minimize the error term $\epsilon$.
+$C$ is a constant, sensitive to sample size. \citeauthor{Zipf1949} assumes a 1-to-1 relationship, implying $\alpha = -1$, but it is possible to compute an optimal estimate for this parameter parameters by taking the logarithm of both sides of the equation and solving for values of $C$ and $\alpha$ that minimize the error term $\epsilon$; this can be done efficiently with linear regression:
 
 \begin{unlabeledexample} 
 $\displaystyle \textrm{log}~f(r) \sim \textrm{log}~C + \alpha~\textrm{log}~r + \epsilon$  
 \end{unlabeledexample}
 
-\citet{Good1953} notes that sparse empirically-estimated distributions exhibit quantization at low frequencies, producing an artificially long and flat right tail and biasing $\alpha$ upwards, especially in large samples. \citet[][29]{Church1991} describe a transform which eliminates this quantization. The vectors $r, n$ are defined so such that $n_i$ is the number of types which occur at frequency $r_i$ (that is, $n$ is a vector of frequencies of individual type frequencies). $Z$ contains the elements of $n$ by normalized by the points to the left and right.
+\noindent
+This cannot produce a worse fit than assuming a fixed value for $\alpha$. \citet{Good1953} notes that sparse distributions exhibit quantization at low frequencies, resulting in an artificially long flat right tail imposing an upward bias on estimates of $\alpha$. \citet[][29]{Church1991} propose a transform which eliminates this quantization. The vectors $r, n$ are defined so such that $n_i$ is the number of types which occur at frequency $r_i$ (that is, $n$ is a vector of frequencies of individual type frequencies). $Z$ contains the elements of $n$ by normalized by the points to the left and right.
 
 \begin{unlabeledexample}
 $\displaystyle Z_i = \frac{2 n_i}{r_{i + 1} - r_{i - 1}}$
 \end{unlabeledexample}
 
-\noindent \citeauthor{Church1991} do not define this transform for the lowest and highest points (i.e., when $i = 1$ or $i = N$), but a natural extension of their definition is to scale the endpoints according to the next intermost point, as defined below.
+\noindent \citeauthor{Church1991} do not define this transform for the lowest and highest points (i.e., when $i = 1$ or $N$), but a natural extension of their definition is to scale the endpoints according to the next intermost point, as defined below.
 
 \begin{unlabeledexample}
 $\displaystyle Z_1 = \frac{n_1}{r_2 - r_1}$

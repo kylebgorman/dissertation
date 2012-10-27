@@ -1,7 +1,35 @@
 \chapter{Structural and accidental gaps} 
 \label{clusters}
 
-Early work in generative phonology recognized that neutralizing, surface-true phonological alternations impose constraints on surface forms and underlying representations (\citealp[283]{Anderson1974}, \citealp[382]{SPE}, \citealp[205f.]{Dell1973}, \citealp[22f.]{SPR}, \citealp{Kenstowicz1977}: chapter 3, \citealp[28f.]{Stampe1973}, \citealp[410f.]{Stanley1967}). Despite isolated claims to the contrary (e.g., \citealp[297]{Hale1965}; \citealp[212f.]{Postal1968}), however, the \emph{communis opinio} (including many of the authors cited above) holds that not all phonotactics---that is, language-specific sound sequence co-occurrence restrictions---can be derived in this fashion, and phonotactic knowledge is independent of the phonology.
+Early work in generative phonology recognized that neutralizing, surface-true phonological alternations impose constraints both on surface forms and underlying representations (\citealp[283]{Anderson1974}, \citealp[382]{SPE}, \citealp[205f.]{Dell1973}, \citealp[22f.]{SPR}, \citealp{Kenstowicz1977}: chapter 3, \citealp[28f.]{Stampe1973}, \citealp[410f.]{Stanley1967}). 
+
+In the literature there are both isolated claims that 
+There are both isolated claims that 
+
+
+Despite isolated claims to the contrary (e.g., \citealp[297]{Hale1965}; \citealp[212f.]{Postal1968}), 
+
+\citet{Kisseberth1970b}
+
+
+however, the \emph{communis opinio} still is that that not all phonotactics---that is, language-specific sound sequence co-occurrence restrictions---can be derived in this fashion, and phonotactic knowledge is independent of the phonology.
+
+%FIXME
+% \citet[255]{Anderson1974}, discussing this fact, writes that \citeauthor{Haugen} ``gives an argument that shows the necessity of including syllables as units in underlying representations''.
+
+%FIXME
+(for dissenting views, see \citealt{Blevins2003} and \citealt{Steriade1999})
+
+Linguists have long recognized underlying representations as privileged domains for stating phonotactic generalizations (e.g., \citealt{Bloomfield1930,Jakobson1932,Pike1947b}). 
+
+More recently, a similar role for the syllable has been recognized 
+(e.g., \citet{Haugen1956}, \citet{Hooper1973}, \citealt{Kahn1976})
+
+
+\begin{quote}
+It would be a result of the greatest interest if it were to turn out that every intramorphemic regularity was necessarily reflected in an alternation, and thus in a rule; but this position cannot seriously be maintained. \citep[283]{Anderson1974}
+\end{quote}
+
 
 \begin{quote}
 It would be a result of the greatest interest if it were to turn out that every intramorphemic regularity was necessarily reflected in an alternation, and thus in a rule; but this position cannot seriously be maintained. \citep[283]{Anderson1974}
@@ -25,7 +53,7 @@ This chapter is concerned with the nature of these ``provisos'' as reflected by 
 
 \subsection{Corpus construction}
 
-A list of medial clusters is gathered by applying a number of filters and transformations to an English lexical database. The resulting list of clusters is reproduced in Appendix \ref{appendixB} and in electronic form at the author's website.
+A list of medial clusters is gathered by applying a number of filters and transformations to an English lexical database. The resulting list of clusters is reproduced in Appendix \ref{appendixC} and in electronic form at the author's website.
 
 \subsubsection{Simplex words}
 
@@ -143,8 +171,8 @@ for contingency tables, but computes an exact $p$-value, whereas the chi-square 
 \toprule
            & attested & unattested & \% saturation & $p$-value                   \\
 \midrule
-conforming & 80       & 370        & 18          & \multirow{2}{*}{1.1\e{-11}} \\
-violating  &  6       & 264        & 2           \\
+conforming & 80       & 370        & 18\%          & \multirow{2}{*}{1.1\e{-11}} \\
+violating  &  6       & 264        & 2\%           \\
 \bottomrule
 \end{tabular}
 \end{example}
@@ -312,27 +340,28 @@ $\displaystyle F_1 = 2 \left( \frac{\textrm{Precision} \times \textrm{Recall}}{\
 A soft-margin support vector machine \citep{Cortes1995} with a linear kernel is used to convert from the per-cluster scores to attestation predictions, by finding a single cutoff which optimally separates attested and unattested clusters according to their model scores. This is in no way intended to be a cognitively plausible model for learning phonotactics; it simply represents an upper bound on the performance of these models. The results for all four models are summarized in Table \ref{cmresults}.
 
 \begin{table} \centering
-\begin{tabular}{l | r r r r}
+\begin{tabular}{l | r r r r | r}
 \toprule
                      & accuracy & precision & recall & $F_1$ \\
 \midrule
-Null baseline        & 0.813    & n.a.      & n.a.   & n.a.  \\
-Derived constraints  & 0.857    & 0.401     & 0.708  & 0.512 \\
-Expected frequency   & 0.839    & 0.210     & 0.750  & 0.328 \\
-\citet{Hayes2008a}   & 0.877    & 0.777     & 0.642  & 0.703 \\
+Null baseline        &     .808 &      .808 &  1.000 &  .894 \\
+\citet{Hayes2008a}   &     .837 &      .948 &   .852 &  .898 \\ %& .002       \\
+Expected frequency   &     .835 &      .845 &   .983 &  .909 \\ %& 1.1\e{-05} \\
+Derived constraints  &     .840 &      .922 &   .885 &  .903 \\
+DC and EF            &     .864 &      .871 &   .989 &  .926 \\ %& 1.9\e{-13} \\
 \bottomrule
 \end{tabular}
-\caption{The \citeauthor{Hayes2008a} model makes the most accurate predictions about possible and impossible syllable contact clusters, though it is only slightly better than the derived constraint baseline.}
+\caption{FIXME}
 \label{cmresults}
 \end{table}
 
 \subsubsection{Null baseline}
 
-18.8\% of the 840 possible clusters are attested. Consequently, a null baseline which predicts no clusters to be attested trivially achieves 81.2\% accuracy. The other metrics are undefined for this baseline.
+19\% of the 880 possible clusters are attested. Consequently, a null baseline which predicts that no clusters are possible will be 81\% accurate, trivially. Because this baseline FIXME RECALL FIXME PRECISION
 
 \subsubsection{Derived constraints}
 
-The three derived constraints define a structured baseline, in which attestation is the predicted outcome for all clusters which not violate the \emph{SPE}-derived generalizations, and non-attestation otherwise. This produces a significant improvement to the null baseline (accuracy = 0.857; sign test $p = 2.16$\e{-05}). The high recall (0.708) but low precision (0.401) of this model indicates that there are more false positives (i.e., unattested clusters which do not violate any constraint) than false negatives (i.e., exceptions to the three rules). It is not clear that low precision is a flaw, since some of these false positives might be accidental gaps---that is, clusters that are well-formed, but unattested.
+The three derived constraints define a structured baseline, in which attestation is the predicted outcome for all clusters which not violate the \emph{SPE}-derived generalizations, and non-attestation otherwise. This results in a significant improvement to the null baseline (sign test $p = 0.006$).  This model has poor recall, however, because many well-formed clusters are unattested. This is not a flaw, but rather the signature of accidental gaps. 
 
 \subsubsection{Expected frequency}
 

@@ -1,23 +1,18 @@
-\chapter{Syllabification and phonologization of CELEX transcriptions}
+\chapter{Automated English syllabification}
+\label{syllabification}
 
-CELEX includes broad, syllabified Received Pronunciation transcriptions of individual wordforms. However, a casual inspection of the data reveals the unsystematic nature of these syllabifications. Any two words sharing a nucleus-medial cluster-nucleus sequence should be given the same parse, since syllabification is universally non-contrastive. Yet many putative syllabification contrasts can be found in CELEX; for instance, compare the parses given to the clusters in \emph{chemistry} [ˈkɛ.mɪ.stɹɪ] and \emph{ministry} [ˈmɪ.nɪs.tɹɪ].\footnote{Note that word-final \emph{y} is generally lax [ɪ] in Received Pronunciation \citep[][II.294]{AOE}.}
+For every entry in the CELEX database, there is a corresponding broad syllabified transcription of the word in a Received Pronunciation accent. This appendix describes an automated procedure used to process these transcripts and to separate medial clusters from their flanking nuclei, parsing the resulting sequences into coda and onset, and reversing allophonic processes targeting medial clusters.
 
-A systematic syllabification requires an automated procedure for delimiting medial clusters and parsing them into coda and onset. Since this procedure is applied only to medial clusters, this study remains agnostic on several contentious issues concerning syllabification of English; for instance, there is no need to address the status of so-called ``ambisyllabic'' consonants, since this does not occur with medial clusters, or morphological effects on syllabification, since no complex words are included. The technique used here is a variation on the theme of onset maximization (e.g., \citealp[42f.]{Kahn1976}, \citealp{Kurylowicz1948}, \citealp[75]{Pulgram1970}, \citealp[][358f.]{Selkirk1982b}) which favors parses of word-medial clusters in which as much of the cluster as possible is assigned to the onset. Initial onsets are used to define what is a ``possible'' medial onset \citep[though cf.][36]{Fischer-Jorgensen1952}. Medial clusters in words like \emph{neu}[.tɹ]\emph{on} or \emph{bi}[.stɹ]\emph{o} are found in word-initial position (e.g., [tɹ]\emph{ansit}, [stɹ]\emph{ike}), so onset maximization assigns the entire medial cluster to the onset, leaving the medial coda empty. In contrast, the cluster in \emph{mi}[n.stɹ]\emph{el} is not found word-initially; the maximal onset here is [stɹ], and the residual [n] is assigned to the coda.
+While the segmental content of these transcriptions is precise, the CELEX syllabifications are unsystematic. Given the absence of contrastive syllabification in English (if not all languages: see \citealp[221]{Blevins1995}, \citealp{Elfner2006}), any sequence of a medial consonant cluster and its flanking nuclei should receive the same syllabification in all words in which it occurs. This is not always the case with the CELEX transcriptions, however. For instance, the sequence [ɪstɹɪ] receives a different parse in \emph{chemistry} [ˈkɛ.mɪ.stɹɪ] and \emph{ministry} [ˈmɪ.nɪs.tɹɪ].\footnote{Note that word-final \emph{y} is lax in Received Pronunciation \citep[][II.294]{AOE}.}
 
-\paragraph{Stressed lax vowels} When a medial consonant cluster is preceded by a stressed lax vowel, as in words like \emph{wh}[ɪs.p]\emph{er}, \emph{v}[ɛs.t]\emph{ige}, or \emph{m}[ʌs.k]\emph{et}, the first consonant of the cluster checks the lax vowel \citep[e.g.,][3]{Hammond1997}. \citet[][55]{Harris1994} notes that onset maximization produces an incorrect result when, in addition, the medial cluster is a valid onset: in \emph{whisper}, \emph{vestige}, and \emph{musket}, onset maximization incorrectly assigns [sp, st, sk] to the medial onset, leaving the lax vowel unchecked. Consequently, the first consonant of a medial cluster is assigned to the coda of a preceding syllable before a stressed lax vowel \citep[cf.][48]{Pulgram1970}, a minimal modification of the onset maximization parse.
+\section{Ambiguous segments}
 
-\paragraph{Affricates} If the affricates [tʃ, dʒ] are treated as stop-fricative sequences \citep[e.g.,][]{Hualde1988,Lombardi1990}, the previous principle will incorrectly assign the two segments of the affricate to separate syllables before stressed lax vowels (e.g., *\emph{ra}[t.ʃ]\emph{et} or \emph{a}[d.ʒ]\emph{ile}) unless some ad hoc constraint \citep[e.g.,][]{Wells1990} is in place. A more traditional analysis of affricates, in which they are simple segments distinguished from pure stops by stridency \citep[24]{Jakobson1961} or delayed release (\emph{SPE}:321f.) is assumed here, following \citeauthor{Pierrehumbert1994}. This assumption can be motivated by the tendency of affricates to pattern with individual segments in phonotactic generalizations. For instance, Classical Nahua allows the affricate series [ts, tʃ, tɬ] in onsets, but bans all other onset clusters \citep[9]{Launey2011}.
-%\citet[86]{Butskhrikidze2002} notes a similar generalization in the consonant clusters of Georgian.
+The syllabification procedure begins by separating sequences of vocalic and consonantal segments. In English, \emph{r} and onglides pattern with consonants or with vowels depending on the context in which they occur. The heuristic adopted here is that ambiguous segments which impose restrictions on adjacent vowels are themselves vocalic, and those which impose restrictions on adjacent consonants are consonantal.
 
-\paragraph{The velar nasal} According to some \citep[e.g.,][]{Sapir1925}, [ŋ] in English is a phoneme in its own right, but others (e.g., \emph{SPE}:85, \citealp{Borowsky1986}:65f.) hold that it is simply the allophone of /n/ before underlying /k, ɡ/ (with later deletion of /ɡ/ in some contexts). The total absence of onset [ŋ], where it cannot be followed by a dorsal consonant which conditions the velar allophone, is strong evidence that [ŋ] is a pure allophone of /n/, the analysis assumed here.
+Initially, between two vowels, or finally, \emph{r} is consonantal. Before another consonant, however, \emph{r} has been lost in Received Pronunciation. Even in \emph{r}-ful dialects, though, post-vocalic non-onset \emph{r} patterns with vowels, not coda consonants. Before non-onset \emph{r} many vowel contrasts are suspended (e.g., \citealp[269f.]{Fudge1969}, \citealp[][255]{Harris1994}): compare American English \emph{fern}/\emph{fir}/\emph{fur} to \emph{pet}/\emph{pit}/\emph{putt}. In this position, \emph{r} is the only consonant which permits variable glottalization of a following /t/ in \emph{r}-ful British dialects \citep[258]{Harris1994}, and the only consonant which does does not trigger variable deletion of a following word-final /t, d/ in American dialects \citep[8]{Guy1980}. This is shown in (\ref{tglottalization}--\ref{tddeletion}) below.
 
-\paragraph{[j] onglides} While some have argued that the front onglide in words such as \emph{val}[j]\emph{ue} is inserted by rule (\emph{SPE}:196, \citealp[][89]{Halle1985a}, \citealp[][217]{McMahon1990}), the very presence or absence of the glide is contrastive (e.g., \emph{coo}/\emph{coup} \alt{} \emph{queue}, \emph{booty} \alt{} \emph{beauty}) indicating that it is present in underlying representation (\citealp{Anderson1988b}, \citealp[278]{Borowsky1986}). The front onglide is further assumed to be assigned to the nucleus, except when the onset would otherwise be null (e.g., \emph{jun}[j]\emph{or}). There is considerable evidence for this assumption. When [j] is a simplex onset, it may be followed by any vowel \citep[][276]{Borowsky1986}, but when [j] is immediately preceded by an onset consonant (e.g., [bj]\emph{ugle}), the following vowel is always [u], suggesting that the glide is nuclear (\citealp{Davis1995}, \citealp[][61f.]{Harris1994}, \citealp[][232]{Hayes1980}). \citet[][42]{Clements1983} note that /m, v/ do not appear in onset clusters, though they may be followed by [ju] in words like [mj]\emph{use} or [vj]\emph{iew}, also suggesting the nuclear affiliation of the glide. There is also external support for this analysis: the [ju] in words like \emph{spew} may pattern together in Pig Latin \citep{Davis1995,Idsardi2005}, \emph{shm}-reduplication \citep{Nevins2003}, and speech errors (e.g., [kju]\emph{mor} [h]\emph{omponent}, intended [hju]\emph{mor component}; \citealp[130]{Shattuck-Hufnagel1986}).
-
-\paragraph{[w] onglides} The phonotactic properties of the back onglide [w] are the opposite of the front onglide. Whereas the front onglide shows only limited selectivity for preceding tautosyllabic consonants \citep{Davis1995,Kaye1996}, the back onglide [w] is rarely preceded by tautosyllabic consonants other than [k] (e.g., \emph{tran}[kw]\emph{il}). Unlike the front glide, syllable-initial [kw] may be followed by nearly any vowel \citep[161]{Davis1995}. Unlike [juː], onglide [w] followed by a vowel does not pattern together in Pig Latin \citep[166]{Davis1995}. Taken together, these facts indicate that the back onglide is assigned to the onset.
-
-\paragraph{Post-vocalic \emph{r}} Word-medial post-vocalic \emph{r} has been lost in Received Pronunciation, the standard accent of the CELEX transcriptions. Even in \emph{r}-ful dialects, though, there is reason to believe that post-vocalic \emph{r} is fact nuclear, and thus irrelevant to syllable contact clusters. Many vowel contrasts are suspended before \emph{r} (e.g., \citealt[269f.]{Fudge1969}, \citealt[][255]{Harris1994}): compare American English \emph{fern}, \emph{fir}, \emph{fur} to \emph{pet}, \emph{pit}, \emph{putt}. Post-vocalic \emph{r} patterns with vowels and not other consonants for several phonological processes: it is the only consonant which does not block variable glottalization of following /t/ in British dialects \citep[258]{Harris1994}.
-
-\begin{example}[/t/-\textsc{Glottalization} in British English]
+\begin{example}[/t/-\textsc{Glottalization} in \emph{r}-ful British dialects]
+\label{tglottalization}
 \begin{tabular}{l l l l@{} l l l}
 a. & {des}[ɚt]    & \alt{} &   & {des}[ɚʔ]    \\
    & {c}[ɚt]{ain} & \alt{} &   & {c}[ɚʔ]{ain} \\
@@ -26,13 +21,51 @@ b. & {fi}[st]     & \alt{} & * & {fi}[sʔ]     \\
 \end{tabular}
 \end{example}
 
-\noindent Post-vocalic \emph{r} is the only consonant which does not trigger variable deletion of a following /t, d/ in American dialects \citep[8]{Guy1980}.
-
 \begin{example}[/t, d/-\textsc{Deletion} in American English]
+\label{tddeletion}
 \begin{tabular}{l l l l@{} l l l}
 a. & {be}[lt] & \alt{} &   & {be}[l] \\
    & {me}[nd] & \alt{} &   & {me}[n] \\
-b. & {sh}[ɚt] & \alt{} & * & {sh}[ɚ] \\
-   & {c}[ɚd]  & \alt{} & * & {c}[ɚ]  \\
+b. & {sk}[ɚt] & \alt{} & * & {sk}[ɚ] \\
+   & {th}[ɚd] & \alt{} & * & {th}[ɚ] \\
 \end{tabular}
 \end{example}
+
+\noindent
+Following \citet{Pierrehumbert1994}, pre-consonantal \emph{r} is assigned to the preceding nucleus.
+
+The front onglide is assigned to onset position when initial or preceded by a single consonant, as in [j]\emph{arn} or \emph{ju}[n.j]\emph{or}. When the glide is preceded by two or more consonants, it is assigned to the nucleus. There is considerable evidence in support of this assumption. When [j] is assigned to the onset, it may be followed by any vowel \citep[276]{Borowsky1986}, but when it is nuclear, the following vowel is always [u], suggesting a nuclear affiliation (\citealp[61f.]{Harris1994}, \citealp[232]{Hayes1980}). \citet[42]{Clements1983} note that [j] is the only consonant which can follow onset /m/ and /v/: [mj]\emph{use}, [vj]\emph{iew}. Finally, [ju] sequences in words such as \emph{spew} behave as a unit in language games \citep{Davis1995,Nevins2003} and speech errors \citep[130]{Shattuck-Hufnagel1986}.\footnote{The glide is also assumed to be present in underlying representation (e.g., \citealp{Anderson1988b}, \citealp[278]{Borowsky1986}) rather than inserted by rule (e.g., \emph{SPE}:196, \citealp[][89]{Halle1985a}, \citealp[][217]{McMahon1990}) since presence or absense of the glide is contrastive (e.g., \emph{booty}/\emph{beauty}, \emph{coot}/\emph{cute}).}
+
+The phonotactic properties of the back onglide [w] are quite different than those of the front onglide, and it is consequently assigned to the onset portion of medial clusters. Whereas [j] shows only limited selectivity for preceding tautosyllabic consonants \citep{Kaye1996}, [w] only rarely occurs after onset consonants other than [k] (e.g., \emph{tran}[kw]\emph{il}), and never after tautosyllabic labials in the native vocabulary. Whereas [kj] is always followed by [u], [kw] may precede nearly any vowel \citep[161]{Davis1995}.
+
+\section{Parsing medial consonant clusters}
+
+Medial consonant clusters are segmented into coda and onset using a heuristic version of the principle of onset maximization (e.g., \citealp[42f.]{Kahn1976}, \citealp{Kurylowicz1948}, \citealp[75]{Pulgram1970}, \citealp[][358f.]{Selkirk1982b}) which favors parses of word-medial clusters in which as much of the cluster as possible is assigned to the onset. A medial onset is defined to be ``possible'' simply if it occurs word-initially (according to the rules defined above). As an example, the medial clusters in words such as \emph{neu}[.tɹ]\emph{on} or \emph{bi}[.stɹ]\emph{o} also occur in word-initial position (e.g., [tɹ]\emph{ain}, [stɹ]\emph{ike}), so the entire cluster is assigned ot the onset. In contrast, the cluster in \emph{mi}[n.stɹ]\emph{el} is not found word-initially; the maximal onset here is [stɹ] and the remaining [n] is assigned to the preceding coda.
+
+In English, when a medial consonant cluster is preceded by a stressed lax vowel, as \emph{wh}[ɪs.p]\emph{er}, \emph{v}[ɛs.t]\emph{ige}, or \emph{m}[ʌs.k]\emph{et}, the first consonant of the cluster checks the lax vowel \citep[3]{Hammond1997}. As \citet[55]{Harris1994} notes, however, when the medial cluster is also a valid onset, as in \emph{whi}[s.p]\emph{er}, \emph{ve}[s.ti]\emph{ge}, and \emph{mu}[s.k]\emph{et}, onset maximization will incorrectly assign the entire cluster to the onset and leave the lax vowel unchecked. For this reason, onset maximization parses are modified to assign the first consonant of a complex medial consonant cluster to the coda before a stressed lax vowel \citep[48]{Pulgram1970}.
+
+\section{Phonologization}
+
+Following \citet{Pierrehumbert1994}, the traditional analysis of affricates as single segments (e.g., \emph{SPE}:321f., \citealp[24]{Jakobson1961}) rather than stop-fricative sequences \citep[e.g.,][]{Hualde1988,Lombardi1990} is assumed here. In many languages, affricates pattern with simple onsets; for instance, Classical Nahua bans true onset clusters but permits the affricate series [ts, tʃ, tɬ] \citep[9]{Launey2011}. In English, however, affricates do not form complex onsets. Yet, the stop and release phase of affricates cannot be separated by a syllable boundary, as predicted from the assumption they are single phonological units.
+
+In English, [ŋ] has been analyzed as a pure allophone of /n/ before underlying /k, ɡ/ (with later deletion of /ɡ/ in some contexts; \citealt[65f.]{Borowsky1986}, \emph{SPE}:85, \citealt[62]{Halle1985a}), or as a phoneme in its own right \citep[e.g.,][]{Jusczyk2002,Sapir1925}. Onset [ŋ] is totally absent in onset position, where it cannot be followed by a /k, ɡ/ needed to derive the velar allophone, a fact predicted only by the former account, and English speakers have considerable difficulty producing initial [ŋ] (COLE AND X FIXME). Following \citet{Pierrehumbert1994}, the allophonic analysis is assumed here, and surface [ŋ] is mapped to underlying /n/.
+
+%\section{Exemplification}
+% 
+%In (\ref{exemplification}), a few segmentations are given so as to demonstrate the principles the principles outlined above.
+% 
+%\begin{example}[Some examples of medial cluster segmentation]
+%\label{exemplification}
+%\begin{tabular}{l l l}
+%a. & \emph{tranquil} & /\ldots{}n.kw\ldots{}/ & (coda nasal place assimilation, [Cw] onsets) \\
+%b. & \emph{
+%c. & \emph{
+%d. & \emph{
+%e. & \emph{
+%f. & \emph{
+%g. & \emph{
+%h. & \emph{
+%i. & \emph{
+%j. & \emph{
+%\end{tabular}
+%\end{example}
