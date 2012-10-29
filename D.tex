@@ -1,7 +1,7 @@
 \chapter{Parameterizing Zipf's Law} 
 \label{zr}
 
-\citet{Zipf1949} observes a 1-to-1 linear relationship between log rank $r$ and log word frequency $f(r)$ in several linguistic samples. What is now known as Zipf's Law is a generalization of this log-log linear relationship.
+\citet{Zipf1949} famously observes the linear relationship between log rank $r$ and log word frequency $f(r)$ in several linguistic samples. This is generalized below:
 
 \begin{unlabeledexample} 
 $\displaystyle f(C, \alpha) = \frac{C}{r^\alpha}$ 
@@ -14,8 +14,7 @@ $C$ is a constant, sensitive to sample size. \citeauthor{Zipf1949} assumes a 1-t
 $\displaystyle \textrm{log}~f(r) \sim \textrm{log}~C + \alpha~\textrm{log}~r + \epsilon$  
 \end{unlabeledexample}
 
-\noindent
-This cannot produce a worse fit than assuming a fixed value for $\alpha$. \citet{Good1953} notes that sparse distributions exhibit quantization at low frequencies, resulting in an artificially long flat right tail imposing an upward bias on estimates of $\alpha$. \citet[][29]{Church1991} propose a transform which eliminates this quantization. The vectors $r, n$ are defined so such that $n_i$ is the number of types which occur at frequency $r_i$ (that is, $n$ is a vector of frequencies of individual type frequencies). $Z$ contains the elements of $n$ by normalized by the points to the left and right.
+\citet{Good1953} notes that sparse distributions exhibit quantization at low frequencies, resulting in an artificially long flat right tail imposing an upward bias on estimates of $\alpha$. \citet[][29]{Church1991} propose a transform which eliminates this quantization. The vectors $r, n$ are defined so such that $n_i$ is the number of types which occur at frequency $r_i$ (that is, $n$ is a vector of frequencies of individual type frequencies). $Z$ contains the elements of $n$ by normalized by the points to the left and right.
 
 \begin{unlabeledexample}
 $\displaystyle Z_i = \frac{2 n_i}{r_{i + 1} - r_{i - 1}}$
