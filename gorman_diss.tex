@@ -1,13 +1,9 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
 \documentclass[draft]{upenndiss}
 
 % bibliography stuff
 \usepackage{url}
 \usepackage{natbib}
 \bibpunct[:]{(}{)}{,}{a}{}{,}
-\usepackage{natbibspacing}
-\setlength{\bibspacing}{0.25\baselineskip}
 
 % graphics
 \usepackage{graphicx}
@@ -45,18 +41,14 @@
 \newcommand{\immedsubsection}{\subsection}
 \newcommand{\immedsubsubsection}{\subsubsection}
 
-% symbol footnotes for chapter headers
-\long\def\symbolfootnote[#1]#2{\begingroup%
-\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
-
 \title{Generative Phonotactics}
 \author{Kyle Gorman}
 \supervisor{Charles Yang \\ Associate Professor, Linguistics, Computer and Information Science, \& Psychology}
 \gradchair{Robin Clark \\ Associate Professor, Linguistics}
-\committee{Stephen R. Anderson \\ Dorothy R. Diebold professor of Linguistics, Psychology, \& Cognitive Science, Yale University
-\and Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science 
-\and Eugene Buckley \\ Associate Professor, Linguistics
-\and Rolf Noyer \\ Associate Professor, Linguistics}
+\committee{Stephen R. Anderson \\ Dorothy R. Diebold professor of Linguistics, Psychology, \& Cognitive Science, Yale University \and 
+           Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science \and 
+           Eugene Buckley \\ Associate Professor, Linguistics \and 
+           Rolf Noyer \\ Associate Professor, Linguistics}
 
 \copyrighttrue
 \copyrightyear{2012}  % Defaults to the current year
@@ -66,19 +58,19 @@
 \abstractfile{abs} 
 %\acknowledgementsfile{ack}
 %\dedication{\center To my parents, Mark and Bev, who never once said *\emph{bnick} or *\emph{forwent}}
-\prefacefile{pre}
+%\prefacefile{pre}
 
 \begin{document}
-%\FrontMatter
+\FrontMatter
 
-%\include{1placeholder}
-%\include{2}
-%\include{3}
+\include{1placeholder}
+\include{2}
+\include{3}
 \include{4}
 
 \appendix 
-%\renewcommand{\arraystretch}{0.25}
-%\include{A} \include{B} \include{C} \include{D}
+\renewcommand{\arraystretch}{0.25}
+\include{A} \include{B} \include{C} \include{D}
 
 \bibliography{\jobname}
 \bibliographystyle{pwpl}
