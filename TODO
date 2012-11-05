@@ -1,13 +1,35 @@
-static and derived (10)
-computational models (5)
-intro to evaluation (2)
-discussion (2)
-conclusion (1)
-introduction (10)
-30 paragraphs(!)
+Abstract
+Intro 
+Evaluation FIXME
+Discussion 
+    - improvements to baseline
+    - residuals
+    - random, w/ noise?
+Conclusions
+Edit
 
-intro
-preface
+What a theory of phonotactics should account for is itself contentious. 
+It should account for contrasts 
+There are also numerous things the theory need not, and should not, account for. The phonotactic system does not need to say anything about any contrast between actual words like \emph{brick} and possible, but non-existent words like \emph{blick}. That contrast derives from the fact that \emph{brick} has a denotation, whereas \emph{blick} does not, and a phonotactic model that distinguishes between the two is on the wrong track. 
+
+such models have been constructed, but they operate on different inputs and outputs than any model of nonce word well-formedness. 
+
+
+
+- duplication problem and the cycle (etc.)
+- examples of surfacey c
+onstraints being imposed on the base
+- 
+
+Online intro
+
+armstrong 
+
+Online s1
+ 
+This statistical test is so named because it is similar to the chi-square test over contingency tables, the Fisher test computes an exact $p$-value where as the chi-square test depends on an approximation inappropriate for small samples.
+
+intro/preface
 (discuss Silverman, Benua, and Kiparsky on *ū and short-a)
 
 1. What wordlikeness might not be

@@ -1,4 +1,4 @@
-\documentclass[draft]{upenndiss}
+\documentclass{upenndiss}
 
 % bibliography stuff
 \usepackage{url}
@@ -19,8 +19,11 @@
 % nice feature matrices
 \usepackage{amsmath}
 
+% underlining in chap 2
+\usepackage[normalem]{ulem}
+
 % (occasional) autosegmental diagrams
-\usepackage{xypic}
+%\usepackage{xypic}
 
 % fonts
 \usepackage{mathspec}
@@ -61,16 +64,31 @@
 %\prefacefile{pre}
 
 \begin{document}
-\FrontMatter
+%\FrontMatter
 
-\include{1placeholder}
-\include{2}
-\include{3}
-\include{4}
+%\chapter{A generative theory of phonotactic knowledge and acquisition} 
+%\input{1placeholder}
+\chapter{Categorical and gradient aspects of wordlikeness}
+\input{2}
+%\chapter{Static and derived Turkish phonotactics} 
+%\input{3}
+%\chapter{Structural and accidental phonotactic gaps} 
+%\input{4}
 
 \appendix 
 \renewcommand{\arraystretch}{0.25}
-\include{A} \include{B} \include{C} \include{D}
+
+\chapter{English wordlikeness ratings}
+\input{A}
+
+\chapter{English syllabification}
+\input{B}
+
+%\chapter{English syllable contact clusters}
+%\input{C}
+
+%\chapter{Parameterizing Zipf's Law}
+%\input{D}
 
 \bibliography{\jobname}
 \bibliographystyle{pwpl}

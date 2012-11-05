@@ -1,6 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage[hmargin=1in,top=1in,bottom=1in]{geometry}
+
+% bibliography stuff
+\usepackage{url}
+\usepackage{natbib}
+\bibpunct[:]{(}{)}{,}{a}{}{,}
+
+% normalem
+\usepackage[normalem]{ulem}
+
+% graphics
+\usepackage{graphicx}
+
+% tables
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+% my example environments
+\usepackage{simplex}
+
+% nice feature matrices
+\usepackage{amsmath}
+
+% fonts
+\usepackage{mathspec}
+\setmainfont[Mapping=tex-text]{Linux Libertine}
+\setmathfont(Digits,Greek,Latin){Linux Libertine}
+
+%% KG's shortcuts
+\newcommand{\buf}{\hspace{0pt}}
+\newcommand{\gap}{\rule{1em}{0.5pt}}
+\newcommand{\alt}{\ensuremath{\sim}}
+\newcommand{\asp}{\textsuperscript{h}}
+\newcommand{\pal}{\textsuperscript{j}}
+\newcommand{\zero}{\ensuremath{\emptyset}}
+\newcommand{\goesto}{\ensuremath{\longrightarrow}}
+\providecommand{\e}[1]{\textsc{e}{$#1$}}
+
+\title{Categorical and gradient aspects of wordlikeness\thanks{Thanks to Gene Buckley, Charles Yang, and audiences at NELS 43 for helpful comments.}} 
+\author{Kyle Gorman \\ University of Pennsylvania}
+\date{November 2012 (comments welcome)}
+
+\begin{document}
+\maketitle
+
+\abstract{Gradient ratings are a property of ratings tasks, not of the grammatical system itself.}
+
+\input{2}
+\appendix
+\renewcommand{\arraystretch}{0.25}
+
+\section{English wordlikeness ratings}
 \label{ratings}
 
-\section{\citet{Albright2007}}
+\subsection{\citet{Albright2007}}
 
 \begin{longtable}{r@{ }r@{ }c@{ }l@{ }l rrrrrr}
 \toprule
@@ -50,7 +104,7 @@ B & Z & AY1 & K &    & 1 & 19.118 & 19.097 & invalid & 1.28 \\
 \bottomrule
 \end{longtable}
 
-\section{\citet{Albright2003b}, norming study} 
+\subsection{\citet{Albright2003b}, norming study} 
 
 \begin{longtable}{r@{ }r@{ }r@{ }c@{ }l@{ }l@{ } rrrrr}
 \toprule
@@ -146,7 +200,7 @@ S &  P &  R & AA1 & R  & F  &  0 & 24.031 & 0.000 &   valid & 2.05 \\
 \bottomrule
 \end{longtable}
 
-\section{\citet{Scholes1966}, experiment 5}    
+\subsection{\citet{Scholes1966}, experiment 5}    
 
 \begin{longtable}{r@{ }r@{ }c@{ }l@{ } rrrrr}
 \toprule
@@ -216,3 +270,79 @@ ZH & N & EH1 & T & 1 & 33.775 &  5.678 & invalid & 0 \\
 ZH & V & IY1 & L & 1 & 32.181 & 15.023 & invalid & 0 \\
 \bottomrule
 \end{longtable}
+
+\section{English syllabification}
+\label{syllabification}
+
+For every entry in the CELEX database, there is a corresponding broad syllabified transcription of the word in a Received Pronunciation accent. This appendix describes an automated procedure used to process these transcripts and to separate medial clusters from their flanking nuclei, parsing the resulting sequences into coda and onset, and reversing allophonic processes targeting medial clusters.
+
+While the segmental content of these transcriptions is precise, the CELEX syllabifications are unsystematic. Given the absence of contrastive syllabification in English (if not all languages: see \citealp[221]{Blevins1995}, \citealp{Elfner2006}), any sequence of a medial consonant cluster and its flanking nuclei should receive the same syllabification in all words in which it occurs. This is not always the case with the CELEX transcriptions, however. For instance, the sequence [ɪstɹɪ] receives a different parse in \emph{chemistry} [ˈkɛ.mɪ.stɹɪ] and \emph{ministry} [ˈmɪ.nɪs.tɹɪ].\footnote{Note that word-final \emph{y} is lax in Received Pronunciation \citep[][II.294]{AOE}.}
+
+\subsection{Ambiguous segments}
+
+The syllabification procedure begins by separating sequences of vocalic and consonantal segments. In English, \emph{r} and onglides pattern with consonants or with vowels depending on the context in which they occur. The heuristic adopted here is that ambiguous segments which impose restrictions on adjacent vowels are themselves vocalic, and those which impose restrictions on adjacent consonants are consonantal.
+
+Initially, between two vowels, or finally, \emph{r} is consonantal. Before another consonant, however, \emph{r} has been lost in Received Pronunciation. Even in \emph{r}-ful dialects, though, post-vocalic non-onset \emph{r} patterns with vowels, not coda consonants. Before non-onset \emph{r} many vowel contrasts are suspended (e.g., \citealp[269f.]{Fudge1969}, \citealp[][255]{Harris1994}): compare American English \emph{fern}/\emph{fir}/\emph{fur} to \emph{pet}/\emph{pit}/\emph{putt}. In this position, \emph{r} is the only consonant which permits variable glottalization of a following /t/ in \emph{r}-ful British dialects \citep[258]{Harris1994}, and the only consonant which does does not trigger variable deletion of a following word-final /t, d/ in American dialects \citep[8]{Guy1980}. This is shown in (\ref{tglottalization}--\ref{tddeletion}) below.
+
+\begin{example}[/t/-\textsc{Glottalization} in \emph{r}-ful British dialects]
+\label{tglottalization}
+\begin{tabular}{l l l l@{} l l l}
+a. & {des}[ɚt]    & \alt{} &   & {des}[ɚʔ]    \\
+   & {c}[ɚt]{ain} & \alt{} &   & {c}[ɚʔ]{ain} \\
+b. & {fi}[st]     & \alt{} & * & {fi}[sʔ]     \\
+   & {mi}[st]{er} & \alt{} & * & {mi}[sʔ]{er} \\
+\end{tabular}
+\end{example}
+
+\begin{example}[/t, d/-\textsc{Deletion} in American English]
+\label{tddeletion}
+\begin{tabular}{l l l l@{} l l l}
+a. & {be}[lt] & \alt{} &   & {be}[l] \\
+   & {me}[nd] & \alt{} &   & {me}[n] \\
+b. & {sk}[ɚt] & \alt{} & * & {sk}[ɚ] \\
+   & {th}[ɚd] & \alt{} & * & {th}[ɚ] \\
+\end{tabular}
+\end{example}
+
+\noindent
+Consequently, pre-consonantal \emph{r} is assigned to the preceding nucleus.
+
+The front onglide is assigned to onset position when initial or preceded by a single consonant, as in [j]\emph{arn} or \emph{ju}[n.j]\emph{or}. When the glide is preceded by two or more consonants, it is assigned to the nucleus. There is considerable evidence in support of this assumption. When [j] is assigned to the onset, it may be followed by any vowel \citep[276]{Borowsky1986}, but when it is nuclear, the following vowel is always [u], suggesting a nuclear affiliation (\citealp[61f.]{Harris1994}, \citealp[232]{Hayes1980}). \citet[42]{Clements1983} note that [j] is the only consonant which can follow onset /m/ and /v/: [mj]\emph{use}, [vj]\emph{iew}. Finally, [ju] sequences in words such as \emph{spew} behave as a unit in language games \citep{Davis1995,Nevins2003} and speech errors \citep[130]{Shattuck-Hufnagel1986}.\footnote{The glide is also assumed to be present in underlying representation (e.g., \citealp{Anderson1988b}, \citealp[278]{Borowsky1986}) rather than inserted by rule (e.g., \emph{SPE}:196, \citealp[][89]{Halle1985a}, \citealp[][217]{McMahon1990}) since presence or absense of the glide is contrastive (e.g., \emph{booty}/\emph{beauty}, \emph{coot}/\emph{cute}).}
+
+The phonotactic properties of the back onglide [w] are quite different than those of the front onglide, and it is consequently assigned to the onset portion of medial clusters. Whereas [j] shows only limited selectivity for preceding tautosyllabic consonants \citep{Kaye1996}, [w] only rarely occurs after onset consonants other than [k] (e.g., \emph{tran}[kw]\emph{il}), and never after tautosyllabic labials in the native vocabulary. Whereas [kj] is always followed by [u], [kw] may precede nearly any vowel \citep[161]{Davis1995}.
+
+\subsection{Parsing medial consonant clusters}
+
+Medial consonant clusters are segmented into coda and onset using a heuristic version of the principle of onset maximization (e.g., \citealp[42f.]{Kahn1976}, \citealp{Kurylowicz1948}, \citealp[75]{Pulgram1970}, \citealp[][358f.]{Selkirk1982b}) which favors parses of word-medial clusters in which as much of the cluster as possible is assigned to the onset. A medial onset is defined to be ``possible'' simply if it occurs word-initially (according to the rules defined above). As an example, the medial clusters in words such as \emph{neu}[.tɹ]\emph{on} or \emph{bi}[.stɹ]\emph{o} also occur in word-initial position (e.g., [tɹ]\emph{ain}, [stɹ]\emph{ike}), so the entire cluster is assigned ot the onset. In contrast, the cluster in \emph{mi}[n.stɹ]\emph{el} is not found word-initially; the maximal onset here is [stɹ] and the remaining [n] is assigned to the preceding coda.
+
+In English, when a medial consonant cluster is preceded by a stressed lax vowel, as \emph{wh}[ɪs.p]\emph{er}, \emph{v}[ɛs.t]\emph{ige}, or \emph{m}[ʌs.k]\emph{et}, the first consonant of the cluster checks the lax vowel \citep[3]{Hammond1997}. As \citet[55]{Harris1994} notes, however, when the medial cluster is also a valid onset, as in \emph{whi}[s.p]\emph{er}, \emph{ve}[s.ti]\emph{ge}, and \emph{mu}[s.k]\emph{et}, onset maximization will incorrectly assign the entire cluster to the onset and leave the lax vowel unchecked. For this reason, onset maximization parses are modified to assign the first consonant of a complex medial consonant cluster to the coda before a stressed lax vowel \citep[48]{Pulgram1970}.
+
+\subsection{Phonologization}
+
+The traditional analysis of affricates as single segments (e.g., \emph{SPE}:321f., \citealp[24]{Jakobson1961}) rather than stop-fricative sequences \citep[e.g.,][]{Hualde1988,Lombardi1990} is assumed here. In many languages, affricates pattern with simple onsets; for instance, Classical Nahua bans true onset clusters but permits the affricate series [ts, tʃ, tɬ] \citep[9]{Launey2011}. In English, however, affricates do not form complex onsets. Yet, the stop and release phase of affricates cannot be separated by a syllable boundary, as predicted from the assumption they are single phonological units.
+
+In English, [ŋ] has been analyzed as a pure allophone of /n/ before underlying /k, ɡ/ (with later deletion of /ɡ/ in some contexts; \citealt[65f.]{Borowsky1986}, \emph{SPE}:85, \citealt[62]{Halle1985a}), or as a phoneme in its own right \citep[e.g.,][]{Jusczyk2002,Sapir1925}. Onset [ŋ] is totally absent in onset position, where it cannot be followed by a /k, ɡ/ needed to derive the velar allophone, a fact predicted only by the former account, and English speakers have considerable difficulty producing initial [ŋ] \citep{Rusaw2009}. The allophonic analysis is assumed here. When followed by /k, ɡ/, [ŋ] is mapped to /n/. When not followed by a velar stop (i.e., finally), [ŋ] is analyzed as underlying /nɡ/.
+
+%\section{Exemplification}
+% 
+%In (\ref{exemplification}), a few segmentations are given so as to demonstrate the principles the principles outlined above.
+% 
+%\begin{example}[Some examples of medial cluster segmentation]
+%\label{exemplification}
+%\begin{tabular}{l l l}
+%a. & \emph{tranquil} & /\ldots{}n.kw\ldots{}/ & (coda nasal place assimilation, [Cw] onsets) \\
+%b. & \emph{
+%c. & \emph{
+%d. & \emph{
+%e. & \emph{
+%f. & \emph{
+%g. & \emph{
+%h. & \emph{
+%i. & \emph{
+%j. & \emph{
+%\end{tabular}
+%\end{example}
+
+\bibliography{gorman_diss.bib}
+\bibliographystyle{pwpl}
+\end{document}

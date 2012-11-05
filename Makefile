@@ -1,22 +1,22 @@
-SOURCE=gorman_diss
-TARGET=gorman_diss.pdf
+TARGET=ms2
+#TARGET=gorman_diss
 BIBTEX=bibtex
 COMMAND=xelatex -halt-on-error
 
-all:
-	$(COMMAND) $(SOURCE)
+$(TARGET).pdf: *.tex
+	$(COMMAND) $(TARGET)
 
-bib: $(TARGET)
-	$(BIBTEX) $(SOURCE)
-	sed -e 's!?\\/}\.!?\\/}!' < $(SOURCE).bbl > TEMP; mv TEMP $(SOURCE).bbl
-	$(COMMAND) -interaction=batchmode -no-pdf $(SOURCE)
-	$(COMMAND) -interaction=batchmode $(SOURCE)
-
+bib: *.tex gorman_diss.bib
+	$(BIBTEX) $(TARGET)
+	sed -e 's!?\\/}\.!?\\/}!' < $(TARGET).bbl > TEMP; mv TEMP $(TARGET).bbl
+	$(COMMAND) -interaction=batchmode -no-pdf $(TARGET)
+	$(COMMAND) -interaction=batchmode $(TARGET)
+ 
 clean:
 	latexmk -C
-	$(RM) $(SOURCE).bbl $(SOURCE).xdv
+	$(RM) $(TARGET).bbl $(TARGET).xdv
 
-show: $(TARGET)
-	open $(TARGET)
+show: $(TARGET).pdf
+	open $(TARGET).pdf
 
 .PHONY: clean show
