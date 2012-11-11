@@ -1,43 +1,35 @@
-Abstract
-Intro 
-Evaluation FIXME
-Discussion 
-    - improvements to baseline
-    - residuals
-    - random, w/ noise?
-Conclusions
-Edit
+Other things remain unresolvable: there is no _external_ way to tell what the final segment of \emph{čilek} `strawberry' since final stops are subject to devoicing, and it deletes in inflected forms (e.g., \emph{čilei}), or what the representation of [sek]-[seɣɘ] `blind' in Catalan \citep[7]{PE}.
 
 What a theory of phonotactics should account for is itself contentious. 
 It should account for contrasts 
 There are also numerous things the theory need not, and should not, account for. The phonotactic system does not need to say anything about any contrast between actual words like \emph{brick} and possible, but non-existent words like \emph{blick}. That contrast derives from the fact that \emph{brick} has a denotation, whereas \emph{blick} does not, and a phonotactic model that distinguishes between the two is on the wrong track. 
 
-such models have been constructed, but they operate on different inputs and outputs than any model of nonce word well-formedness. 
+in infants \citep{Mattys2001a} and adults \citep{Brown1956,Hay2004a,McQueen1998b}. Models of word segmentation using this heuristic exist \citep[e.g.,][]{Norris1997}, but they operate on different inputs and outputs than any model of nonce word well-formedness. This is not a duplication per se, because wordlikeness cannot be reduced to segmentation: [bznk] is no more possible as a English phrase than it is as an English word. 
 
-
-
-- duplication problem and the cycle (etc.)
-- examples of surfacey c
-onstraints being imposed on the base
-- 
-
-Online intro
-
-armstrong 
-
-Online s1
- 
 This statistical test is so named because it is similar to the chi-square test over contingency tables, the Fisher test computes an exact $p$-value where as the chi-square test depends on an approximation inappropriate for small samples.
 
-intro/preface
 (discuss Silverman, Benua, and Kiparsky on *ū and short-a)
 
-1. What wordlikeness might not be
-    1. gradience in judgements
-        gradience in other tasks
-        not an inherent property of judgements, though 
-    2. armstrong et al.
-        While this study is not concerned with language, the findings are very much relevant to grammatical theory, though not widely discussed by linguists (though see Schutze, Yang).
-        Definitional categories
-        likert results, graph
-        \citet{Albright2007,Albright2009a}
+CHAPTER 1:
+
+- discuss Silverman 
+
+CHAPTER 4:
+
+- which of "many" authors cited?
+- "knowledge" vs. "regularity": which is "known"?
+- why am I using stringent criteria? 
+- +- obs vs. +- son
+- why only "some" hetero-voiced clusters?
+- free/freely, full/fully
+- pierrehumbert's claim on p173 is false
+- quote from p175 makes no sense
+- discuss numbers more about no exceptions
+- p44 discussion should come earlier
+- f1 makes sense? probably no
+- clarify "this variant", "this predictor"
+- source of exceptions? 
+- discussion of proper names (Trubetzkoy)
+- clarify "prob of all accidental gaps"
+- "likely" to be accidental gaps
+- quantify degree of "closely matched"

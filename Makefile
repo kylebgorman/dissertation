@@ -1,5 +1,4 @@
-TARGET=ms2
-#TARGET=gorman_diss
+TARGET=gorman_diss
 BIBTEX=bibtex
 COMMAND=xelatex -halt-on-error
 
@@ -14,7 +13,7 @@ bib: *.tex gorman_diss.bib
  
 clean:
 	latexmk -C
-	$(RM) $(TARGET).bbl $(TARGET).xdv
+	$(RM) *.bbl *.xdv
 
 show: $(TARGET).pdf
 	open $(TARGET).pdf
