@@ -212,30 +212,26 @@ Fulfillment of the Requirements for the Degree of Doctor of Philosophy
   \else 
     \let\@eachsig=\@narrowsig
     \@siglist\@supervisor\supervisorname %-- KG
-    \@siglist\@approvedby\approvedname %-- KG
     \@siglist\@committee\committeemembername %-- KG
-    %\@siglist\supervisorname\@supervisor
-    %\@siglist\approvedname\@approvedby
-    %\@siglist\committeemembername\@committee
+    \@siglist\@approvedby\approvedname %-- KG
   \fi }
 
 % If the default signature layout is inappropriate, just override it:
 % Redefine \@signatureblock and lay out the names by hand, either using
 % \@widesig and/or \@narrowsig, or just drawing lines in your favorite way.
 % Example: 
-%\renewcommand\@signatureblock{
-%   \@narrowsig{Supervisor of Dissertation \\ Charles Yang \\ Associate Professor, Linguistics \& Computer and Information Science}
-%   \@narrowsig{Graduate Group Chairperson \\ Eugene Buckley \\ Associate Professor, Linguistics}
-%   \@narrowsig{Eugene Buckley, Associate Professor, Linguistics}
-%   \@narrowsig{Stephen R. Anderson, Dorothy R. Diebold Professor, Linguistics, Psychology, \& Computer Science, Yale University}
-%   \@narrowsig{Mark Liberman, Trustee Professor of Phonetics, Linguistics \& Computer and Information Science}
-%   \@narrowsig{Rolf Noyer, Associate Professor, Linguistics}
-%}
-
+\renewcommand\@signatureblock{
+    \@narrowsig{Supervisor of Dissertation \\ Charles Yang \\ Associate Professor, Linguistics \& Computer and Information Science} 
+    \@narrowsig{Graduate Group Chairperson \\ Robin Clark \\ Associate Professor, Linguistics} 
+    \@narrowsig{Stephen R. Anderson \\ Dorothy R. Diebold Professor, Linguistics, Psychology, \& Computer Science, Yale University}
+    \@narrowsig{Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science} 
+    \@narrowsig{Eugene Buckley \\ Associate Professor, Linguistics}
+    \@narrowsig{Rolf Noyer \\ Associate Professor, Linguistics}
+}
 
 % Signature format intended for signatures laid out one per line
-%\def\@widesig#1{\parbox[t]{12cm}{\parindent=0pt \vskip 0.65in
-%  \par \hrule width 7cm \vskip .1in #1}\\}
+\def\@widesig#1{\parbox[t]{12cm}{\parindent=0pt \vskip 0.65in
+  \par \hrule width 7cm \vskip .1in #1}\\}
 
 % This is narrow enough that it should come out two per line unless
 % followed by \\
@@ -246,7 +242,6 @@ Fulfillment of the Requirements for the Degree of Doctor of Philosophy
 \def\@narrowsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.35in
   \raggedright
   \par \vskip .1in #1}\hfill}
-
 
 % Do a sig line for each name in the list #1, with title #2
 % The output is formatted in the format Name, Title (you can change it here)

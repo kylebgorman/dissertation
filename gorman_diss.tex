@@ -1,4 +1,4 @@
-\documentclass{upenndiss}
+\documentclass[draft]{upenndiss}
 
 % bibliography stuff
 \usepackage{url}
@@ -19,11 +19,11 @@
 % nice feature matrices
 \usepackage{amsmath}
 
+% (occasional) autosegmental diagrams
+\usepackage{xypic}
+
 % underlining in chap 2
 \usepackage[normalem]{ulem}
-
-% (occasional) autosegmental diagrams
-%\usepackage{xypic}
 
 % fonts
 \usepackage{mathspec}
@@ -39,10 +39,6 @@
 \newcommand{\zero}{\ensuremath{\emptyset}}
 \newcommand{\goesto}{\ensuremath{\longrightarrow}}
 \providecommand{\e}[1]{\textsc{e}{$#1$}}
-
-% compatibility with the WCCFL class
-\newcommand{\immedsubsection}{\subsection}
-\newcommand{\immedsubsubsection}{\subsubsection}
 
 \title{Generative Phonotactics}
 \author{Kyle Gorman}
@@ -66,7 +62,7 @@
 \begin{document}
 \FrontMatter
 
-\chapter{Towards a theory of phonotactic knowledge and acquisition}
+\chapter{A program for phonotactic theory}
 \input{1placeholder}
 \chapter{Categorical and gradient aspects of wordlikeness}
 \input{2}
@@ -78,17 +74,11 @@
 \appendix 
 \renewcommand{\arraystretch}{0.25}
 
-\chapter{English wordlikeness ratings}
-\input{A}
-
-\chapter{English syllabification}
-\input{B}
-
-\chapter{English syllable contact clusters}
-\input{C}
-
-\chapter{Parameterizing Zipf's Law}
-\input{D}
+\chapter{English wordlikeness ratings} \input{A}
+\chapter{Training the \citeauthor{Hayes2008a} phonotactic model} \input{B}
+\chapter{English syllabification} \input{C}
+\chapter{English syllable contact clusters} \input{D}
+\chapter{Parameterizing Zipf's Law} \input{E}
 
 \bibliography{\jobname}
 \bibliographystyle{pwpl}
