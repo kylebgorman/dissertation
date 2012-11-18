@@ -1,22 +1,31 @@
+1. Introduction                                                 x
+2. Empirical scope                                              x
+    2.1 Phonotactic constraints
+    2.2 Loanword adaptation
+    2.3 Word production and recognition
+3. Duplication problem
+    3.1 The insufficiency of morpheme structure constraints
+    3.2 Stampean occultation
+    3.3 Acquisitional evidence
+4. A critique of probabilistic phonotactics
+    4.1 Static constraints and the role of diachrony            x
+    4.2 Static constraints and the role of naturalness          x
+    4.3 Phonotactics as gradient grammaticality                 x
+5. Conclusions
 
-Other facts remain unresolvable. There is no way to tell what the final segment of 
+- edits
+- merge
 
 Other things remain unresolvable: only theory-internal considerations can decide what the final segment of the Turkish \emph{čilek} `strawberry' is, or what the representation of [sek]-[seɣɘ] `blind' in Catalan \citep[7]{PE}.
 %Final stops are subject to devoicing, so it might be underlying /G/, and it deletes intervocalically (e.g., \emph{čilei}). 
-
-What a theory of phonotactics should account for is itself contentious. 
-It should account for contrasts 
-There are also numerous things the theory need not, and should not, account for. The phonotactic system does not need to say anything about any contrast between actual words like \emph{brick} and possible, but non-existent words like \emph{blick}. That contrast derives from the fact that \emph{brick} has a denotation, whereas \emph{blick} does not, and a phonotactic model that distinguishes between the two is on the wrong track. 
 
 in infants \citep{Mattys2001a} and adults \citep{Brown1956,Hay2004a,McQueen1998b}. Models of word segmentation using this heuristic exist \citep[e.g.,][]{Norris1997}, but they operate on different inputs and outputs than any model of nonce word well-formedness. This is not a duplication per se, because wordlikeness cannot be reduced to segmentation: [bznk] is no more possible as a English phrase than it is as an English word. 
 
 This statistical test is so named because it is similar to the chi-square test over contingency tables, the Fisher test computes an exact $p$-value where as the chi-square test depends on an approximation inappropriate for small samples.
 
-(discuss Silverman, Benua, and Kiparsky on *ū and short-a)
-
 CHAPTER 1:
 
-- discuss Silverman 
+- discuss Silverman, Benua, and Kiparsky on *ū and short-a
 
 CHAPTER 4:
 
@@ -26,8 +35,6 @@ CHAPTER 4:
 - +- obs vs. +- son
 - why only "some" hetero-voiced clusters?
 - free/freely, full/fully
-- pierrehumbert's claim on p173 is false
-- quote from p175 makes no sense
 - discuss numbers more about no exceptions
 - p44 discussion should come earlier
 - f1 makes sense? probably no
@@ -36,4 +43,3 @@ CHAPTER 4:
 - discussion of proper names (Trubetzkoy)
 - clarify "prob of all accidental gaps"
 - "likely" to be accidental gaps
-- quantify degree of "closely matched"
