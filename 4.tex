@@ -12,7 +12,8 @@ A medial cluster must consist of a well-formed medial coda and a well-formed med
 \noindent
 It is not necessary for predictable prosodic structure to be present in underlying form to achieve this effect, contrary to what has sometimes been stated \citep[e.g.,][255]{A74}.
 All that is necesary is that no phonological processes intervene between underlying representation and the surface form of medial clusters.
-Under the further assumption that underlying and surface representations are as similar as alternations allow (e.g., \citealt[205f.]{Dell1973}, \citealt[28f.]{Stampe1973}), this is the null hypothesis. 
+This is little more than the definition of a ``faithful'' cluster.
+Under the further assumption that underlying and surface representations are as similar as phonological processes allow (e.g., \citealt[205f.]{Dell1973}, \citealt[28f.]{Stampe1973}), faithful realization is the null hypothesis.
 
 In a study of English word-medial consonant clusters, \citet{Pierrehumbert1994} notes that the vast majority of ``possible clusters'', those which can be parsed into coda and onset in accordance with the \textsc{Medial Cluster Law}, are unattested.
 \citeauthor{Pierrehumbert1994} argues that this can be accounted for by positing static co-occurrence restrictions---unrelated to any phonological alternation in English.
@@ -123,7 +124,7 @@ So as to account for the 81\% of ``possible'' but unattested clusters, \citet{Pi
 Two-consonant velar-labial clusters are found in words like \emph{a}[k.m]\emph{e}, \emph{ru}[ɡ.b]\emph{y}, or \emph{pi}[ɡ.m]\emph{ent} occur. 
 Table \ref{dltab} shows that velar-labial clusters are somewhat less likely to occur than  are velar-coronal clusters (e.g., \emph{ve}[k.t]\emph{or}), but such underrepresentation is not unlikely to occur by chance ($p = .106$).
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -160,7 +161,7 @@ violating  & 37       & 243        & 13\%       \\
 \citet[176]{Pierrehumbert1994} notes the ``lack of clusters with identical first and third elements'', ignoring presence or absence of voicing. 
 Despite the fact that there are no exceptions to this generalization, these \textsc{ABA} clusters are not significantly less common than other triconsonantal and quadraconsonantal clusters (Table \ref{abatab}).
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -196,7 +197,7 @@ $\begin{bmatrix} -\textsc{Son} \end{bmatrix}~\goesto~\begin{bmatrix} =\textsc{Vo
 \citet{Pierrehumbert1994} does not discuss a constraint against adjacent obstruents disagreeing in voice. 
 As shown in Table \ref{ovatab} however, the vast majority of medial obstruents clusters in simplex words are either uniformly voiced, as in \emph{hu}[z.b]\emph{and}, or uniformly voiceless, as in or \emph{rha}[p.s]\emph{osdy}. Hetero-voiced clusters, like those in \emph{a}[b.s]\emph{inth} and \emph{a}[s.b]\emph{estos}, are rarer than would be expected from chance.
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -237,7 +238,7 @@ $\begin{bmatrix} $+$\textsc{Nas} \end{bmatrix}~\goesto~\begin{bmatrix} =\textsc{
 \noindent
 As shown in Table \ref{npatab}, virtually all clusters consisting of a nasal coda followed by a homorganic obstruent (e.g., \emph{pi}[m.p]\emph{le}, \emph{sta}[n.z]\emph{a}, \emph{mo}[ŋ.k]\emph{ey}) are attested. As \citet[175]{Pierrehumbert1994} observes, heterorganic clusters, like those \emph{pli}[m.s]\emph{oll} or \emph{scri}[m.ʃ]\emph{aw}, do occur, but they are significantly more rare.
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -261,8 +262,10 @@ $\begin{bmatrix} =\textsc{Lab} \\ =\textsc{Cor} \\ =\textsc{Dor} \\ =\textsc{Son
 
 \noindent
 As can be seen from Table \ref{degemtab}, the sample includes no sequences of identical segments, or of identical segments differing only in voice, something highly unlikely to arise by chance.
+Stampean occultation by \textsc{Degemination} provides a natural explanation for this gap.
+It is informative to compare this to the constraint against ``ABA'' clusters proposed by \citeauthor{Pierrehumbert1994}: both are exceptionless, but only the former is unlikely to arise by chance.
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -292,7 +295,7 @@ Two additional metrics break down accuracy into its constituent parts;
 It is possible to increase precision at the expense of recall, by predicting non-attestation for a greater number of clusters, or to maximize recall at the expense of precision by predicting all clusters to be unattested. 
 $F_1$, the harmonic mean of these two measures, is a standard metric for quantifying this tradeoff; increases in either precision or recall produce a  non-linear increase in $F_1$. The results are summarized in Table \ref{cmresults}.
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \begin{tabular}{l | rrrr}
 \toprule
@@ -334,10 +337,16 @@ By simultaneously accounting for both sources of cluster inventory gaps, this mo
 \citet{Hayes2008a} present a model which uses the principle of maximum entropy to weigh a large number of competing phonotactic constraints. 
 In one sense, this is isomorphic to the expected frequency/derived constraint model in that the constraint discovery mechanism is sensitive to the expected frequency of clusters: it favors constraints which rule out clusters with high expected frequency (but which are unattested) over those which have low expected frequency.
 Unlike the expected frequency/derived constraint model, however, the constraints discovered are not limited to those which are illustrated by alternations; it may also posit static constraints, much like those proposed by \citet{Pierrehumbert1994}.
-Since this model has many experimenter-determined parameters, 
-an attempt is made to replicate the details of \citeauthor{Hayes2008a}'s evaluation as closely as is feasible: their software, model parameters, and feature specifications are all used. 
-Following the procedure of \citet{HayesInPress}, a novel feature [$\pm$\textsc{Coda}] is added to allow the model to distinguish coda and onset consonants. 
-Since the maximum entropy model produces slightly different scores on each run, the worst-performing of 10 runs is reported here, following \citet{Hayes2008a}.
+
+Since this model has numerous experimenter-defined parameters, a close replication of \citeauthor{Hayes2008a}'s original paper is attempted: both their implementation and phonological feature specifications are used here.
+Following \citet{HayesInPress}, dictionary entries are syllabified using the procedure described in \S\ref{syllabification} and a novel feature [$\pm$
+\textsc{Coda}] is added to allow the model to distinguish coda and onset co
+nsonants.
+Also, following \citeauthor{Hayes2008a}, constraints are limited to those s
+panning as many as three segments and an ``accuracy schedule'' of [$.001$, 
+$.01$, $.1$, $.2$, $.3$] is used.
+Since the maximum entropy model produces slightly different scores on each 
+run, the worst-performing of 10 runs is reported here, following \citeauthor{Hayes2008a}.
 This model has the poorest recall of any model; compared to the derived constraints baseline, the constraints induced by the maximum entropy model are narrower.
 This is particularly clear regarding possible clusters with a nasal coda followed by a non-homorganic obstruent, like *[m.kl]: the vast majority of such clusters, which would be neutralized by \textsc{Nasal Place Assimilation}, are unattested, but many are erroneously assigned the highest possible score by the maximum entropy model.
 
@@ -373,7 +382,7 @@ Both codas and onsets show a linear relationship between log rank and log freque
 As a result, an enormous lexical sample would be needed to realize clusters consistent with the \textsc{Medial Cluster Law} even if there were no constraints on the combination of medial codas and onsets in English.
 To illustrate this fact, a simulation is used to create new ``samples'' of the same size as the lexical sample used here. The following procedure is repeated so as to generate each observation in the simulated sample.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics{co.pdf}
 \caption{Medial coda and medial onset type frequencies in the lexical sample show a Zipfian distribution; frequencies have been smoothed using the $Z_r$ transform (see Appendix \ref{zr}).}
@@ -394,7 +403,7 @@ As can be seen, the observed and simulated frequencies are quite similar
 ($R^2 = 0.712$, $p = 4.5$\e{-05}).
 The sparse cluster inventory, previously taken as evidence for static constraints on syllable contact clusters, is expected even if the only constraints on possible clusters are those which are phonologically derived.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics{sim.pdf}
 \caption{A simulated cluster inventory, generated by random sampling and applying phonological neutralizations closely matches the observed cluster frequencies (represented by the smoothing line). Simulated and observed frequencies have been smoothed using the $Z_r$ transform (see Appendix \ref{zr}).}
