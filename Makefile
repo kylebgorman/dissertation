@@ -18,4 +18,4 @@ clean:
 show: $(TARGET).pdf
 	open $(TARGET).pdf
 
-.PHONY: clean show
+.PHONY: $(TARGET).pdf clean show

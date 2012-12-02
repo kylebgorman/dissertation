@@ -1,12 +1,14 @@
 \label{gaps} 
 
 It is a curious fact that many constraints on underlying representations are elegantly described using the units of prosody.
-In some cases, these are part of the system of contrast, such as long segments in moraic theory \citep[e.g.,][]{Davis1999}. For instance, Latin has constrastive consonant and vowel length (e.g., \emph{anus} `ring' vs.~\emph{annus} `year', \emph{os} `bone' vs.~\emph{ōs} `mouth'), but there is no vowel length contrast before geminate consonants. However, constraints on underlying representations may also involve references to non-contrastive prosodic structures, such as syllables (e.g., \citealt{Hooper1973}, \citealt{Kahn1976}).\footnote{See \citealt{Blevins1995} for the claim that syllable structure is universally non-contrastive, and \citealt{Elfner2006} for arguments that a putative counterexample is the result of an underlying moraic, not syllabic, contrast.}
+In some cases, these are part of the system of contrast, such as long segments in moraic theory \citep[e.g.,][]{Davis1999}. For instance, Latin has constrastive consonant and vowel length (e.g., \emph{anus} `ring' vs.~\emph{annus} `year', \emph{os} `bone' vs.~\emph{ōs} `mouth'), but there is no vowel length contrast before geminate consonants. 
+However, constraints on underlying representations may also involve references to non-contrastive prosodic structures, such as syllables (e.g., \citealt{Hooper1973}, \citealt{Kahn1976}).\footnote{
+    See \citealt{Blevins1995} for the claim that syllable structure is universally non-contrastive, and \citealt{Elfner2006} for arguments that a putative counterexample is the result of an underlying moraic, not syllabic, contrast.}
 For instance, as \citeauthor{Haugen1956} first notes, the constraints on word-medial consonant clusters are not arbitrary in prosodic terms:
 
 \begin{example}[\textsc{Medial Cluster Law} (after \citealt{Haugen1956})]
 \label{mcl}
-A medial cluster must consist of a well-formed medial coda and a well-formed medial onset
+A medial cluster consists maximally of a well-formed medial coda and a well-formed medial onset
 \end{example}
 
 \noindent
@@ -124,7 +126,7 @@ So as to account for the 81\% of ``possible'' but unattested clusters, \citet{Pi
 Two-consonant velar-labial clusters are found in words like \emph{a}[k.m]\emph{e}, \emph{ru}[ɡ.b]\emph{y}, or \emph{pi}[ɡ.m]\emph{ent} occur. 
 Table \ref{dltab} shows that velar-labial clusters are somewhat less likely to occur than  are velar-coronal clusters (e.g., \emph{ve}[k.t]\emph{or}), but such underrepresentation is not unlikely to occur by chance ($p = .106$).
 
-\begin{table}[ht]
+\begin{table}
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -161,7 +163,7 @@ violating  & 37       & 243        & 13\%       \\
 \citet[176]{Pierrehumbert1994} notes the ``lack of clusters with identical first and third elements'', ignoring presence or absence of voicing. 
 Despite the fact that there are no exceptions to this generalization, these \textsc{ABA} clusters are not significantly less common than other triconsonantal and quadraconsonantal clusters (Table \ref{abatab}).
 
-\begin{table}[ht]
+\begin{table}
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -197,7 +199,7 @@ $\begin{bmatrix} -\textsc{Son} \end{bmatrix}~\goesto~\begin{bmatrix} =\textsc{Vo
 \citet{Pierrehumbert1994} does not discuss a constraint against adjacent obstruents disagreeing in voice. 
 As shown in Table \ref{ovatab} however, the vast majority of medial obstruents clusters in simplex words are either uniformly voiced, as in \emph{hu}[z.b]\emph{and}, or uniformly voiceless, as in or \emph{rha}[p.s]\emph{osdy}. Hetero-voiced clusters, like those in \emph{a}[b.s]\emph{inth} and \emph{a}[s.b]\emph{estos}, are rarer than would be expected from chance.
 
-\begin{table}[ht]
+\begin{table}
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -238,7 +240,7 @@ $\begin{bmatrix} $+$\textsc{Nas} \end{bmatrix}~\goesto~\begin{bmatrix} =\textsc{
 \noindent
 As shown in Table \ref{npatab}, virtually all clusters consisting of a nasal coda followed by a homorganic obstruent (e.g., \emph{pi}[m.p]\emph{le}, \emph{sta}[n.z]\emph{a}, \emph{mo}[ŋ.k]\emph{ey}) are attested. As \citet[175]{Pierrehumbert1994} observes, heterorganic clusters, like those \emph{pli}[m.s]\emph{oll} or \emph{scri}[m.ʃ]\emph{aw}, do occur, but they are significantly more rare.
 
-\begin{table}[ht]
+\begin{table}
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -265,7 +267,7 @@ As can be seen from Table \ref{degemtab}, the sample includes no sequences of id
 Stampean occultation by \textsc{Degemination} provides a natural explanation for this gap.
 It is informative to compare this to the constraint against ``ABA'' clusters proposed by \citeauthor{Pierrehumbert1994}: both are exceptionless, but only the former is unlikely to arise by chance.
 
-\begin{table}[ht]
+\begin{table}
 \centering
 \begin{tabular}{l rrrr}
 \toprule
@@ -295,7 +297,7 @@ Two additional metrics break down accuracy into its constituent parts;
 It is possible to increase precision at the expense of recall, by predicting non-attestation for a greater number of clusters, or to maximize recall at the expense of precision by predicting all clusters to be unattested. 
 $F_1$, the harmonic mean of these two measures, is a standard metric for quantifying this tradeoff; increases in either precision or recall produce a  non-linear increase in $F_1$. The results are summarized in Table \ref{cmresults}.
 
-\begin{table}[ht]
+\begin{table}
 \centering
 \begin{tabular}{l | rrrr}
 \toprule
@@ -308,9 +310,10 @@ DC \& EF            & 0.861    & 0.868     & 0.988  & 0.924 \\
 \citet{Hayes2008a}  & 0.835    & 0.942     & 0.854  & 0.896 \\
 \bottomrule
 \end{tabular}
-\caption{Results for the cluster classification task; a combination of derived constraints and expected frequency (``DC \& EF'') produces the highest accuracy and $F_1$.}
+\caption{Results for the cluster classification task}
 \label{cmresults}
 \end{table}
+%; a combination of derived constraints and expected frequency (``DC \& EF'') produces the highest accuracy and $F_1$.}
 
 \paragraph{Null baseline} 
 In a classification task, the simplest baseline is one which uniformly predicts the most common outcome. 
@@ -382,10 +385,10 @@ Both codas and onsets show a linear relationship between log rank and log freque
 As a result, an enormous lexical sample would be needed to realize clusters consistent with the \textsc{Medial Cluster Law} even if there were no constraints on the combination of medial codas and onsets in English.
 To illustrate this fact, a simulation is used to create new ``samples'' of the same size as the lexical sample used here. The following procedure is repeated so as to generate each observation in the simulated sample.
 
-\begin{figure}[ht]
+\begin{figure}[t]
 \centering
 \includegraphics{co.pdf}
-\caption{Medial coda and medial onset type frequencies in the lexical sample show a Zipfian distribution; frequencies have been smoothed using the $Z_r$ transform (see Appendix \ref{zr}).}
+\caption{Medial coda and medial onset type frequencies in the lexical sample show a Zipfian distribution; frequencies have been smoothed using the $Z_r$ transform (see Appendix \ref{zr})}
 \label{cao}
 \end{figure}
 
@@ -403,10 +406,10 @@ As can be seen, the observed and simulated frequencies are quite similar
 ($R^2 = 0.712$, $p = 4.5$\e{-05}).
 The sparse cluster inventory, previously taken as evidence for static constraints on syllable contact clusters, is expected even if the only constraints on possible clusters are those which are phonologically derived.
 
-\begin{figure}[ht]
+\begin{figure}[t]
 \centering
 \includegraphics{sim.pdf}
-\caption{A simulated cluster inventory, generated by random sampling and applying phonological neutralizations closely matches the observed cluster frequencies (represented by the smoothing line). Simulated and observed frequencies have been smoothed using the $Z_r$ transform (see Appendix \ref{zr}).}
+\caption{A simulated cluster inventory, generated by random sampling and applying phonological neutralizations closely matches the observed cluster frequencies (represented by the smoothing line); simulated and observed frequencies have been smoothed using the $Z_r$ transform (see Appendix \ref{zr})}
 \label{sim}
 \end{figure}
 

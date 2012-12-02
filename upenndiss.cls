@@ -226,7 +226,7 @@ Fulfillment of the Requirements for the Degree of Doctor of Philosophy
     \@narrowsig{Stephen R. Anderson \\ Dorothy R. Diebold Professor, Linguistics, Psychology, \& Computer Science, Yale University}
     \@narrowsig{Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science} 
     \@narrowsig{Eugene Buckley \\ Associate Professor, Linguistics}
-%    \@narrowsig{Rolf Noyer \\ Associate Professor, Linguistics}
+    \@narrowsig{Rolf Noyer \\ Associate Professor, Linguistics}
 }
 
 % Signature format intended for signatures laid out one per line
