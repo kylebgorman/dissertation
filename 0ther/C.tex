@@ -1,0 +1,10 @@
+\chapter{Problems with the random shuffle procedure} 
+\label{zr}
+
+\citet{Kessler2001,Kessler2008} proposes a novel 
+
+which is applied to co-occurrence restrictions by \citet{Brown2010} and \citet{Martin2007,2011}.
+
+it is in theory simply a Monte Carlo approximation of a one-tailed chi-square test. 
+
+This method requires a way to randomly generate all $N!$ permutations of a list of $N$ words with equal probability. Unfortunately, for reasonably large samples, this is all but impossible with current computational resources. Random shuffling is accomplished by a \emph{pseudo-random number generator} (PRNG). PRNGs are characterized by their \emph{period}, which is the number of times they can be sampled independently; this is also the upper bound on the number of unique random shuffles they can generate. Since factorials grow so quickly, even small samples require a period much larger than is currently available. The PRNG in Perl, which is used by both \citeauthor{Martin2011} and \citeauthor{Brown2010}, has a period of approximately $2^{48}$, a number which is between $16!$ and $17!$. For samples of 17 or more words, this PRNG will generate a huge proportion of the possible permutations with zero probability, introducing bias. Large samples easily exceed the resources of even the best PRNGs. For instance, \citet{Martin2007} applies the Monte Carlo technique to a list of 4,758 noun-noun compounds. By Stirling's approximation, $4,758!$ is approximately $2 ^ {51260}$. This is many times larger than the period of the best PRNGS, including the $2^{19937} - 1$ period of the Mersenne Twister \citep{Matsumoto1998}.
