@@ -72,7 +72,8 @@ After constructing a sample of syllable contact clusters in English simplex word
 
 Following \citet[ chap.~8]{Duanmu2009} and \citet[ chap.~3]{Hammond1999a}, 
 a wordlist is generated using the English portion of the CELEX database \citep{CELEX}. 
-Only words coded as ``monomorphemic'' are used, and all words coded as non-native are excluded.
+Only words marked in CELEX as ``monomorphemic'' are used, and all words 
+labeled non-native are excluded.
 This stringent criterion for inclusion eliminates many of the exceptions noted by \citeauthor{Duanmu2009} or \citeauthor{Hammond1999a} in their studies. For instance, nearly all the exceptions to \textsc{Obstruent Voice Assimilation} (see \S\ref{ova} below) noted by \citet[74]{Hammond1999a} are 
 either complex words (e.g., \emph{jurisdiction}, \emph{madcap}, \emph{tadpole}, \emph{scapegoat}, \emph{magpie}) or non-native (e.g., \emph{vodka}, \emph{smorgasbord}).
 
@@ -95,7 +96,7 @@ There is also an interaction between Latinate prefixes on verbs and the makeup o
 Latinate verbs do not generally allow ditransitive, verb participle, or adjectival resultative constructions, all of which are acceptable with similar Anglo-Saxon verbs \citep{Gropen1989,Harley2009}.
 %\citep[see also][]{Gropen1989,Coppock2008}. 
 
-\begin{example}[Latinate verbs and small clauses] 
+\begin{example}[Syntactic restrictions on Latinate verbs]
 \label{harley}
 \begin{tabular}{l l l l@{} l}
 a. & {show him the painting} & \alt{} & * & {exhibit him the painting} \\
@@ -216,7 +217,9 @@ violating  & 11       & 305        &  3\%       \\
 \paragraph{Nasal place assimilation}
 \label{npa}
 
-\textsc{Nasal Place Assimilation} (e.g., \citealt[65f.]{Borowsky1986}, \emph{SPE}:85, \citealt[62]{Halle1985a}) permits [ŋ] to be described as a pure allophone of /n/, and accounts for certain patterns in Latinate prefix allomorphy.
+\textsc{Nasal Place Assimilation} (e.g., \citealt[65f.]{Borowsky1986}, \emph{SPE}:85, \citealt[62]{Halle1985a}) 
+%\citealt[269]{Fudge1969}) 
+permits [ŋ] to be described as a pure allophone of /n/, and accounts for certain patterns in Latinate prefix allomorphy.
 
 \begin{example}[\emph{im-}/\emph{in-} allomorphy]
 \label{nparule}
@@ -328,7 +331,7 @@ This represents a significant improvement compared to the null baseline (sign te
 
 \paragraph{Derived constraints} 
 By hypothesis, \textsc{Obstruent Voice Assimilation}, \textsc{Nasal Place Assimilation}, and \textsc{Degemination} rule out a large number of possible clusters. 
-In all, they target 316 out of 920 possible clusters (34\%), and only 11 (3\%) of these clusters has non-zero frequency in the sample.
+In all, they target 316 out of 920 possible clusters (34\%), and only 11 (3\%) of these clusters have non-zero frequency in the sample.
 Together, these three processes define a simple classifier in which a cluster is predicted to be unattested if and only if it would be neutralized by one of these processes. 
 Unsurprisingly, this results in increased precision and a significant improvement in accuracy compared to the null baseline (sign test $p = 4.0$\e{-09}). 
 
@@ -342,7 +345,7 @@ In one sense, this is isomorphic to the expected frequency/derived constraint mo
 Unlike the expected frequency/derived constraint model, however, the constraints discovered are not limited to those which are illustrated by alternations; it may also posit static constraints, much like those proposed by \citet{Pierrehumbert1994}.
 
 Since this model has numerous experimenter-defined parameters, a close replication of \citeauthor{Hayes2008a}'s original paper is attempted: both their implementation and phonological feature specifications are used here.
-Following \citet{HayesInPress}, dictionary entries are syllabified using the procedure described in \S\ref{syllabification} and a novel feature [$\pm$
+Following \citet{HayesInPress}, dictionary entries are syllabified using the procedure described in Appendix \ref{syllabification} and a novel feature [$\pm$
 \textsc{Coda}] is added to allow the model to distinguish coda and onset co
 nsonants.
 Also, following \citeauthor{Hayes2008a}, constraints are limited to those s
