@@ -1,3 +1,138 @@
 \label{conclusions}
 
+\section{Summary of dissertation and future directions}
 
+\subsection{Chapter 1}
+
+Chapter \ref{intro} began with the claim that phonotactic theorists have not been sufficiently explicit about what they take as evidence for phonotactic knowledge.
+A core challenge in phonotactic theory is to determine which of the countless competing generalizations are internalized by speakers.
+Wordlikeness judgements, production and recognition experiments, loanword adaptation, alternative phonologies, and lexical statistics all are potential sources of phonotactic evidence, though there are important caveats associated with each source of evidence.
+
+Some questions remain open regarding the relationship between loanword adaptation and phonotactic generalizations.
+A crucial question is what determines which phonotactic generalizations will be implicated in loanword adaptation. 
+As indicated in the chapter, a naïve hypothesis that those generalizations which are phonologically ``derived'' cannot be maintained in light of evidence put forth by \citet{Peperkamp2005}.
+On the other hand, the model of loanword adapation advocated by \citeauthor{Peperkamp2005} is has little to say regarding how phonotactic knowledge and how it might influence non-native speech perception.
+
+\citeauthor{Shibatani1973}'s classic argument for the insufficiency of morpheme structure constraints was then presented.
+It was suggested that much of the distinction between \emph{sequence structure constraints} and phonological processes is moot in light of \emph{Stampean occultation}.
+Other sequence structure constraints may be identified with language-specific restrictions on the prosodic inventory.
+It therefore remains to be seen whether there are ``static'' constraints: those which are neither derived by phonological process or phonotactic parsing. 
+According to one hypothesis, static constraints are inferred from statistical trends in the lexicon; this account makes predictions about gradient grammaticality and the independence of phonology and phonotactics which are taken up in in Chapters \ref{gradience} and \ref{turkish}.
+Another account identifies phonotactic knowledge with inviolate markedness constraints and is considered in Chapter \ref{gaps}.
+
+Finally, it was argued that whatever the merits of these accounts of static constraints, there is also some potential value to the null hypothesis that static constraints do not exist at all: such a principle would allow for a resolution of certain intransigent debates in phonology, such as the proper analysis of the Sanskrit ``diaspirates''.
+Other cases of this type, where one analysis derives a phonotactic constraint and another makes no such prediction, surely could be adduced and investigated experimentally.
+
+\subsection{Chapter 2}
+
+Chapter \ref{gradience} is concerned with the claim that phonotactic wellformedness is not an ``all-or-nothing'' affair.
+This claim is first placed in a historical context.
+Then, three arguments are presented for \emph{a priori} skepticism regarding the claims of gradience in wordlikeness judgements.
+First, a model of gradient grammatical judgements seems to require extraordinary abilities for which there is little evidence, whereas reporting categorical judgements calls only on well-established capacities.
+Secondly, intermediate ratings in wordlikeness tasks, long taken as evidence for gradient models, are in fact present in any rating task which permits intermediate ratings, even when this is nonsensical.
+Finally, there have been no serious attempts to compare current gradient models to simple categorical baselines.
+
+The second half of this chapter is concerned with providing an evaluation which implements this comparison.
+A simple categorical baseline, as well as another baseline model measuring similarity to existing items, reliably outperform state-of-the-art models of gradient wellformedness.
+Once the categorical baseline effect is controlled for, gradient models are largely uncorrelated with the ratings.
+It is concluded that there is no evidence that intermediate ratings in wordlikeness tasks are the result of gradient grammaticality.
+
+This chapter suggests many directions for further research.
+First, it throws down a gauntlet to computational modelers who are proponents of gradient grammaticality, and the evaluation therein must be kept up to date when the challenge is answered.
+Furthermore, the categorical baseline presented in this model is intentionally quite primitive, and some of the proposed improvements discussed in the chapter are worthy of implementation and evaluation.
+The evaluation in this chapter is based on a small amount of published wordlikeness data. 
+It should be clear that the quality and quantity of this data is quite limited, but that it can be cheaply gathered.
+On analogy with undertakings like the English Lexicon Project \citep{ELP}, a publicly available database of lexical decision latencies, a carefully designed ``English Wordlikeness Project'' would be of great value to other phonotactic theorists, and would provide useful norming data for many other psycholinguistic tasks.
+
+\subsection{Chapter 3}
+
+The lexical/statistical model of phonotactic knowledge is the subject of Chapter 3. 
+While it has long been speculated that statistical criteria could be used to determine which phonotactic generalizations are internalized and which are ignored, it is argued that lexical statistics are neither necessary nor sufficient to determine this fact.
+On the contray, there are many static phonotactic constraints which are statistically reliable but synchronically inert: case studies include Latin rhotacism and restrictions on the English vowel system.
+A longer case study considers constraints on Turkish vowels.
+A host of evidence, phonological, statistical, and ``external'', suggests that vowel harmony is active throughout the language, despite a significant amount of lexical exceptions.
+Considerably less clear is the status of the static constraint known as \textsc{Labial Attraction}; at best, it counteracts the effect of harmony.
+
+Future work should further consider instances of ``statistically reliable/synchronically inert'' restrictions.
+Two obvious targets would be Mid-Atlantic short \emph{a} and Turkish \textsc{Labial Attraction}, which would benefit from further careful psycholinguistic investigation.
+
+\subsection{Chapter 4}
+
+Chapter 4 begins with the observation that many phonotactic constraints can be described with reference to prosodic primitives, and that this is in fact consistent with Stampean occultation.
+\citeauthor{Pierrehumbert1994}, however, has argued that not all constraints on English syllable contact clusters can be attributed to prosodic restrictions, and that various static constraints are necessary.
+However, \citeauthor{Pierrehumbert1994}'s study suffers from several methodological flaws.
+Principle among them is the failure to distinguish between derived and static constraints.
+A restudy shows that the former impose robust restrictions on the English syllable contact cluster inventory, whereas the static constraints proposed by \citeauthor{Pierrehumbert1994} lack statistical validity.
+
+Many of the clusters which appear to be prosodically well-formed are not attested, but state-of-the-art computational models are not able to detect any systematicity in the patterns of missingness. 
+Consequently, it is argued that many unattested clusters must be viewed as accidentap gaps, and that such is to be expected given the statistical properties of distributions of codas and onsets that make up medial clusters.
+
+Further psycholinguistic research could be used to further evaluate the claim made in this chapter, that many unattested syllable contact clusters are accidental gaps.
+The analysis could profitably be extended to medial clusters in other languages.
+
+\section{A note on architectural matters}
+
+A major finding of this dissertation is that the ``lexical/statistical'' theory of phonotactics is not sufficiently in evidence.
+Consequently, it is premature to assume the existence of a grammatical module which performs the task of computing phonotactic wellformedness.
+
+The alternative argued for here is that phonotactic knowledge is derived from familiar components of the (``narrow'') phonological grammar: phonological processes and prosodic structures like syllables, feet, etc. 
+These too must be compiled into a module capable of recognizing ``possible'' and ``impossible' words, and work will need to be done to clarify how this is accomplished. 
+But, unlike the ``lexical/statistical'' theory, this knowledge comes online only in response to phonological acquisition. 
+As will be shown in what remains, this is in fact the view from research into phonological development.
+
+\section{Acquisition of phonotactic knowledge}
+\label{s:aopk}
+
+As a sort of final summary of the theories under evaluation in this dissertation, consider the evidence provided by the order in which phonotactic, phonological, and lexical knowledge is acquired.
+\citet{Hayes2004b} argues that phonotactic learning occurs before lexical or phonological acquisition, and it therefore must be independent of other types of grammatical knowledge.
+
+At 9 months of age, several studies imply that typically-develping infants have internalized langauge-specific preferences for native language phonotactics \citep{Friederici1993,Jusczyk1994}.
+A particularly telling study is performed by \citet{Jusczyk1993b}, who find that Dutch and English infants prefer to listen to lists of (likely unfamiliar) words in their native languages over those in English or Dutch, respectively.
+Crucially, these studies do not find the same preferences at earlier ages.
+Keeping in mind the usual caveats about a strong interpretation of negative results, this actually suggests that phonotactic acquisition occurs relatively late.
+
+Some non-trivial amount of lexical learning occurs at an earlier age, for instance.
+Typically-developing infants know their names and the names of their caretakers as early as 4 months of age \citep{Bortfeld2005,Mandel1995,Tincoff1999}.
+As early as 6 months of age, infants know the visual referents of familiar words presented auditorily \citep{Bergelson2012}.
+At 7.5 months, phonological representations are sufficiently detailed to allow infants to discriminate between words like \emph{cup} and mispronunciations like \emph{*tup} \citep{Jusczyk1995}.
+By 8 months, infants are able to locate both familiar and novel words in continuous speech \citep{Jusczyk1997,Seidl2006}.
+It is approximately at this time that the ability to discriminate non-native phonetic contrasts for vowels and consonants begins to decline \citep{Best1994,Polka1994,Werker1981,Werker1984,Werker1988}.
+
+While very few studies have investigated young infants' knowledge of phonological alternations, this is the subject of a fascinating study by \citet{White2008}.
+Simplifying somewhat, the experimenters expose 8.5-month-old infants to an artificial language in which fricative voicing is contrastive, but voiced and voiceless variants of plosives are in complementary distribution, appearing only after vowels (\emph{na-bevi}) and after voiceless consonants (\emph{rot-pevi}), respectively.
+After familiarization, infants prefer to listen to nonce words preserving this complementary distribution of stops over nonce words which disrupt this distribution (e.g., \emph{na-poli}, \emph{rot-boli}), suggesting that the infants have extracted an allophonic generalization concerning plosive voicing.
+This too occurs before the earliest evidence for a more traditional type of phonotactic learning.
+
+It is not until much later that phonotactic knowledge can be investigated using productive language skills; the seminal study by \citet{Smith1973}, for instance, begins when the target child, Amahl, is more than 2 years of age.
+Given the familiar assymetry between comprehension and production (the former leading), it seems unlikely that much can be learned about the chronology of acquisition from this ``lagging indicator''.
+
+While there are many gaps in current understanding which merit future research, there is no reason to think that phonotactic knowledge is acquired before a considerable amount of lexical acquisition has occurred, or before children are capable of extracting phonological alternations and applying them to novel words.
+This observation that infants' phonotactic knowledge comes online only after highly specific phonological entries, subsyllabic representations, and alternation learning are available, is precisely what is predicted by the null hypothesis that phonotactic knowledge is derived from phonological processes and prosodic restrictions.
+
+%I would like to suggest that there are two types of problems that arise in developing a theory of phonotactics free of duplication. The first type of problem consists of conflicts between theoretical assumptions and the desire to eliminate duplication. If we continue to view duplication as a sort of negative heuristic, then it may be the case that the theoretical assumptions are wrong. Such a case arises in Chapter \ref{turkish} in the discussion of archiphonemic underspecification analysis of Turkish vowel harmony proposed by \citet{Clements1982}. \citeauthor{Clemenst1982} propose that all but the first vowel of a harmonic root is underspecified for backness (and in high vowels, roundness) and is filled in by rule. Since there are disharmonic roots, this rule must be ``structure-filling''. Consequently, this rule cannot account for the apparent markedness of disharmonic roots revealed by wordlikeness judgements (among other psycholinguistic tasks). If duplication is a pathology, this analysis is wrong.
+%The arguments of \citeauthor{Shibatani1973} and others led theorists to focus their attention on properties of surface representations as determinants of wordlikeness. Though syllabification plays no role in \emph{SPE}, it is crucial to many earlier studies \citep[for a review, see][]{Goldsmith2011b}, and it received particular attention in the 1970s. \citet{Hooper1973} and \citet{Kahn1976} argue that the syllable is useful for defining wordlikeness generalizations.\footnote{\citet{Steriade1999} and \citet{Blevins2003}, however, argue that a number of phonotactic generalizations previously stated in syllabic terms can be reanalyzed without making reference to syllables.} \citeauthor{Hooper1973} argues, for instance, that [bn], impossible as an English onset, is unobjectionable as a syllable contact cluster in nonce words like \emph{stabnik} (or in names like \emph{Abner}), and that this demonstrates the superiority of syllable-based wordlikeness generalizations. This already signals further trouble for alternative accounts which focus on underlying forms. Syllabification may span morphs, is generally predictable, and is universally non-contrastive, and as a consequence, few posit in to be present in underlying representations \citep[though see, e.g.,][]{Vaux2003}. \citeauthor{Hooper1973} also points to loanword adaptations which produce native syllable structure \citep[e.g.,][]{Carlisle1991} as evidence that syllabification is part of the phonological computation. Further enrichments to the theory are provided by the autosegmental theory of the syllable \citep{McCarthy1979b}, which envisions the syllable as an articulated tree structure \citep[as first envisioned by][]{Pike1947a}, and theories like prosodic licensing \citep{Ito1989a}, in which syllabification triggers phonological repairs.
+%Despite the considerable attention given to the proposals of \emph{SPE} in the wake of that book's publication in 1968, the \emph{SPE} wordlikeness model has received almost no further attention in the literature. At the risk of explaining what might be no more than an accidental gap in the literature, the novel aspects of \emph{SPE} model---gradience derived from similarity to existing lexical entries---may have been overshadowed by the many other contentious proposals in \emph{SPE}, and particularly by compelling arguments against the assumption that wordlikeness contrasts derive solely from properties of underlying forms. \citet{Shibatani1973} observes that there are some generalizations about surface forms which give rise to wordlikeness contrasts, but cannot be stated as constraints on underlying forms. An example from German is shown in (\ref{fd}) below.
+
+%\emph{K}[uːx]\emph{en}
+%\emph{K}[uːç]\emph{en}
+%\footnote{Examples like \emph{Mas}[oːç]\emph{ist} `masochist', \emph{Eun}[uːç]\emph{ismus} `eunichism', first noted by \citet{Merchant1994}, suggest that this should also be restricted to assimilation within the same foot \citep[226f.]{Jensen2000}.}
+
+%Whether phonological computations or representations themselves are graded \citep[e.g.,][]{Lakoff1973} is besides the point, as metalinguistic judgements are behaviors, not mental states; they can no more be compared than can ``fear'' and ``flight response''.
+
+%\begin{example}[German \emph{ich}- and \emph{ach-laut}]
+%\begin{tabular}{l l l}
+%a. & [buːx]   & `book'           \\
+%   & [tɔxtər] & `daughter'       \\
+%   & [naxt]   & `night'          \\
+%b. & [siçt]   & `view'           \\
+%   & [ʃpeçt]  & `woodpecker'     \\
+%   & [ɡərʏçt] & `rumor'          \\
+%   & [knøçəl] & `ankle, knuckle' \\
+%   & [flɛçə]  & `surface'        \\
+%\end{tabular}
+%\end{example}
+%
+%\emph{Umlaut}, the fronting (and raising) of back vowels in certain morphological contexts, produces the front variant of the dorsal fricative; e.g., [lɔx]-[løçər] `hole-holes', \emph{B}[uːx]-\emph{B}[yːç]\emph{er} `book-books',
+% 
+%Throughout the term \emph{lexicon} is used in a specific sense of the set underlying representations in some language; this is not meant to imply a position on the possibility that larger, composite linguistic representations are also stored in lexical memory (thought see \citealt{LignosInPressa} for some recent experimental evidence bearing on this question).
+%I reject the possibility that phonotactics do exist altogether.

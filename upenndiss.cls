@@ -182,7 +182,7 @@
 	in \\[.1in]
 	\@department \\[.1in]
 	\vfill
-Presented to the Faculties of the University of Pennsylvania in  Partial \\
+Presented to the Faculties of the University of Pennsylvania in Partial \\
 Fulfillment of the Requirements for the Degree of Doctor of Philosophy
 \\[.1in]
 	\@copyrightyear
@@ -220,27 +220,30 @@ Fulfillment of the Requirements for the Degree of Doctor of Philosophy
 % Redefine \@signatureblock and lay out the names by hand, either using
 % \@widesig and/or \@narrowsig, or just drawing lines in your favorite way.
 % Example: 
-\renewcommand\@signatureblock{
-    \@narrowsig{Supervisor of Dissertation \\ Charles Yang \\ Associate Professor, Linguistics \& Computer and Information Science} 
-    \@narrowsig{Graduate Group Chairperson \\ Robin Clark \\ Associate Professor, Linguistics} 
+\renewcommand\@signatureblock{\vskip 0pt plus 0.5 fill
+    \@supervisorsig{Charles Yang \\ Associate Professor, Linguistics \& Computer and Information Science} 
+    \@chairpersonsig{Robin Clark \\ Associate Professor, Linguistics}
     \@narrowsig{Stephen R. Anderson \\ Dorothy R. Diebold Professor, Linguistics, Psychology, \& Computer Science, Yale University}
-    \@narrowsig{Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science} 
+    \@narrowsig{Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science}
     \@narrowsig{Eugene Buckley \\ Associate Professor, Linguistics}
+    \hspace{.45in}
     \@narrowsig{Rolf Noyer \\ Associate Professor, Linguistics}
 }
 
-% Signature format intended for signatures laid out one per line
-\def\@widesig#1{\parbox[t]{12cm}{\parindent=0pt \vskip 0.65in
-  \par \hrule width 7cm \vskip .1in #1}\\}
-
-% This is narrow enough that it should come out two per line unless
-% followed by \\
-%\def\@narrowsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.65in
-%  \raggedright
-%  \par \vskip .1in #1}\hfill}
-
 \def\@narrowsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.35in
   \raggedright
+  \par \vskip .1in #1}\hfill}
+
+\def\@supervisorsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.35in
+  \raggedright
+  \par \vskip .1in Supervisor of Dissertation
+  \par \vskip \baselineskip \hrule width 6cm
+  \par \vskip .1in #1}\hfill}
+
+\def\@chairpersonsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.35in
+  \raggedright
+  \par \vskip .1in Graduate Group Chairperson
+  \par \vskip \baselineskip \hrule width 6cm
   \par \vskip .1in #1}\hfill}
 
 % Do a sig line for each name in the list #1, with title #2
