@@ -2,7 +2,7 @@ TARGET=gorman_diss
 BIBTEX=bibtex
 COMMAND=xelatex -halt-on-error
 
-$(TARGET).pdf: *.tex
+$(TARGET).pdf: *.tex *.sty *.cls
 	$(COMMAND) $(TARGET)
 
 bib: *.tex gorman_diss.bib
@@ -12,10 +12,10 @@ bib: *.tex gorman_diss.bib
 	$(COMMAND) -interaction=batchmode $(TARGET)
  
 clean:
-	latexmk -C
+	latexmk -c
 	$(RM) *.bbl *.xdv
 
 show: $(TARGET).pdf
 	open $(TARGET).pdf
 
-.PHONY: $(TARGET).pdf clean show
+.PHONY: show clean $(TARGET).pdf

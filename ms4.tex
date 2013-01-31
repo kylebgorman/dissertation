@@ -40,13 +40,14 @@ Thanks to Steve Anderson,
 Gene Buckley, 
 Constantine Lignos,
 Rolf Noyer,
+Hilary Prichard,
 Charles Yang, 
 and audiences at    
 the University of California, Santa Cruz, 
 the University of Delaware, and 
 New York Unversity.}}
 \author{Kyle Gorman \\ University of Pennsylvania}
-\date{November 2012 (comments welcome)}
+\date{Revised January 2013 (comments welcome)}
 
 \begin{document}
 \maketitle
@@ -55,7 +56,9 @@ New York Unversity.}}
 
 \section{Introduction}
 \input{4}
+
 \appendix
+
 \renewcommand{\arraystretch}{0.25}
 
 % what about Fromkin 1973 on sprig time for hintler
@@ -66,7 +69,7 @@ New York Unversity.}}
 \begin{longtable}{r@{ } r@{ } c@{ } l@{ } l@{ } l@{ } r r r r l }
 \toprule
  &   &   &  &   &  &  cluster  &  coda  &  onset  &  $-$log $p$  &  rule \\
-\multicolumn{6}{c}{cluster}  &  frequency  &  frequency  &  frequency  &  (MaxEnt)  &  exceptions\\
+\multicolumn{6}{c}{cluster}  &  frequency  &  frequency  &  frequency  &  (MaxEnt)  &  exceptions\\ 
 \midrule
  & N & . & D &  &  & 79 & 365 & 88 & 0.000 &  \\
  & N & . & T &  &  & 69 & 365 & 150 & 0.000 &  \\
@@ -991,12 +994,12 @@ D & Z & . & T & R &  & 0 & 1 & 19 & 6.385 & \textsc{VAssim} \\
 \bottomrule
 \end{longtable}
 
-\section{Appendix: English syllabification}
+\section{English syllabification}
 \label{syllabification}
 
 For every entry in the CELEX database, there is a corresponding broad syllabified transcription of the word in a Received Pronunciation accent. This appendix describes an automated procedure used to process these transcripts and to separate medial clusters from their flanking nuclei, parsing the resulting sequences into coda and onset, and reversing allophonic processes targeting medial clusters.
 
-While the segmental content of these transcriptions is precise, the CELEX syllabifications are unsystematic. Given the absence of contrastive syllabification in English (if not all languages: see \citealp[221]{Blevins1995}, \citealp{Elfner2006}), any sequence of a medial consonant cluster and its flanking nuclei should receive the same syllabification in all words in which it occurs. This is not always the case with the CELEX transcriptions, however. For instance, the sequence [ɪstɹɪ] receives a different parse in \emph{chemistry} [ˈkɛ.mɪ.stɹɪ] and \emph{ministry} [ˈmɪ.nɪs.tɹɪ].\footnote{Note that word-final \emph{y} is lax in Received Pronunciation \citep[][II.294]{AOE}.}
+While the segmental content of these transcriptions is precise, the CELEX syllabifications are unsystematic. Given the absence of contrastive syllabification in English (if not all languages: see \citealp[221]{Blevins1995}, \citealp{Elfner2006}), any sequence of a medial consonant cluster and its flanking nuclei should receive the same syllabification in all words in which it occurs. This is not always the case with the CELEX transcriptions, however. For instance, the sequence [ɪstɹɪ] receives a different parse in \emph{chemistry} [ˈkɛ.mɪ.stɹɪ] and \emph{ministry} [ˈmɪ.nɪs.tɹɪ].\footnote{Note that word-final \emph{y} is usually lax in Received Pronunciation \citep[][II.294]{AOE}.} Consequently, these syllabifications are not used here.
 
 \subsection{Ambiguous segments}
 
@@ -1035,15 +1038,18 @@ The phonotactic properties of the back onglide [w] are quite different than thos
 
 Medial consonant clusters are segmented into coda and onset using a heuristic version of the principle of onset maximization (e.g., \citealp[42f.]{Kahn1976}, \citealp{Kurylowicz1948}, \citealp[75]{Pulgram1970}, \citealp[][358f.]{Selkirk1982b}) which favors parses of word-medial clusters in which as much of the cluster as possible is assigned to the onset. A medial onset is defined to be ``possible'' simply if it occurs word-initially (according to the rules defined above). As an example, the medial clusters in words such as \emph{neu}[.tɹ]\emph{on} or \emph{bi}[.stɹ]\emph{o} also occur in word-initial position (e.g., [tɹ]\emph{ain}, [stɹ]\emph{ike}), so the entire cluster is assigned ot the onset. In contrast, the cluster in \emph{mi}[n.stɹ]\emph{el} is not found word-initially; the maximal onset here is [stɹ] and the remaining [n] is assigned to the preceding coda.
 
-In English, when a medial consonant cluster is preceded by a stressed lax vowel, as \emph{wh}[ɪs.p]\emph{er}, \emph{v}[ɛs.t]\emph{ige}, or \emph{m}[ʌs.k]\emph{et}, the first consonant of the cluster checks the lax vowel \citep[3]{Hammond1997}, \citet{Treiman1990}). As \citet[55]{Harris1994} notes, however, when the medial cluster is also a valid onset, as in \emph{whi}[s.p]\emph{er}, \emph{ve}[s.ti]\emph{ge}, and \emph{mu}[s.k]\emph{et}, onset maximization will incorrectly assign the entire cluster to the onset and leave the lax vowel unchecked. For this reason, onset maximization parses are modified to assign the first consonant of a complex medial consonant cluster to the coda before a stressed lax vowel \citep[48]{Pulgram1970}.
+In English, when a medial consonant cluster is preceded by a stressed lax vowel, as \emph{wh}[ɪs.p]\emph{er}, \emph{v}[ɛs.t]\emph{ige}, or \emph{m}[ʌs.k]\emph{et}, the first consonant of the cluster checks the lax vowel (\citealt[3]{Hammond1997}, \citealt{Treiman1990}). As \citet[55]{Harris1994} notes, however, when the medial cluster is also a valid onset, as in \emph{whi}[s.p]\emph{er}, \emph{ve}[s.ti]\emph{ge}, and \emph{mu}[s.k]\emph{et}, onset maximization will incorrectly assign the entire cluster to the onset and leave the lax vowel unchecked. For this reason, onset maximization parses are modified to assign the first consonant of a complex medial consonant cluster to the coda before a stressed lax vowel \citep[48]{Pulgram1970}.
 
 \subsection{Phonologization}
+\label{s:phonologization}
 
-Following \citet{Pierrehumbert1994}, the traditional analysis of affricates as single segments (e.g., \emph{SPE}:321f., \citealp[24]{Jakobson1961}) rather than stop-fricative sequences \citep[e.g.,][]{Hualde1988,Lombardi1990} is assumed here. In many languages, affricates pattern with simple onsets; for instance, Classical Nahua bans true onset clusters but permits the affricate series [ts, tʃ, tɬ] \citep[9]{Launey2011}. In English, however, affricates do not form complex onsets. Yet the stop and release phase of affricates cannot be separated by a syllable boundary, as predicted from the assumption they are single phonological units.
+Following \citet{Pierrehumbert1994}, the traditional analysis of affricates as single segment (e.g., \emph{SPE}:321f., \citealp[24]{Jakobson1961}) rather than sequences of a stop and fricative \citep[e.g.,][]{Hualde1988,Lombardi1990} is adopted here.
+In many languages, affricates pattern with simple onsets; for instance, Classical Nahua bans true onset clusters but permits the affricate series [ts, tʃ, tɬ] \citep[9]{Launey2011}.
+Other languages, such as Polish, distinguish affricates and stop-fricative sequences \citep{Brooks1965}, providing further evidence that ``true'' affricates are represented as single segments (or single timing units), and in contrast with stop-fricative clusters \citep[34f.]{Clements1983}.
 
 In English, [ŋ] has been analyzed as a pure allophone of /n/ before underlying /k, ɡ/ (with later deletion of /ɡ/ in some contexts; \citealt[65f.]{Borowsky1986}, \emph{SPE}:85, \citealt[62]{Halle1985a}), or as a phoneme in its own right \citep[e.g.,][]{Jusczyk2002,Sapir1925}. Onset [ŋ] is totally absent in onset position, where it cannot be followed by a /k, ɡ/ needed to derive the velar allophone, a fact predicted only by the former account, and English speakers have considerable difficulty producing initial [ŋ] \citep{Rusaw2009}. Following \citet{Pierrehumbert1994}, the allophonic analysis is assumed here. When followed by /k, ɡ/, [ŋ] is mapped to /n/. When not followed by a velar stop (i.e., finally), [ŋ] is analyzed as underlying /nɡ/.
 
-\section{Appendix: Parameterizing Zipf's Law}
+\section{Parameterizing Zipf's Law}
 \label{zr}
 
 \citet{Zipf1949} famously observes the linear relationship between log rank $r$ and log word frequency $f(r)$ in several linguistic samples. This is generalized below:
@@ -1065,7 +1071,7 @@ $\displaystyle \textrm{log}~f(r) \sim \textrm{log}~C + \alpha~\textrm{log}~r + \
 $\displaystyle Z_i = \frac{2 n_i}{r_{i + 1} - r_{i - 1}}$
 \end{unlabeledexample}
 
-\noindent \citeauthor{Church1991} do not extend this transform to the lowest and highest points (i.e., when $i = 1$ or $N$), but a natural extension of their definition is to scale the endpoints according to the next intermost point, as defined below.
+\noindent \citeauthor{Church1991} do not define this transform for the lowest and highest points (i.e., when $i = 1$ or $N$), but a natural extension of their definition is to scale the endpoints according to the next intermost point, as defined below.
 
 \begin{unlabeledexample}
 $\displaystyle Z_1 = \frac{n_1}{r_2 - r_1}$
@@ -1077,10 +1083,10 @@ $\displaystyle Z_N = \frac{n_N}{r_N - r_{N - 1}}$
 
 \noindent The effect of applying this transform to sparse frequency data is shown in Figure \ref{subtlex}.
 
-\begin{figure}
+\begin{figure}[t]
 \centering
 \includegraphics{zr.pdf}
-\caption{The left panel shows the empirical word frequencies from the SUBTLEX-US frequency norms \citep{Brysbaert2009}. The right panel shows the same frequencies smoothed with the $Z_r$ transform.}
+\caption{Left panel: word frequencies from the SUBTLEX-US frequency norms \citep{Brysbaert2009}; Right panel: the same data smoothed with the $Z_r$ transform}
 \label{subtlex}
 \end{figure}
 

@@ -174,10 +174,10 @@
   \null\vskip.1in%
   \begin{center}
 %	{\setstretch{2.5} \uppercase\expandafter{\@title}\par }%
-	{\setstretch{2.5} \MakeUppercase{\@title}\par }%
-	\vskip.3in
+	{\setstretch{1.5} \MakeUppercase{\@title}\par }%
+	\vskip.2in
 	\@author
-	\vskip .3in
+	\vskip .2in
 	A DISSERTATION \\[.1in]
 	in \\[.1in]
 	\@department \\[.1in]
@@ -219,28 +219,33 @@ Fulfillment of the Requirements for the Degree of Doctor of Philosophy
 % If the default signature layout is inappropriate, just override it:
 % Redefine \@signatureblock and lay out the names by hand, either using
 % \@widesig and/or \@narrowsig, or just drawing lines in your favorite way.
-% Example: 
+% Example:
 \renewcommand\@signatureblock{\vskip 0pt plus 0.5 fill
     \@supervisorsig{Charles Yang \\ Associate Professor, Linguistics \& Computer and Information Science} 
-    \@chairpersonsig{Robin Clark \\ Associate Professor, Linguistics}
-    \@narrowsig{Stephen R. Anderson \\ Dorothy R. Diebold Professor, Linguistics, Psychology, \& Computer Science, Yale University}
-    \@narrowsig{Mark Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science}
+    \@chairpersonsig{Robin L. Clark \\ Associate Professor, Linguistics}
+    \@thicksig{Dissertation Committee}
+    \@narrowsig{Stephen R. Anderson \\ Dorothy R. Diebold Professor, Linguistics, Psychology, \& Cognitive Science, Yale University}
+    \@narrowsig{Mark Yoffe Liberman \\ Trustee Professor of Phonetics, Linguistics \& Computer and Information Science}
     \@narrowsig{Eugene Buckley \\ Associate Professor, Linguistics}
     \hspace{.45in}
     \@narrowsig{Rolf Noyer \\ Associate Professor, Linguistics}
 }
 
-\def\@narrowsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.35in
-  \raggedright
-  \par \vskip .1in #1}\hfill}
+\def\@narrowsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.25in
+    \raggedright
+    \par \vskip .1in #1}\hfill}
 
-\def\@supervisorsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.35in
+\def\@thicksig#1{\parbox[t]{\textwidth}{\parindent=0pt \vskip 0.25in
+    \raggedright
+    \par \vskip .1in #1}\hfill}
+
+\def\@supervisorsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.25in
   \raggedright
   \par \vskip .1in Supervisor of Dissertation
   \par \vskip \baselineskip \hrule width 6cm
   \par \vskip .1in #1}\hfill}
 
-\def\@chairpersonsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.35in
+\def\@chairpersonsig#1{\parbox[t]{7cm}{\parindent=0pt \vskip 0.25in
   \raggedright
   \par \vskip .1in Graduate Group Chairperson
   \par \vskip \baselineskip \hrule width 6cm
@@ -277,7 +282,7 @@ Fulfillment of the Requirements for the Degree of Doctor of Philosophy
     \def\and{and }%
     %\global\@tempcnta=0 \@count@names\@tempcnta\@supervisorAbstract -- KG
     %\ifnum \@tempcnta > 1 Supervisors: \else Supervisor: \fi \@supervisorAbstract -- KG
-    Supervisor: \@supervisor % -- KG
+    \@supervisor % -- KG
   \end{center}
   \vskip 10pt
   \par\noindent \@abstract }
